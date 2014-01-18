@@ -1,0 +1,41 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+margin: 0; 
+padding: 0;
+border: 0;
+outline: 0;
+font-size: 100%;
+vertical-align: baseline;
+background: transparent;
+}
+
+
+html           {height:100%;}
+
+body           {font-family:'helveticaneuecyrlight', Helvetica, Arial, sans-serif; background: #f2f2f4; overflow-y: scroll;
+              font-size:14px; color:#858585; position:relative; margin:0 auto; min-height:100%; height:auto !important; height:100%;
+              z-index:0; width:1000px; background:#f2f2f4;}
+
+a              {text-decoration:underline} 
+a:hover        {text-decoration:none;}
+
+input:focus{outline: 0 none;}
+
+.error404 {padding: 448px 0 0; margin: 0 auto 0; width: 422px; background: url(../img/error404/error404.png) center 80px no-repeat;}
+.error404 h1 {font-weight: normal; color: #0ba6fd; text-align: top; font-size: 34px; color: #0ba6fd; text-align: center; padding-bottom: 17px;}
+.search_form {border: 1px solid #bebebe; background: #eaeaea; width: 420px; margin: 0 auto 22px; position: relative;}
+	.search_form_button {position: absolute; top: 11px; left: 14px;}
+	.search_form_input {border: 0; background: none; margin: 0; padding: 11px 7px 12px 38px; width: 375px; font-size: 12px; color: #464646; font-family: Arial;}
+	.error404_done {padding: 0 0 50px;}
+		.error404_done a {display: block; width: 167px; height: 41px; line-height: 41px; background: #0ba6fd; text-decoration: none; color: #fff; font-size: 14px; text-transform: uppercase; text-align: center; margin: 0 auto;}
+html body .ui-autocomplete  {z-index:110 !important; background:url(../img/bg_opas.png) 0 0 repeat; border:0; padding:0 1px 1px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;}

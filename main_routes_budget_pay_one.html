@@ -1,0 +1,545 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- css -->
+<link rel="stylesheet" type="text/css" href="css/calendar.css" />
+<link rel="stylesheet" type="text/css" href="css/jquery.ui.all.css" /> 
+<link rel="stylesheet" type="text/css" href="css/jquery.ui.theme.css" />   
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<title>Маршруты - бюджет</title> 
+<script src='https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false'></script>
+</head>
+<body>
+<!-- Шапка-->
+<header class="unauthorizate inited" data-module="header">
+    <div class="left"></div>
+    <div class="right"></div>
+    <div class="layout">
+        <div class="logoparts">
+            <a class="foot" href="/"></a>
+            <a href="/" class="logo"></a>
+        </div>
+        <nav class="main">
+            <a href="/">БЛОГи</a>
+            <a href="/"> МАРШРУТЫ</a>
+            <a href="/">АВИАБИЛЕТЫ</a>
+            <a href="/">ОТЕЛИ</a>
+            <a href="/">туры</a>
+        </nav>
+        <div class="help">
+            <span>Помощь</span>
+            <div class="open">
+                <div class="triangle"></div>
+                <div class="item top">
+                    В КАКОМ РАЗДЕЛЕ ВАМ НУЖНА ПОМОЩЬ?
+                </div>
+                <a href="" class="item avia">АВИАБИЛЕТЫ</a>
+                <a href="" class="item hotel">ОТЕЛИ</a>
+                <a href="" class="item tour">ТУРЫ</a>
+                <a href="" class="item route">МАРШРУТЫ</a>
+                <a href="" class="item trip">ПУТЕШЕСТВИЯ</a>
+                <div class="item bottom">
+                    тел: +7 926 426 68 55
+                    <div class="mail">
+                        hello@travelonline.ru 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="separate"></div>
+        <a onclick="registrationPopup()" class="signup">Регистрация</a>
+        <div class="separate"></div>
+        <a onclick="enterPopup()" class="signin">Вход</a>
+    </div>
+</header>
+<!-- Поиск на карте -->
+<div class="search-menu-map"> 
+	<a href="#" class="search-menu-btn">Поиск мест в Google</a> 
+		<input type="text" placeholder="Поиск" class="searchfield style_input js-searchfield">
+		<ul class="enumlist">
+			<li> Испания, А-Корунья</li>
+			<li> Испания, Виго</li>
+			<li> Испания, Севилья</li>
+		</ul> 
+</div>
+<!-- карта гугл -->
+<div class="map" id="map">
+	 
+</div>
+<div class="share_map share_map_on_route">
+	<ul class="share_map_list js_share_map_list">
+		<li class="active js_share_map_but" style="z-index:3">
+        	<span class="share_map_bg">
+                <span class="share_map_namber">A</span>
+                <span class="share_map_header">Барселона</span>
+                <a href="" class="share_map_close"><img src="img/px.gif" alt="" /></a>
+          	</span>
+        </li>
+        <li class="js_share_map_but" style="z-index:2">
+        	<span class="share_map_bg">
+                <span class="share_map_namber">B</span>
+                <span class="share_map_header">Барселона</span>
+                <a href="" class="share_map_close"><img src="img/px.gif" alt="" /></a>
+          	</span>
+        </li>
+        <li class="js_share_map_but" style="z-index:1">
+        	<span class="share_map_bg">
+                <span class="share_map_namber">C</span>
+                <span class="share_map_header">Барселона</span>
+                <a href="" class="share_map_close"><img src="img/px.gif" alt="" /></a>
+          	</span>
+        </li>
+        <li class="share_map_add"><a href=""><img src="img/share_map_add_img.png" alt="" /></a></li>
+	</ul>
+</div>
+<div class="routes-submenu">
+	<ul class="routes-submenu-inner">
+		<li><a href="#" class="dates">12/06 - 10/07 <span>(21)</span></a></li>
+		<li><a href="main_routes_places.html" class="places ">МЕСТА</a></li>
+		<li><a href="main_routes_routes.html" class="routes ">МАРШРУТЫ</a></li>
+		<li><a href="routes flights.html" class="tickets">АВИАБИЛЕТЫ</a></li>
+		<li><a href="main_routes_hotels.html" class="hotels">ОТЕЛИ</a></li>
+		<li><a href="main_routes_calendar.html" class="calendar">КАЛЕНДАРЬ</a></li>
+		<li><a href="main_routes_budget.html" class="budget active">БЮДЖЕТ</a></li>
+	</ul>
+<div class="search-menu">  
+	<div class="field">
+		<input type="text" placeholder="Поиск" class="searchfield js-searchfield">
+		<ul class="enumlist">
+			<li> Испания, А-Корунья</li>
+			<li> Испания, Виго</li>
+			<li> Испания, Севилья</li>
+		</ul>
+	</div>
+</div>
+
+</div>
+<div class="routes-range">
+	<div class="wrap-routes-range budget-range">  
+		<div class="budget-input-col">
+			<label for="aviatickets">Авиабилеты</label>
+			<input type="text" name="aviatickets" class="style_input" placeholder="0$"/>
+			<label for="living">Проживание</label>
+			<input type="text" name="living" class="style_input" placeholder="0$"/>
+			<label for="food">Питание</label>
+			<input type="text" name="food" class="style_input" placeholder="0$"/>
+		</div>
+		<div class="budget-input-col">
+			<label for="events">Развлечения</label>
+			<input type="text" name="events" class="style_input" placeholder="0$"/>
+			<label for="drinking">Алкоголь</label>
+			<input type="text" name="drinking" class="style_input" placeholder="0$"/>
+			<label for="souveniers">Сувениры</label>
+			<input type="text" name="souveniers" class="style_input" placeholder="0$"/>
+		</div>
+		<div class="budget-input-col">
+			<label for="transport">Транспорт</label>
+			<input type="text" name="transport" class="style_input" placeholder="0$"/>
+			<label for="network">Связь</label>
+			<input type="text" name="network" class="style_input" placeholder="0$"/>
+			<label for="other">Другие </label>
+			<input type="text" name="other" class="style_input" placeholder="0$"/>
+		</div>
+		<div class="budget-input-col budget-txt-col"> 
+			<p class="sum-day">На 1 день:<span>350 <em>$</em></span></p>
+			<p class="summary">ИТОГО:<span>1350 <em>$</em></span></p>
+			<select id="currency" class="currency js-currency">
+            	<option>USD</option>
+				<option>RUB</option>
+                <option>EUR</option>
+			</select>
+		</div>  
+	</div>
+</div>
+
+<!-- Контент -->
+<div class="content content-booking"> 
+	<div class="booking-top">Выберите элементы маршрута <p>Итого:<span><em>0</em> $</span></p></div>	
+	<div class="booking-header">
+		<p>Добавленные</p>
+		<p class="date">17 / 06 / 2013, Понедельник </p>
+	</div>	
+	<div class="booking-body">
+		<div class="booking-block booking-flight">
+			<div class="booking-icon flight-icon"></div>
+			<div class="booking-name flight-name">
+				<p class="flight">MOV<span></span>DPS</p>
+				<p class="aircompany">El Al Israel Airlines</p> 
+				<div class="sum-rating">
+					<div class="val">
+						<div style="width: 80%"></div>
+					</div>
+				</div>
+			</div>
+			<div class="flight-plan">
+				<span class="plane-to"></span>
+                <div class="result_plane_info result_plane_info_to">
+                	<p>Туда, 13 февраля, Суббота</p>
+                	<div class="result_plane_info_clock">
+                    	<span>мест 1</span>
+                    	<h4>22:50 - 11:20 (20 фев)</h4>
+                   		<div class="clear"></div>
+                	</div>
+                 	<div class="result_plane_city color_red">
+                     	<span>12 ч 10 мин</span>
+                     	<a href="#" class="color_red">через Лондон</a>
+                     	<div class="clear"></div>
+             		</div>
+                  	<div class="result_plane_city">
+                    	<span>16 ч 30 мин</span>
+                    	из Домодедово - в Гатвик
+                     	<div class="clear"></div>
+                   	</div>
+                </div>
+				<span class="plane-back"></span>
+                <div class="result_plane_info result_plane_info_back"> 
+                	<p>Обратно, 27 февраля, Пятница</p>
+                	<div class="result_plane_info_clock">
+                    	<span>мест 1</span>
+                    	<h4>12:30 - 9:50 (29 фев)</h4>
+                   		<div class="clear"></div>
+                	</div>
+                 	<div class="result_plane_city color_red">
+                     	<span>12 ч 10 мин</span>
+                     	<a href="#" class="color_red">через Лондон</a>
+                     	<div class="clear"></div>
+             		</div>
+                  	<div class="result_plane_city">
+                    	<span>16 ч 30 мин</span>
+                    	из Домодедово - в Гатвик
+                     	<div class="clear"></div>
+                   	</div>
+                </div>
+			</div>
+			<div class="booking-price flight-price"> 
+				<strong>190 $</strong>
+				<a href="#">обновить</a>
+			</div>
+		</div>
+		<div class="check"><input type="checkbox" id="check-this"></div>
+		<div class="booking-block booking-hotel">
+			<div class="booking-icon hotel-icon">AMS</div>
+			<div class="booking-name hotel-name">
+				<p class="hotel">Hotel Serena</p> 
+				<div class="sum-rating">
+					<div class="val">
+						<div style="width: 80%"></div>
+					</div>
+				</div>
+				<p class="desc"> Via Principe Amedeo 64, Stazione Termini <a href="#" target="_blank">www.serena.com</a></p>
+			</div>
+			<div class="hotel-plan">
+				<p>Двухместный номер с 1 кроватью, вид на сад</p>   
+				<p class="guests"><span>Число гостей:</span> 1</p>
+				<p class="rooms"><span>Номер:</span> 1</p>
+			</div>
+			<div class="booking-price hotel-price"> 
+				<strong>1234 $</strong>
+				<p>3 часа назад</p>
+				<a href="#">обновить</a>
+			</div>
+		</div>
+		<div class="check"><input type="checkbox" id="check-this"></div>  
+	</div>	
+	<div class="booking-header"> 
+		<p class="date">16 / 06 / 2013, Воскресенье</p>
+	</div>	
+	<div class="booking-body"> 
+		<div class="booking-block booking-hotel">
+			<div class="booking-icon hotel-icon">AMS</div>
+			<div class="booking-name hotel-name">
+				<p class="hotel">Hotel Serena</p> 
+				<div class="sum-rating">
+					<div class="val">
+						<div style="width: 80%"></div>
+					</div>
+				</div>
+				<p class="desc"> Via Principe Amedeo 64, Stazione Termini <a href="#" target="_blank">www.serena.com</a></p>
+			</div>
+			<div class="hotel-plan">
+				<p>Двухместный номер с 1 кроватью, вид на сад</p>   
+				<p class="guests"><span>Число гостей:</span> 1</p>
+				<p class="rooms"><span>Номер:</span> 1</p>
+			</div>
+			<div class="booking-price hotel-price"> 
+				<strong>1234 $</strong>
+				<p>3 часа назад</p>
+				<a href="#">обновить</a>
+			</div>
+		</div>
+		<div class="check"><input type="checkbox" id="check-this"></div>  
+	</div>	
+	<div class="booking-summary">
+		<div class="booking-summary-price"><span class="js_payment_sym"><em>0</em> $</span></div>
+		<p>Итого:</p>
+	</div>
+
+    <div class="hotel_oformlenie">
+        <div class="hotel_of_form_name">
+            <div class="guest_form">
+                <div class="pay_form">
+                    <div class="pay_form-item">
+                        <div class="pay_form-input">
+                            <input type="text" class="input_style wid_147" placeholder="Фамилия" />
+                            <div class="input_style_star">*</div>
+                        </div>
+                        <div class="pay_form-input">
+                            <input type="text" class="input_style wid_147" placeholder="Имя" />
+                            <div class="input_style_star">*</div>
+                        </div>
+                        <div class="pay_form-input">
+                            <input type="text" class="input_style wid_32 input_pol" placeholder="Пол" />
+                            <div class="input_style_star">*</div>
+                            <ul class="pol_select">
+                                <li><a href="">М</a></li>
+                                <li><a href="">Ж</a></li>
+                            </ul>
+                        </div>
+                        <div class="pay_form-input">
+                            <input type="text" id="pasportBirth" class="input_style wid_115 input_date" placeholder="Дата рождения" />
+                            <div class="input_style_star">*</div>
+                        </div>
+                        <div class="pay_form-input">
+                            <input type="text" class="input_style wid_98 citizenship_input" placeholder="Гражданство" />
+                            <div class="input_style_star">*</div>
+                            <div class="citizenship_select">
+                                <ul class="citizenship">
+                                    <li><a href="">Беларусь</a></li>
+                                    <li><a href="">Поляка</a></li>
+                                    <li><a href="">Еврей</a></li>
+                                    <li><a href="">Беларусь</a></li>
+                                    <li><a href="">Беларусь</a></li>
+                                    <li><a href="">Беларусь</a></li>
+                                    <li><a href="">Беларусь</a></li>
+                                    <li><a href="">Беларусь</a></li>
+                                    <li><a href="">Беларусь</a></li>
+                                    <li><a href="">Беларусь</a></li>
+                                    <li><a href="">Беларусь</a></li>
+                                    <li><a href="">Беларусь</a></li>
+                                    <li><a href="">Беларусь</a></li>
+                                    <li><a href="">Беларусь</a></li>
+                                    <li><a href="">Беларусь</a></li>
+                                    <li><a href="">Беларусь</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="pay_form-input">
+                            <input type="text" id="pasportDate" class="input_style wid_125 input_date" placeholder="Действителен до" />
+                            <div class="input_style_star">*</div>
+                        </div>
+                        <div class="pay_form-input">
+                            <input type="text" class="input_style wid_145" placeholder="Серия № документа"  />
+                            <div class="input_style_star">*</div>
+                        </div>
+                    </div>
+                    <div class="pay_form-item">
+                        <div class="pay_form-input">
+                            <input type="text" class="input_style wid_147" placeholder="Фамилия" />
+                            <div class="input_style_star">*</div>
+                        </div>
+                        <div class="pay_form-input">
+                            <input type="text" class="input_style wid_147" placeholder="Имя" />
+                            <div class="input_style_star">*</div>
+                        </div>
+                        <div class="pay_form-input">
+                            <input type="text" class="input_style wid_32 input_pol" placeholder="Пол" />
+                            <div class="input_style_star">*</div>
+                            <ul class="pol_select">
+                                <li><a href="">М</a></li>
+                                <li><a href="">Ж</a></li>
+                            </ul>
+                        </div>
+                        <div class="pay_form-input">
+                            <input type="text" id="pasportBirth" class="input_style wid_115 input_date" placeholder="Дата рождения" />
+                            <div class="input_style_star">*</div>
+                        </div>
+                        <div class="pay_form-input">
+                            <input type="text" class="input_style wid_98 citizenship_input" placeholder="Гражданство" />
+                            <div class="input_style_star">*</div>
+                            <div class="citizenship_select">
+                                <ul class="citizenship">
+                                    <li><a href="">Беларусь</a></li>
+                                    <li><a href="">Поляка</a></li>
+                                    <li><a href="">Еврей</a></li>
+                                    <li><a href="">Беларусь</a></li>
+                                    <li><a href="">Беларусь</a></li>
+                                    <li><a href="">Беларусь</a></li>
+                                    <li><a href="">Беларусь</a></li>
+                                    <li><a href="">Беларусь</a></li>
+                                    <li><a href="">Беларусь</a></li>
+                                    <li><a href="">Беларусь</a></li>
+                                    <li><a href="">Беларусь</a></li>
+                                    <li><a href="">Беларусь</a></li>
+                                    <li><a href="">Беларусь</a></li>
+                                    <li><a href="">Беларусь</a></li>
+                                    <li><a href="">Беларусь</a></li>
+                                    <li><a href="">Беларусь</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="pay_form-input">
+                            <input type="text" id="pasportDate" class="input_style wid_125 input_date" placeholder="Действителен до" />
+                            <div class="input_style_star">*</div>
+                        </div>
+                        <div class="pay_form-input">
+                            <input type="text" class="input_style wid_145" placeholder="Серия № документа"  />
+                            <div class="input_style_star">*</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            
+            <div class="guest_form guest_form_one">
+                <h2>Покупатель</h2>
+                <div class="pay_form">
+                    <div class="pay_form-item">
+                        <div class="pay_form-input">
+                            <input type="text" class="input_style wid_160" id="phoneCart" placeholder="Мобильный телефон" />
+                            <div class="input_style_star">*</div>
+                        </div>
+                        <div class="pay_form-input">
+                            <input type="text" class="input_style wid_217" placeholder="Электронная почта" onkeyup="Mail(this);" />
+                            <div class="input_style_star">*</div>
+                        </div>
+                    </div>
+                    <div class="pay_form-item">
+                        <div class="pay_form-input">
+                            <input type="text" class="input_style wid_190" placeholder="Фамилия" />
+                            <div class="input_style_star">*</div>
+                        </div>
+                        <div class="pay_form-input">
+                            <input type="text" class="input_style wid_189" placeholder="Имя" />
+                            <div class="input_style_star">*</div>
+                        </div>
+                    </div>
+                    <div class="pay_form-item">
+                        <div class="pay_form-input">
+                            <input type="text" class="input_style wid_82" placeholder="Индекс" onkeyup="Namber(this);" />
+                            <div class="input_style_star">*</div>
+                        </div>
+                        <div class="pay_form-input">
+                            <input type="text" class="input_style wid_295" placeholder="Адрес" />
+                            <div class="input_style_star">*</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="pay_form-comment">
+                    <p>Укажите действительный адрес электронной почты и телефон. <br />
+    Мы отправляем подтверждение бронирование на этот адрес и свяжемся с вами в случае изменения в вашем бронировании.</p>
+                    <p>* - поля, обязательные для заполнения.</p>
+                </div>
+            </div>
+            <div class="carts_form carts_form_one">
+                <h2>Оплата Картой</h2>
+                <div class="cart_namber_form">
+                    <div class="cart_namber_form-inp"><input type="text" id="NamberCart" class="input_style wid_230" placeholder="Номер Карты" /></div>
+                    <img src="img/img_carts.png" alt="" class="img_carts">
+                </div>
+                <div class="cart_namber_form-info">
+                    <div class="cart_namber_form-h">VALID<br />THRU</div>
+                    <div class="pay_form-input">
+                        <input type="text" class="input_style wid_54 data_mask" placeholder="месяц" />
+                    </div>
+                    <div class="pay_form-input">
+                        <input type="text" class="input_style wid_32 data_mask" placeholder="год" />
+                    </div>
+                    <div class="cart_namber_form-h pad-left_20">CVV/<br />CVC</div>
+                    <div class="pay_form-input">
+                        <input type="text" class="input_style wid_38" id="CVV" />
+                    </div>
+                    <div class="pay_form-help"><img src="img/ico_help.png" alt=""></div>
+                </div>
+                <div class="pay_form-input">
+                    <input type="text" class="input_style wid_397" placeholder="Владелец карты" onkeyup="Latin(this);" />
+                </div>
+                <div class="clear"></div>
+                <div class="cart_namber_form-com">
+                    Перед началом оплаты ознакомтесь пожалуйста <br />
+                    со следующей <a href="">информацией</a>
+                    <p>Передача информации защищена сертификатом SSL от компании DigiCert.
+Сайт в полной мере отвечает стандартам безопасности платёжных систем
+Visa и MasterCard (PCI compliance).</p>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+            <div class="pay_form_comment">
+                <ul class="pay_form_comment-list">
+                    <li>Пожалуйста, прочитайте <a href="">правила анулирования</a> и <a href="">условия бронирования номеров</a>.</li>
+                    <li>Стоимость не включает возможные сборы, взимаемые администрацией отеля напрямую.</li>
+                    <li>Сборы при аннулировании номеров не возвращаются.</li>
+                </ul>
+                <div class="hotel_oformlenie_text">
+                    <div class="check terms-check">
+                        <input type="checkbox" name="terms-check">
+                        <label>я подтверждаю, что я прочитал и принимаю условия, правила и ограничения</label>
+                    </div> 
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="hotel_oformlenie_button"><a href="">ОПАЛТИТЬ <br> <span class="js_payment_sym"><em>0</em> $</span></a></div>
+    </div>
+</div> 
+ 
+<!-- Попап на карте --> 
+<div class="popup_map popup_map_route" style="top:100px; left:60%;">
+	<div class="popup_map_bg">
+		<div class="popup_map_hotel"> 
+			<div class="popup_map_img"><img src="img/routes/popup_map_route.png" alt=""/></div>
+		    <div class="popup_map_hotel_info">
+				<div class="user">
+					<img src="img/routes/owner-pic-temp.png" alt=""/> 
+				</div>
+				<div class="place">
+		    		<h2>Лучшие места Барселоны и Испании</h2>
+					<p class="author">от Инокентия Смактуновского</p>
+				</div>
+		    	<div class="popup_map_hotel_rating">
+		        	<div class="hotel_rating_box">
+		            	2.2
+		            </div>
+		        	<div class="hotel_duration_box">
+		            	<span>5</span> дней
+		            </div>
+		            <div class="clear"></div>
+		        </div>
+		    </div> 
+		    <div class="clear"></div>
+		</div>
+		<div class="popup_map_box_shadow"></div>
+		<div class="popup_map_comment_info">
+			<div class="p_map_comment_info_namber">Достопримечательности, Активный отдых</div> 
+		</div>  
+	</div>
+    <div class="popup_map_footer"></div>
+</div> 
+
+<!-- Попап подсказка карточки --> 
+<div class="popup_cont popup cart_form_help_popup">
+    <div class="popup_in cart_form_help_popup_in">
+        <a href="#" class="close"></a>
+        <div class="cart_form_help_image"><img src="img/cart_help.png" alt="" /></div>
+    </div>
+</div>
+  
+<!-- js -->
+<script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="js/jquery.ui.core.js" type="text/javascript"></script>
+<script src="js/jquery.ui.widget.js" type="text/javascript"></script>
+<script src="js/jquery.ui.mouse.js" type="text/javascript"></script>
+<script src="js/jquery.ui.slider.js" type="text/javascript"></script> 
+<script src="js/jquery.ui.datepicker.js" type="text/javascript"></script> 
+<script src="js/jquery.ui.datepicker-ru.js" type="text/javascript"></script> 
+<script src="js/jquery.carouFredSel-6.2.1-packed.js" type="text/javascript"></script>
+<script src="js/jquery.selectbox-0.2.min.js" type="text/javascript"></script>
+<script src='js/markerclusterer.js' type="text/javascript"></script>
+<script src='js/jquery.mousewheel.js' type="text/javascript"></script>
+<script src='js/jquery.jscrollpane.js' type="text/javascript"></script>
+<script src='js/jquery.maskedinput.min.js' type="text/javascript"></script>
+<script src="js/main.js" type="text/javascript"></script>
+</body>
+</html>
