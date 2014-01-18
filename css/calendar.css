@@ -1,0 +1,77 @@
+div.calendar {
+	display: none;
+	z-index: 77; position: absolute; left:137px;
+	padding: 19px;
+	color: #eaeaea;
+	background:#262626;
+	-webkit-box-shadow: 5px 5px 20px black;
+	   -moz-box-shadow: 5px 5px 20px black;
+			box-shadow: 5px 5px 20px black;
+	width: 526px;
+	position: absolute;
+    margin-top:58px;
+}
+div.calendar .icoPlane { display: inline-block; width: 18px; height: 17px; background: url("../img/avia/planes.png") no-repeat center left; }
+div.calendar .icoPlane.returnFlight { background-position: center right !important; }
+div.calendar .withStop { color: #ff7000; }
+div.calendar .prevdoStraight { color: #FFB880; }
+
+div.calendar table { border-collapse: collapse; table-layout: fixed; }
+div.calendar table td { padding: 0; vertical-align: top; }
+
+div.calendar div.caption { margin: -20px -20px -5px; padding:2px 20px 0 20px; 
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	-webkit-border-radius: 10px 10px 0 0;
+	   -moz-border-radius: 10px 10px 0 0;
+			border-radius: 10px 10px 0 0;
+}
+div.calendar table.caption { width: 100%; overflow: hidden; }
+div.calendar table.caption td.caption>div { min-height: 2em; }
+div.calendar table.caption td { padding: 0 2px; text-align: right; vertical-align: middle; }
+div.calendar table.caption td:first-child { text-align: left; }
+div.calendar table.caption .icoPlane {}
+div.calendar td.caption span.caption1 { color: #0f9dec; font-size: 13px; padding-right:10px;}
+div.calendar td.caption span.caption { font-size: 13px; position: relative; color:#eaeaea; display: inline-block; line-height: 25px;}
+div.calendar td.caption span.dashed { font-size: 80%; margin-left: 1em; color: #8c8c8c; }
+div.calendar td.legend { font-size: 80%; width: 7.5em; position: relative; }
+div.calendar td.legend>span { display: inline-block; }
+
+div.calendar table.months { width: 100%; margin: 10px 0; }
+div.calendar table.months td { height: 25px; vertical-align: baseline; }
+div.calendar table.months td.center { width: 40px; }
+div.calendar table.months td.month { font-size: 14px; font-weight:bold; color:#eaeaea;}
+div.calendar table.months td.month.left { text-align: center; background:url(../img/avia/planes_white_l.png) 0 8px no-repeat; padding:0 28px 0 0; width:130px;}
+div.calendar table.months td.month.right { text-align: center; background:url(../img/avia/planes_white_r.png) 0 8px no-repeat; padding:0 0 0 28px; width:130px;}
+div.calendar table.months td.month span { color: #E4A200; }
+div.calendar table.months td.roll { color: #888; width:42px;}
+div.calendar table.months td.roll.left { text-align: left; }
+div.calendar table.months td.roll.right { text-align: right; }
+div.calendar table.months td.roll>span { cursor: pointer; }
+div.calendar table.months td.roll span.arr { display: inline-block; width: 23px; height: 33px; margin: auto; background: url(../img/avia/arrows.png) no-repeat left top; vertical-align: middle; }
+div.calendar table.months td.roll.right span.arr { background-position: right top; }
+div.calendar table.months td.roll span.month { text-transform: lowercase; font-size: 80%; text-decoration: underline; }
+
+
+div.calendar table.weekdays { width: 100%; margin: 8px 0; }
+div.calendar table.weekdays table { width: 100%; }
+
+div.calendar div.body { width: 100%; overflow: hidden; }
+div.calendar table.roll>tbody>tr>td { padding-left: 36px; }
+div.calendar table.roll>tbody>tr>td:first-child { padding-left: 0; }
+div.calendar table.calendar {  }
+div.calendar table.calendar td { text-align: center; padding:1px 1.5px; }
+div.calendar table.calendar thead td { vertical-align: bottom; color: #7d7d7d; font-size: 10px; text-transform: uppercase; padding: 2px; text-align: center; }
+div.calendar table.calendar thead td.weekend { color: #9e0205; }
+div.calendar table.calendar tbody td { color: #ccc; }
+div.calendar div.day { width:32px; height:32px; position: relative; }
+div.calendar div.day.disabled { color: #444; text-shadow: #333333 1px 1px 0px; background:url(../img/avia/day_bg_dis.png) 0 0 no-repeat;}
+div.calendar div.day.enabled { background: url(../img/avia/day_bg.png) no-repeat left bottom; cursor: pointer; }
+div.calendar div.day.enabled:hover { background-position: left -43px; }
+div.calendar div.day.today { color: #308BE2; }
+div.calendar div.date { line-height: 32px; font-size: 18px; text-align: center; font-weight: bold;}
+div.calendar div.stroke { z-index: 7; position: absolute; margin: auto; top: 0; bottom: 0; left: 3px; right: 2px; height: 0; border-top: 1px solid rgba(0,0,0,0.9); border-bottom: 1px solid rgba(255,255,255,0.2); }
+div.calendar div.day .icoPlane { z-index: 3; position:absolute; margin: auto; top: 0; right: 0; bottom: 0; left:-5px; }
+div.calendar div.flight { text-align: left; }
+div.calendar div.flight div.date { float:right;font-size: 10px; text-align: center; line-height: normal; padding: 3px 4px; display: inline-block; vertical-align: top; }
+.calendar_pointer	{position:absolute; left:50%; top:-14px; margin:0 0 0 -14px; background:url(../img/avia/calendar_pointer.png) 0 0 no-repeat; width:28px; height:14px;}

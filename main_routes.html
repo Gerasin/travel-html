@@ -1,0 +1,228 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- css -->
+<link rel="stylesheet" type="text/css" href="css/calendar.css" />
+<link rel="stylesheet" type="text/css" href="css/jquery.ui.all.css" /> 
+<link rel="stylesheet" type="text/css" href="css/jquery.ui.theme.css" />   
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<title>Маршруты Главная</title> 
+<script src='https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false'></script>
+</head>
+<body>
+<!-- Шапка-->
+<header class="unauthorizate inited" data-module="header">
+    <div class="left"></div>
+    <div class="right"></div>
+    <div class="layout">
+        <div class="logoparts">
+            <a class="foot" href="/"></a>
+            <a href="/" class="logo"></a>
+        </div>
+        <nav class="main">
+            <a href="/">БЛОГи</a>
+            <a href="/"> МАРШРУТЫ</a>
+            <a href="/">АВИАБИЛЕТЫ</a>
+            <a href="/">ОТЕЛИ</a>
+            <a href="/">туры</a>
+        </nav>
+        <div class="help">
+            <span>Помощь</span>
+            <div class="open">
+                <div class="triangle"></div>
+                <div class="item top">
+                    В КАКОМ РАЗДЕЛЕ ВАМ НУЖНА ПОМОЩЬ?
+                </div>
+                <a href="" class="item avia">АВИАБИЛЕТЫ</a>
+                <a href="" class="item hotel">ОТЕЛИ</a>
+                <a href="" class="item tour">ТУРЫ</a>
+                <a href="" class="item route">МАРШРУТЫ</a>
+                <a href="" class="item trip">ПУТЕШЕСТВИЯ</a>
+                <div class="item bottom">
+                    тел: +7 926 426 68 55
+                    <div class="mail">
+                        hello@travelonline.ru 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="separate"></div>
+        <a onclick="registrationPopup()" class="signup">Регистрация</a>
+        <div class="separate"></div>
+        <a onclick="enterPopup()" class="signin">Вход</a>
+    </div>
+</header>
+<!-- Главная маршруты -->
+<div class="fixed-content" data-type="top" data-speed="2">
+    <div class="routes_main_cont routes_main_cont_up">
+        <div class="routes_main_comment">
+            <h1>Спланируй свой маршурт за 15 минут!</h1>
+            <p>Исследуйте места и маршруты других путешественников и добавляйте свои.</p> 
+             <nav class="routes_main_menu">
+                <a href="#" class="routes_menu_ico_3 active"><span>места</span></a>
+                <a href="#" class="routes_menu_ico_4 "><span>маршруты</span></a>
+                <a href="#" class="routes_menu_ico_5 "><span>авиабилеты</span></a>
+                <a href="#" class="routes_menu_ico_6 "><span>отели</span></a>  
+                <a href="#" class="routes_menu_ico_8 "><span>деньги</span></a>  
+             </nav>
+        </div>
+    </div>
+    
+    <div class="hotel_main_slider_cent">
+        <div id="hotel_main_slider" class="hotel_main_slider">
+            <div class="hotel_main routes_main">
+                    <img src="img/routes/routes_main.jpg" class="routes_main_img" alt="" />
+            </div>
+            <div class="hotel_main routes_main">
+                    <img src="img/avia/avia_main.jpg" class="hotel_main_img" alt="" />
+            </div>
+            <div class="hotel_main routes_main">
+                    <img src="img/routes/routes_main.jpg" class="routes_main_img" alt="" />
+            </div>
+            <div class="hotel_main routes_main">
+                    <img src="img/avia/avia_main.jpg" class="hotel_main_img" alt="" />
+            </div>
+            <div class="hotel_main routes_main">
+                    <img src="img/routes/routes_main.jpg" class="routes_main_img" alt="" />
+            </div>
+        </div>
+    </div>
+</div>
+<div class="relative-content">
+<div class="map_search search_hotels search_hotels_on_routes">
+	<div class="map_search_center">
+    	<input name="" type="text" class="style_input input_search_adres" placeholder="Куда вы хотите поехать?" />
+        <input name="" type="text" id="datepicker-from-main" class="style_input input_search_date" placeholder="Начало " />
+        <input name="" type="text" id="datepicker-to-main" class="style_input input_search_date" placeholder="Окончание" />  
+        <div class="search_button">
+        	<a href="" class="search_button_link">Построить</a>
+        </div>
+    </div>
+</div>
+   
+<div class="hotel_slider route_comment_slider">
+	<ul id="hotel_slider_min_l">
+		<li><a href=""><img src="img/hotel/img_1.jpg" alt=""><div class="route_user_comment"><div class="wrap-userpic"><img src="img/routes/route-slider-userpic-temp.jpg" alt=""/></div><div class="wrap-usertext"><p class="routename">Римские каникулы</p><p class="username">Мария Курочкина</p></div><div class="route-time">7 дн.</span></div></div></a><span class="hotel_slider_bg"></span>
+		</li>
+        <li><a href=""><img src="img/hotel/img_2.jpg" alt=""><div class="route_user_comment"><div class="wrap-userpic"><img src="img/routes/route-slider-userpic-temp.jpg" alt=""/></div><div class="wrap-usertext"><p class="routename">Венеция</p><p class="username">Мария Курочкина</p></div><div class="route-time">7 дн.</span></div></div></a><span class="hotel_slider_bg"></span>
+		</li>
+        <li><img src="img/hotel/img_17.jpg" alt=""><div class="route_user_comment"><div class="wrap-userpic"><img src="img/routes/route-slider-userpic-temp.jpg" alt=""/></div><div class="wrap-usertext"><p class="routename">Норвегия</p><p class="username">Мария Курочкина</p></div><div class="route-time">72 ч.</span></div></div></a><span class="hotel_slider_bg"></span>
+		</li>
+        <li><img src="img/hotel/img_18.jpg" alt=""><div class="route_user_comment"><div class="wrap-userpic"><img src="img/routes/route-slider-userpic-temp.jpg" alt=""/></div><div class="wrap-usertext"><p class="routename">Осень в Цюрихе</p><p class="username">Мария Курочкина</p></div><div class="route-time">3 дн.</span></div></div></a><span class="hotel_slider_bg"></span>
+		</li>
+        <li><img src="img/hotel/img_5.jpg" alt=""><div class="route_user_comment"><div class="wrap-userpic"><img src="img/routes/route-slider-userpic-temp.jpg" alt=""/></div><div class="wrap-usertext"><p class="routename">Москва</p><p class="username">Мария Курочкина</p></div><div class="route-time">3 дн.</span></div></div></a><span class="hotel_slider_bg"></span>
+		</li>
+        <li><img src="img/hotel/img_19.jpg" alt=""><div class="route_user_comment"><div class="wrap-userpic"><img src="img/routes/route-slider-userpic-temp.jpg" alt=""/></div><div class="wrap-usertext"><p class="routename">Я люблю Париж!</p><p class="username">Мария Курочкина</p></div><div class="route-time">3 дн.</span></div></div></a><span class="hotel_slider_bg"></span>
+		</li>
+        <li><img src="img/hotel/img_20.jpg" alt=""><div class="route_user_comment"><div class="wrap-userpic"><img src="img/routes/route-slider-userpic-temp.jpg" alt=""/></div><div class="wrap-usertext"><p class="routename">Серфинг на Гоа</p><p class="username">Мария Курочкина</p></div><div class="route-time">4 дн.</span></div></div></a><span class="hotel_slider_bg"></span>
+		</li>
+        <li><img src="img/hotel/img_3.jpg" alt=""><div class="route_user_comment"><div class="wrap-userpic"><img src="img/routes/route-slider-userpic-temp.jpg" alt=""/></div><div class="wrap-usertext"><p class="routename">Waterworld</p><p class="username">Глеб Кушедов</p></div><div class="route-time">2 дн.</span></div></div></a><span class="hotel_slider_bg"></span>
+		</li> 
+        <li><a href=""><img src="img/hotel/img_1.jpg" alt=""><div class="route_user_comment"><div class="wrap-userpic"><img src="img/routes/route-slider-userpic-temp.jpg" alt=""/></div><div class="wrap-usertext"><p class="routename">Римские каникулы</p><p class="username">Мария Курочкина</p></div><div class="route-time">7 дн.</span></div></div></a><span class="hotel_slider_bg"></span>
+		</li>
+        <li><a href=""><img src="img/hotel/img_2.jpg" alt=""><div class="route_user_comment"><div class="wrap-userpic"><img src="img/routes/route-slider-userpic-temp.jpg" alt=""/></div><div class="wrap-usertext"><p class="routename">Венеция</p><p class="username">Мария Курочкина</p></div><div class="route-time">7 дн.</span></div></div></a><span class="hotel_slider_bg"></span>
+		</li>
+        <li><img src="img/hotel/img_17.jpg" alt=""><div class="route_user_comment"><div class="wrap-userpic"><img src="img/routes/route-slider-userpic-temp.jpg" alt=""/></div><div class="wrap-usertext"><p class="routename">Норвегия</p><p class="username">Мария Курочкина</p></div><div class="route-time">72 ч.</span></div></div></a><span class="hotel_slider_bg"></span>
+		</li>
+        <li><img src="img/hotel/img_18.jpg" alt=""><div class="route_user_comment"><div class="wrap-userpic"><img src="img/routes/route-slider-userpic-temp.jpg" alt=""/></div><div class="wrap-usertext"><p class="routename">Осень в Цюрихе</p><p class="username">Мария Курочкина</p></div><div class="route-time">3 дн.</span></div></div></a><span class="hotel_slider_bg"></span>
+		</li>
+        <li><img src="img/hotel/img_5.jpg" alt=""><div class="route_user_comment"><div class="wrap-userpic"><img src="img/routes/route-slider-userpic-temp.jpg" alt=""/></div><div class="wrap-usertext"><p class="routename">Москва</p><p class="username">Мария Курочкина</p></div><div class="route-time">3 дн.</span></div></div></a><span class="hotel_slider_bg"></span>
+		</li>
+        <li><img src="img/hotel/img_19.jpg" alt=""><div class="route_user_comment"><div class="wrap-userpic"><img src="img/routes/route-slider-userpic-temp.jpg" alt=""/></div><div class="wrap-usertext"><p class="routename">Я люблю Париж!</p><p class="username">Мария Курочкина</p></div><div class="route-time">3 дн.</span></div></div></a><span class="hotel_slider_bg"></span>
+		</li>
+        <li><img src="img/hotel/img_20.jpg" alt=""><div class="route_user_comment"><div class="wrap-userpic"><img src="img/routes/route-slider-userpic-temp.jpg" alt=""/></div><div class="wrap-usertext"><p class="routename">Серфинг на Гоа</p><p class="username">Мария Курочкина</p></div><div class="route-time">4 дн.</span></div></div></a><span class="hotel_slider_bg"></span>
+		</li>
+        <li><img src="img/hotel/img_3.jpg" alt=""><div class="route_user_comment"><div class="wrap-userpic"><img src="img/routes/route-slider-userpic-temp.jpg" alt=""/></div><div class="wrap-usertext"><p class="routename">Waterworld</p><p class="username">Глеб Кушедов</p></div><div class="route-time">2 дн.</span></div></div></a><span class="hotel_slider_bg"></span>
+		</li> 
+	</ul>
+</div>
+<div class="hotel_slider hotel_slider_r route_comment_slider">
+	<ul id="hotel_slider_min_r">
+		<li><a href=""><img src="img/hotel/img_21.jpg" alt=""><div class="route_user_comment"><div class="wrap-userpic"><img src="img/routes/route-slider-userpic-temp.jpg" alt=""/></div><div class="wrap-usertext"><p class="routename">Everything In Itself</p><p class="username">Мария Курочкина</p></div><div class="route-time">1 дн.</span></div></div></a><span class="hotel_slider_bg"></span>
+		</li>
+        <li><a href=""><img src="img/hotel/img_22.jpg" alt=""><div class="route_user_comment"><div class="wrap-userpic"><img src="img/routes/route-slider-userpic-temp.jpg" alt=""/></div><div class="wrap-usertext"><p class="routename">The Mystic of Venice</p><p class="username">Мария Курочкина</p></div><div class="route-time">2 дн.</span></div></div></a><span class="hotel_slider_bg"></span>
+		</li>
+        <li><img src="img/hotel/img_23.jpg" alt=""><div class="route_user_comment"><div class="wrap-userpic"><img src="img/routes/route-slider-userpic-temp.jpg" alt=""/></div><div class="wrap-usertext"><p class="routename">Лондонский мост</p><p class="username">Мария Курочкина</p></div><div class="route-time">2 дн.</span></div></div></a><span class="hotel_slider_bg"></span>
+		</li>
+        <li><img src="img/hotel/img_24.jpg" alt=""><div class="route_user_comment"><div class="wrap-userpic"><img src="img/routes/route-slider-userpic-temp.jpg" alt=""/></div><div class="wrap-usertext"><p class="routename">Castle (Sweden)</p><p class="username">Мария Курочкина</p></div><div class="route-time">1 дн.</span></div></div></a><span class="hotel_slider_bg"></span>
+		</li>
+        <li><img src="img/hotel/img_13.jpg" alt=""><div class="route_user_comment"><div class="wrap-userpic"><img src="img/routes/route-slider-userpic-temp.jpg" alt=""/></div><div class="wrap-usertext"><p class="routename">Arc de Triomphee</p><p class="username">Мария Курочкина</p></div><div class="route-time">11 ч.</span></div></div></a><span class="hotel_slider_bg"></span>
+		</li>
+        <li><img src="img/hotel/img_25.jpg" alt=""><div class="route_user_comment"><div class="wrap-userpic"><img src="img/routes/route-slider-userpic-temp.jpg" alt=""/></div><div class="wrap-usertext"><p class="routename">Bled Blue Hour</p><p class="username">Мария Курочкина</p></div><div class="route-time">2 дн.</span></div></div></a><span class="hotel_slider_bg"></span>
+		</li>
+        <li><img src="img/hotel/img_26.jpg" alt=""><div class="route_user_comment"><div class="wrap-userpic"><img src="img/routes/route-slider-userpic-temp.jpg" alt=""/></div><div class="wrap-usertext"><p class="routename">The Rock Tower</p><p class="username">Мария Курочкина</p></div><div class="route-time">1 дн.</span></div></div></a><span class="hotel_slider_bg"></span>
+		</li>
+        <li><img src="img/hotel/img_27.jpg" alt=""><div class="route_user_comment"><div class="wrap-userpic"><img src="img/routes/route-slider-userpic-temp.jpg" alt=""/></div><div class="wrap-usertext"><p class="routename">Maranola Night</p><p class="username">Глеб Кушедов</p></div><div class="route-time">2 дн.</span></div></div></a><span class="hotel_slider_bg"></span> 
+		</li> 
+        <li><a href=""><img src="img/hotel/img_21.jpg" alt=""><div class="route_user_comment"><div class="wrap-userpic"><img src="img/routes/route-slider-userpic-temp.jpg" alt=""/></div><div class="wrap-usertext"><p class="routename">Everything In Itself</p><p class="username">Мария Курочкина</p></div><div class="route-time">1 дн.</span></div></div></a><span class="hotel_slider_bg"></span>
+		</li>
+        <li><a href=""><img src="img/hotel/img_22.jpg" alt=""><div class="route_user_comment"><div class="wrap-userpic"><img src="img/routes/route-slider-userpic-temp.jpg" alt=""/></div><div class="wrap-usertext"><p class="routename">The Mystic of Venice</p><p class="username">Мария Курочкина</p></div><div class="route-time">2 дн.</span></div></div></a><span class="hotel_slider_bg"></span>
+		</li>
+        <li><img src="img/hotel/img_23.jpg" alt=""><div class="route_user_comment"><div class="wrap-userpic"><img src="img/routes/route-slider-userpic-temp.jpg" alt=""/></div><div class="wrap-usertext"><p class="routename">Лондонский мост</p><p class="username">Мария Курочкина</p></div><div class="route-time">2 дн.</span></div></div></a><span class="hotel_slider_bg"></span>
+		</li>
+        <li><img src="img/hotel/img_24.jpg" alt=""><div class="route_user_comment"><div class="wrap-userpic"><img src="img/routes/route-slider-userpic-temp.jpg" alt=""/></div><div class="wrap-usertext"><p class="routename">Castle (Sweden)</p><p class="username">Мария Курочкина</p></div><div class="route-time">1 дн.</span></div></div></a><span class="hotel_slider_bg"></span>
+		</li>
+        <li><img src="img/hotel/img_13.jpg" alt=""><div class="route_user_comment"><div class="wrap-userpic"><img src="img/routes/route-slider-userpic-temp.jpg" alt=""/></div><div class="wrap-usertext"><p class="routename">Arc de Triomphee</p><p class="username">Мария Курочкина</p></div><div class="route-time">11 ч.</span></div></div></a><span class="hotel_slider_bg"></span>
+		</li>
+        <li><img src="img/hotel/img_25.jpg" alt=""><div class="route_user_comment"><div class="wrap-userpic"><img src="img/routes/route-slider-userpic-temp.jpg" alt=""/></div><div class="wrap-usertext"><p class="routename">Bled Blue Hour</p><p class="username">Мария Курочкина</p></div><div class="route-time">2 дн.</span></div></div></a><span class="hotel_slider_bg"></span>
+		</li>
+        <li><img src="img/hotel/img_26.jpg" alt=""><div class="route_user_comment"><div class="wrap-userpic"><img src="img/routes/route-slider-userpic-temp.jpg" alt=""/></div><div class="wrap-usertext"><p class="routename">The Rock Tower</p><p class="username">Мария Курочкина</p></div><div class="route-time">1 дн.</span></div></div></a><span class="hotel_slider_bg"></span>
+		</li>
+        <li><img src="img/hotel/img_27.jpg" alt=""><div class="route_user_comment"><div class="wrap-userpic"><img src="img/routes/route-slider-userpic-temp.jpg" alt=""/></div><div class="wrap-usertext"><p class="routename">Maranola Night</p><p class="username">Глеб Кушедов</p></div><div class="route-time">2 дн.</span></div></div></a><span class="hotel_slider_bg"></span> 
+		</li> 
+	</ul>
+</div>
+<div class="hotel_main_reg"> 
+	<h2>Зарегистрируйся, это бесплатно и займет всего 10 секунд!</h2>
+    <a href="" class="hotel_main_reg_but">Присоединиться</a>
+</div>
+</div>
+<!-- Конец шапки -->
+<!-- Подвал  -->
+<div class="footer_main">
+	 <nav class="footer_main_menu">
+     	<a href="" class="footer_menu_ico_1">О нас</a>
+        <a href="" class="footer_menu_ico_2">Помощь</a>
+        <a href="" class="footer_menu_ico_3">Блоги</a>
+        <a href="" class="footer_menu_ico_4">Маршруты</a>
+        <a href="" class="footer_menu_ico_5 active">Авиабилеты</a>
+        <a href="" class="footer_menu_ico_6">Отели</a>
+        <a href="" class="footer_menu_ico_7">Туры</a>
+     </nav>
+     <div class="footer_soc">
+     	<h4>Мы в социальных сетях</h4>
+        <ul class="footer_soc_ico">
+        	<li><a href=""><img src="img/soc_vk.png" alt="" /></a></li>
+            <li><a href=""><img src="img/soc_fb.png" alt="" /></a></li>
+            <li><a href=""><img src="img/soc_g.png" alt="" /></a></li>
+        </ul>
+     </div>
+     <div class="footer_main_info">
+     	<div class="copyright">
+        	&copy; Travelonline.ru 2004 - 2013
+        </div>
+        <div class="footer_mail">
+        	Email: <a href="mailto:info@travelonline.ru">info@travelonline.ru</a>
+        </div>
+        <div class="footer_phone">
+        	Тел: <span>+ 7 495 <strong>777-77-77</strong></span>
+        </div>
+     </div>
+</div>
+<!-- Конец подвал  --> 
+  
+<!-- js -->
+<script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="js/jquery.ui.core.js" type="text/javascript"></script>
+<script src="js/jquery.ui.widget.js" type="text/javascript"></script>
+<script src="js/jquery.ui.mouse.js" type="text/javascript"></script>
+<script src="js/jquery.ui.slider.js" type="text/javascript"></script> 
+<script src="js/jquery.ui.datepicker.js" type="text/javascript"></script> 
+<script src="js/jquery.ui.datepicker-ru.js" type="text/javascript"></script> 
+<script src="js/jquery.carouFredSel-6.2.1-packed.js" type="text/javascript"></script>
+<script src="js/jquery.selectbox-0.2.min.js" type="text/javascript"></script>
+<script src='js/markerclusterer.js' type="text/javascript"></script>
+<script src="js/main.js" type="text/javascript"></script>
+</body>
+</html>

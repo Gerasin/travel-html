@@ -1,0 +1,263 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- css -->
+<link rel="stylesheet" type="text/css" href="css/calendar.css" />
+<link rel="stylesheet" type="text/css" href="css/jquery.ui.all.css" /> 
+<link rel="stylesheet" type="text/css" href="css/jquery.ui.theme.css" />   
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<title>Помощ</title> 
+<script src='https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false'></script>
+</head>
+<body>
+<!-- Шапка-->
+<header class="unauthorizate inited" data-module="header">
+    <div class="left"></div>
+    <div class="right"></div>
+    <div class="layout">
+        <div class="logoparts">
+            <a class="foot" href="/"></a>
+            <a href="/" class="logo"></a>
+        </div>
+        <nav class="main">
+            <a href="/">БЛОГи</a>
+            <a href="/"> МАРШРУТЫ</a>
+            <a href="/">АВИАБИЛЕТЫ</a>
+            <a href="/">ОТЕЛИ</a>
+            <a href="/">туры</a>
+        </nav>
+        <div class="help">
+            <span>Помощь</span>
+            <div class="open">
+                <div class="triangle"></div>
+                <div class="item top">
+                    В КАКОМ РАЗДЕЛЕ ВАМ НУЖНА ПОМОЩЬ?
+                </div>
+                <a href="" class="item avia">АВИАБИЛЕТЫ</a>
+                <a href="" class="item hotel">ОТЕЛИ</a>
+                <a href="" class="item tour">ТУРЫ</a>
+                <a href="" class="item route">МАРШРУТЫ</a>
+                <a href="" class="item trip">ПУТЕШЕСТВИЯ</a>
+                <div class="item bottom">
+                    тел: +7 926 426 68 55
+                    <div class="mail">
+                        hello@travelonline.ru 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="separate"></div>
+        <a onclick="registrationPopup()" class="signup">Регистрация</a>
+        <div class="separate"></div>
+        <a onclick="enterPopup()" class="signin">Вход</a>
+    </div>
+</header>
+<!-- Помощ  -->
+<div class="crubs">
+    <ul>
+        <li>Помощь</li>
+    </ul>
+</div>
+<div class="help_page">
+    <div class="help_page-left">
+        <ul class="help_page-menu">
+            <li><a href="" class="help_link_1">С чего начать?</a>
+                <ul>
+                    <li class="help_page-close"><a href="">Вернуться</a></li>
+                    <li><a href="" class="help_link_2" rel="help_1_1">С себя</a>
+                        <ul>
+                            <li class="help_page-close2"><a href="">Вернуться</a></li>
+                            <li><a href="" class="help_link_click" rel="help_1_1_1">Воставь</a></li>
+                            <li><a href="" class="help_link_click" rel="help_1_1_2">Налей</a></li>
+                            <li><a href="" class="help_link_click" rel="help_1_1_3">Выпей</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="" class="help_link_2" rel="help_1_1">С друга</a>
+                        <ul>
+                            <li class="help_page-close2"><a href="">Вернуться</a></li>
+                            <li><a href="" class="help_link_click" rel="help_1_1_1">Воставь 2</a></li>
+                            <li><a href="" class="help_link_click" rel="help_1_1_2">Налей 2</a></li>
+                            <li><a href="" class="help_link_click" rel="help_1_1_3">Выпей 2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="" class="help_link_click" rel="help_1_3">Лучше смени родину</a></li>
+                </ul>
+            </li>
+            <li><a href="" class="help_link_1">Посты</a>
+                <ul>
+                    <li class="help_page-close"><a href="">Вернуться</a></li>
+                    <li><a href="" class="help_link_click" rel="help_2_1">Посты 1</a></li>
+                    <li><a href="" class="help_link_click" rel="help_2_2">Посты 2</a></li>
+                    <li><a href="" class="help_link_click" rel="help_2_3">Посты 3</a></li>
+                </ul>
+            </li>
+            <li><a href="" class="help_link_1">Лента</a>
+                <ul>
+                    <li class="help_page-close"><a href="">Вернуться</a></li>
+                    <li><a href="" class="help_link_click" rel="help_3_1">Лента 1</a></li>
+                    <li><a href="" class="help_link_click" rel="help_3_2">Лента 2</a></li>
+                    <li><a href="" class="help_link_click" rel="help_3_3">Лента 3</a></li>
+                </ul>
+            </li>
+            <li><a href="" class="help_link_click" rel="help_4_1">Поиск</a></li>
+            <li><a href="" class="help_link_click" rel="help_5_1">Профиль</a></li>
+        </ul>
+    </div>
+    <div class="help_page-right">
+        <div class="pointer_help_page"></div>
+        <div id="help_error" class="help_page-item">
+            <h2>Такой раздел еще не создали</h2>
+            <p>Приносим свои глубочайшие извинения</p>
+        </div>
+        <div id="help_0_0" class="help_page-item" style="display: block;">
+            <h2>Что такое лента и для чего она нужна?</h2>
+            <p>В ленте вы можете смотреть обновления ваших друзей, а также других зарегистрированных 
+пользователей на нашем сайте. Для этого лишь нужно нажать кнопку “Обновление друзей”. </p>
+            <p> <br /> </p>
+            <img src="img/help/help_img.jpg" alt="" />
+            <div class="help_link_detals"><a href="">Читать далее</a></div>
+            <div class="help_detals-cont">
+                <h2>Что такое лента и для чего она нужна?</h2>
+                <p>В ленте вы можете смотреть обновления ваших друзей, а также других зарегистрированных 
+пользователей на нашем сайте. Для этого лишь нужно нажать кнопку “Обновление друзей”. </p>
+                <h2>Что такое лента и для чего она нужна?</h2>
+                <p>В ленте вы можете смотреть обновления ваших друзей, а также других зарегистрированных 
+пользователей на нашем сайте. Для этого лишь нужно нажать кнопку “Обновление друзей”. </p>
+                <h2>Что такое лента и для чего она нужна?</h2>
+                <p>В ленте вы можете смотреть обновления ваших друзей, а также других зарегистрированных 
+пользователей на нашем сайте. Для этого лишь нужно нажать кнопку “Обновление друзей”. </p>
+            </div>
+        </div>
+        <div id="help_1_1" class="help_page-item">
+            <h2>С себя</h2>
+            <p>В ленте вы можете смотреть обновления ваших друзей, а также других зарегистрированных 
+пользователей на нашем сайте. Для этого лишь нужно нажать кнопку “Обновление друзей”. </p>
+            <p> <br /> </p>
+        </div>
+        <div id="help_1_2" class="help_page-item">
+            <h2>С друга</h2>
+            <p>В ленте вы можете смотреть обновления ваших друзей, а также других зарегистрированных 
+пользователей на нашем сайте. Для этого лишь нужно нажать кнопку “Обновление друзей”. </p>
+            <p> <br /> </p>
+        </div>
+        <div id="help_1_3" class="help_page-item">
+            <h2>Лучше смени родину</h2>
+            <p>В ленте вы можете смотреть обновления ваших друзей, а также других зарегистрированных 
+пользователей на нашем сайте. Для этого лишь нужно нажать кнопку “Обновление друзей”. </p>
+            <p> <br /> </p>
+        </div>
+        <div id="help_2_1" class="help_page-item">
+            <h2>Посты 1</h2>
+            <p>В ленте вы можете смотреть обновления ваших друзей, а также других зарегистрированных 
+пользователей на нашем сайте. Для этого лишь нужно нажать кнопку “Обновление друзей”. </p>
+            <p> <br /> </p>
+        </div>
+        <div id="help_2_2" class="help_page-item">
+            <h2>Посты 2</h2>
+            <p>В ленте вы можете смотреть обновления ваших друзей, а также других зарегистрированных 
+пользователей на нашем сайте. Для этого лишь нужно нажать кнопку “Обновление друзей”. </p>
+            <p> <br /> </p>
+        </div>
+        <div id="help_2_3" class="help_page-item">
+            <h2>Посты 3</h2>
+            <p>В ленте вы можете смотреть обновления ваших друзей, а также других зарегистрированных 
+пользователей на нашем сайте. Для этого лишь нужно нажать кнопку “Обновление друзей”. </p>
+            <p> <br /> </p>
+        </div>
+    </div>
+    <div class="clear"></div>
+
+</div>
+
+<!-- Подвал  -->
+<div class="footer_main">
+    <div class="fooer_tab">
+        <div class="fooer_tab_box">
+            <ul class="fooer_tab_link">
+                <li><strong><a href="">Направления</a></strong></li>
+                <li><a href="">Европа</a></li>
+                <li><a href="">Азия</a></li>
+                <li><a href="">Африка</a></li>
+                <li><a href="">Ближний восток</a></li>
+                <li><a href="">Северная Америка</a></li>
+                <li><a href="">Южная Америка</a></li>
+                <li><a href="">Австралия & Океания</a></li>
+            </ul>
+            <ul class="fooer_tab_link">
+                <li><strong><a href="">Путеводители</a></strong></li>
+                <li><a href="">Пляжи</a></li>
+                <li><a href="">Культура & История</a></li>
+                <li><a href="">Острова</a></li>
+                <li><a href="">Дорожные путешествия</a></li>
+                <li><a href="">Романтика</a></li>
+                <li><a href="">Кафе & Рестораны</a></li>
+                <li><a href="">Ночная жизнь</a></li>
+                <li><a href="">Шоппинг</a></li>
+                <li><a href="">События</a></li>
+                <li><a href="">Природа</a></li>
+            </ul>
+            <ul class="fooer_tab_link">
+                <li><strong><a href="">Бронирование</a></strong></li>
+                <li><a href="">Авиабилеты</a></li>
+                <li><a href="">Отели</a></li>
+            </ul>
+            <ul class="fooer_tab_link">
+                <li><strong><a href="">Помощь</a></strong></li>
+                <li><a href="">FAQ</a></li>
+                <li><a href="">Блоги</a></li>
+                <li><a href="">Маршруты</a></li>
+                <li><a href="">Профиль</a></li>
+                <li><a href="">Авиабилеты</a></li>
+                <li><a href="">Отели </a></li>
+                <li><a href="">Маршруты</a></li>
+            </ul>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="footer_menu">
+        <ul>
+            <li><a href="">О нас</a></li>
+            <li><a href="">Контакты</a></li>
+            <li><a href="">Пользовательское соглашение</a></li>
+            <li><a href="">Политика конфеденциальности</a></li>
+        </ul>
+    </div>
+     <div class="footer_main_info">
+        <div class="footer_soc">
+            <div class="footer_soc_header">Мы в соц. сетях:</div>
+            <div class="popup_soc_link footer_soc_footer">
+                <a href="" class="fb"></a>
+                <a href="" class="vk"></a>
+                <a href="" class="gplus"></a>
+                <a href="" class="lj"></a>
+            </div>
+        </div>
+        <div class="footer_mail">
+        	Email: <a href="mailto:info@travelonline.ru">info@travelonline.ru</a>
+        </div>
+        <div class="footer_phone">
+        	Тел: <span><strong>+ 7 495 777-77-77</strong></span>
+        </div>
+     </div>
+     <div class="copyright">
+        &copy; Travelonline.ru 2004 - 2013. All rights reserved. No part of this site may be reproduced without our written permission.
+    </div>
+</div>
+<!-- Конец подвал  --> 
+  
+<!-- js -->
+<script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="js/jquery.ui.core.js" type="text/javascript"></script>
+<script src="js/jquery.ui.widget.js" type="text/javascript"></script>
+<script src="js/jquery.ui.mouse.js" type="text/javascript"></script>
+<script src="js/jquery.ui.slider.js" type="text/javascript"></script> 
+<script src="js/jquery.ui.datepicker.js" type="text/javascript"></script> 
+<script src="js/jquery.ui.datepicker-ru.js" type="text/javascript"></script> 
+<script src="js/jquery.carouFredSel-6.2.1-packed.js" type="text/javascript"></script>
+<script src="js/jquery.selectbox-0.2.min.js" type="text/javascript"></script>
+<script src='js/markerclusterer.js' type="text/javascript"></script>
+<script src="js/ap_help.js" type="text/javascript"></script>
+<script src="js/main.js" type="text/javascript"></script>
+</body>
+</html>

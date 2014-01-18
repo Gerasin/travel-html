@@ -1,0 +1,137 @@
+ /*==== маршруты - календарь ====*/ 
+.routes-submenu-inner li a .c-events {position:absolute; top:6px; right:12px; background:#f15a22; display:block; padding:4px; -webkit-border-radius:20px; -moz-border-radius:20px; border-radius:20px; color:#fff; font-size:12px; font-weight:bold; text-shadow:1px 1px 1px #666;}
+
+.main-content-wrapper {overflow: hidden;}
+.routes-range {z-index: 10;}
+.hidden-block { position: absolute; top:0; height:153px; background: #151515; z-index: 11; }
+.hidden-left {left:0;}
+.hidden-right {right:0;}
+
+.wrap-routes-range .caroufredsel_wrapper {margin: 0 70px !important; overflow: visible !important;}
+.places-carousel {width:850px; margin:0 auto; height:188px; position:relative;}
+.navbtn {position:absolute; top:52px; background:url(../img/routes/place-navbtn.png) 0 0 no-repeat; width:23px; height:46px; display:block; z-index: 12;} 
+.navbtn.btn-prev {left:10px;}
+.navbtn.btn-next {background-position: -23px 0; right:10px;}
+.places-carousel ul {height:154px; width:850px; margin: 0 auto;}
+.place-col {float:left; list-style:none; padding: 10px 0 0 15px;}
+.place-col:first-child { padding: 10px 0 0;}
+.place-small-item {position:relative; display:block; width:185px; height:33px; font-size:12px; color:#868686; padding:3px 7px; margin: 0 0 5px 0;  -webkit-border-radius:3px; -moz-border-radius:3px; border-radius:3px; cursor:pointer}
+.place-small-item:hover, .place-small-item.selected {background:#f15a23; color:#fff;}
+.place-small-item .num {float:left; width: 15px; display: block; text-align: center; padding:8px 3px 0 0;}
+.place-small-item img {float:left; margin:  0;}
+.place-small-item .city {float:left; padding: 0 0 0 6px;}
+.place-small-item .city .place {display:block;}
+.place-small-item .p-close {position: absolute;  top: 11px; right: 10px; background:url(../img/routes/p-close.png) 0 0 no-repeat; width:15px; height:15px;  }
+.place-small-item:hover .p-close, .place-small-item.selected .p-close {background-position: 0 -15px;}
+
+.tour-calendar-container {background: #f7f9fb;padding: 0 0 20px;}
+.tour-calendar * {position: static;}
+.tour-calendar { width: 960px; margin: 0 auto; display: block;}
+.fc-event-vert .fc-event-inner {position: relative !important;}
+.fc-event-inner:hover {background: #c6e3f3;}
+.fc .ui-resizable-handle {position: absolute !important;}
+
+
+.fc {background: #f7f9fb;}
+.fc-content {margin: -6px 0 0;}
+.fc-header-right {margin:0;}
+.fc-state-default { background: none; text-shadow: none; border: 0; box-shadow: none; margin: -34px 0 0; height: 34px; border-left: 1px solid #1d1d1d; box-shadow: inset 1px 0px 0px #505050; padding: 0 14px;}
+.fc-state-default.fc-corner-left,
+.fc-state-default.fc-corner-right {border-radius:0; position:relative; right:-15px;}
+.fc-text-arrow {background:url(../img/tour-calendar/fc-text-arrow.png) 0 0 no-repeat; width: 12px; height: 17px; font-size: 0; display: inline-block;}
+.fc-state-default.fc-corner-right .fc-text-arrow {background-position: -12px 0;}
+.fc-header .fc-button {margin-right: 0;}
+.fc-widget-header {font-size: 10px; line-height: 12px; color:#676767; text-transform: uppercase; padding:12px 0 9px 0  !important; font-family:Arial;}
+.fc-agenda .fc-agenda-axis {text-align: center;}
+.fc-agenda .fc-agenda-axis.fc-widget-header {padding:11px 0 12px 0  !important;}
+.fc-event-vert.fc-event-end {border-radius: 0; border:0; }
+.fc-event { color:#696969; }
+.fc-event-vert .ui-resizable-s {background:url(../img/tour-calendar/resizeble.png) center center no-repeat; width: 9px; height: 9px !important; color:#f15a23; bottom: -5px !important; opacity: .0;}
+.fc-event-hori .ui-resizable-e {background:url(../img/tour-calendar/resizeble.png) 0 0 no-repeat; width: 9px !important; top: 40% !important; opacity:0; }
+.fc-event-vert .ui-resizable-s:hover, .fc-event-hori .ui-resizable-e:hover {opacity: 1;}
+.fc-event-icon {width:34px; height: 34px; float: left; margin: 1px 3px 1px 1px;}
+.fc-event-title {overflow: hidden; white-space:normal; text-overflow:ellipsis; padding:2px 0 0;}
+
+/*.tour-calendar-container .jspContainer, 
+.tour-calendar-container .jspTrack, 
+.tour-calendar-container .jspDrag  {position: relative !important;}
+.tour-calendar-container .jspPane, 
+.tour-calendar-container .jspVerticalBar  {position: absolute !important;}
+.tour-calendar-container .jspPane {margin-left:0 !important;}
+.tour-calendar-container .jspTrack {background: transparent;}
+.tour-calendar-container .jspDrag {background: #cdcdcd; left: 3px;}*/
+
+.tour-calendar-options-popup {position: absolute; background: #008cd4; top: 120px; z-index: 12; }
+.tour-calendar-options-popup ul {list-style: none;height: 83px;}
+.tour-calendar-options-popup ul:after {content: ''; top: 100%; border: solid transparent; height: 0; width: 0; position: absolute; border-color: rgba(0, 140, 212, 0); border-top-color: #008cd4; border-width: 10px; left: 26%; margin-left: -10px;}
+.tour-calendar-options-popup li { float: left; width: 79px; height: 83px; border-left: 1px solid #5ebae9;}
+.tour-calendar-options-popup li:first-child {border-right: 1px solid #0079b8; border-left:0;}
+.tour-calendar-options-popup li a {display: block; width: 100%; color: #fff; text-align: center; text-decoration: none; font-size: 10px; font-weight: bold;}
+.tour-calendar-options-popup li a span {background: url(../img/tour-calendar/option-icons.png) 0 0 no-repeat; width: 31px; height: 34px; display: block; margin: 22px auto 4px;}
+.tour-calendar-options-popup li a.compare span {background-position: -31px 0; width: 32px;}
+
+
+/* повестка дня - календарь*/
+.tour-agenda {display: none;min-height: 700px;}
+.route_day_current {color:#008cd4;}
+.route_day_weekend {color:#cb2622;}
+.tour-agenda .route_day_head {border-bottom:1px solid #4d4d4d;}
+.tour-agenda .route_day_info {border-top:0;}
+.tour-agenda .route_day_info .distance { font-size: 12px; color:#fff; padding:13px 0 0 8px;}
+.tour-agenda .route_day {margin: 4px 3px 0 0;}
+.tour-agenda-nav {position: absolute;top: -34px;right: 0;}
+.tour-agenda-nav ul {list-style: none;}
+.tour-agenda-nav li {float: left; border-left:1px solid #1d1d1d; box-shadow: inset 1px 0px 1px #505050;}
+.tour-agenda-nav li a {display: block; width: 20px; height: 15px; background: url(../img/tour-calendar/agenda-nav.png) 0 0 no-repeat; margin: 10px 8px 8px 11px; }
+.tour-agenda-nav a.days {background-position: 0 0;}
+.tour-agenda-nav a.all-days {background-position: 0 -15px;}
+
+.tour-agenda-days {}
+.tour-agenda-alldays {display: none;}
+
+.route_day_add {background: #2e2e2e; height: 324px; float: left; width: 245px; margin: 4px 0 0 0;}
+.route_day_add .add-day { width: 100%; display: block; height: 100%; font-size:12px; color:#929191; font-weight:bold; text-align: center; text-decoration: none; text-shadow: 1px 1px 1px #282828;}
+.route_day_add .add-day span { font-size: 140px; color: #929191; text-align: center; display: block; font-weight:normal; padding:107px 0 0; line-height:90px; }
+
+.route_day_box_time {float: left; width: 26px; padding: 0; background: none; font-size: 12px; color: #ffffff;}
+.route_day_box_img {float: left; width: 34px; height:34px;  }
+.route_day_box_img {width: 34px; height:34px; overflow: hidden;}
+.route_day_box_address {float: left;  font-size: 12px; color: #ffffff;}
+.route_day_box_address a {color: #ffffff; text-decoration: none;}
+.route_day_box_tel {float: left;  font-size: 12px; color: #ffffff;}
+.route_day_box_tel a {color: #ffffff; text-decoration: none;}
+
+.route_day_long {background: #2e2e2e; height: 324px; float: left; width: 100%; margin: 4px 0 0 0; overflow: hidden;}
+.route_day_long .route_day_list {float: left; width:990px; position: relative;}
+.route_day_list-wrapper {width: 999999px; float: left;}
+.route_day_long .jspPane {width: 100% !important;}
+.route_day_long .jspTrack {background: none;position: absolute;} 
+.route_day_long .jspDrag {background: #555555;width: 7px; opacity: 0;}
+.route_day_long:hover .jspDrag {opacity: 1;}
+
+.route_day_row {position: relative; width: 100%; float: left; height: 40px; background: #222222; }
+.route_day_row:nth-child(2n) {background: #2e2e2e;}
+.route_day_row:hover {background: #008cd4 !important;} 
+
+.route_day_head_button {top:3px; right: 12px;}
+.route_day_head_days {text-align: left; width: 96%; float: left; height: 39px;}
+.route_day_head_days a { color:#fff; text-decoration: none; padding: 2px 18px 0; line-height: 22px; font-size: 12px; border-left: 1px solid #1d1d1d; border-right: 1px solid #505050; width: 10%; float: left; margin: 7px 0 0; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;}
+.route_day_head_days a:first-child {border-left: 0;}
+.route_day_head_days a:last-child {border-right: 0;}
+.route_day_head_days a.route_day_current {color:#008cd4;}
+.route_day_head_days a.route_day_weekend {color:#cb2622;}
+.route_day_head_days.route_day_head_days_array a {width:6%; padding: 2px 8px 0;}
+.route_day_head_days.route_day_head_days_array a:first-child {padding: 2px 8px 0 18px;}
+
+.route_day_row .route_day_box {float: left; background: none; border-right: 1px solid #4c4c4c; border-left: 1px solid #1f1f1f;} 
+.route_day_row .route_day_box .route_day_box_img {margin:-10px 12px 0 0;}
+.route_day_row .route_day_box .route_day_box_address { width:470px; white-space:nowrap; text-overflow:ellipsis; overflow:hidden;}
+.route_day_row .route_day_box .route_day_box_tel {padding: 0 0 0 15px;}
+.route_day_row .route_day_box1 {width:238px; border-left: 0;}
+.route_day_row .route_day_box2 {width:542px;}
+.route_day_row .route_day_box3 {width:160px;border-right:0;}
+
+.route_day_long .check input {display: none;}
+.route_day_long .check {background:url(../img/radio_check.png) -15px 0 no-repeat; width:15px;height:15px; display:inline-block; cursor:pointer;} 
+.route_day_long .checkOn {background-position:-15px -15px;}
+
