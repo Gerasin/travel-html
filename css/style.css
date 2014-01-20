@@ -2124,7 +2124,7 @@ background: linear-gradient(#FB7F01, #d65002);}
           .footer_soc .footer_soc_ico li.soc_g  img {width:92px; height:28px; background:url(../img/soc_g.png) 0 0 no-repeat;  }
           .footer_soc .footer_soc_ico li.soc_vk a:hover img {background:url(../img/soc_vk_hov.png) 0 0 no-repeat;}
           .footer_soc .footer_soc_ico li.soc_fb a:hover img {background:url(../img/soc_fb_hov.png) 0 0px no-repeat;}
-          .footer_soc .footer_soc_ico li.soc_g a:hover  img {background:url(../img/soc_g_hov.png) 0 0 no-repeat;}
+          .footer_soc .footer_soc_ico li.soc_g a:hover  img {background:url(../img/soc_g_hov.png) 0 0 no-repeat;  }
   .footer_main_info {width:976px; margin:0 auto; overflow:hidden; padding:0 0 30px;}
   .copyright  {float:left; background:url(../img/logo_footer.png) 0 0 no-repeat; padding:4px 0 5px 34px; margin:1px 0 0; color:#eaeaea; font-size:14px;}
   .footer_mail  {float:right; font-size:14px; padding:0; color:#fff }
