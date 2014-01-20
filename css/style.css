@@ -2128,7 +2128,7 @@ background: linear-gradient(#FB7F01, #d65002);}
   .footer_main_info {width:976px; margin:0 auto; overflow:hidden; padding:0 0 30px;}
   .copyright  {float:left; background:url(../img/logo_footer.png) 0 0 no-repeat; padding:4px 0 5px 34px; margin:1px 0 0; color:#eaeaea; font-size:14px;}
   .footer_mail  {float:right; font-size:14px; padding:0; color:#fff }
-    .footer_mail a  {color:#0b6796; font-size:18px; text-decoration:none;}
+    .footer_mail a  {color:#0b6796; font-size:18px; text-decoration:none; }
     .footer_mail a:hover  {text-decoration:underline;}
   .footer_phone {text-align:center; color:#fff; font-size:14px;}
     .footer_phone span  {font-size:18px;}
