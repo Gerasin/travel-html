@@ -12,12 +12,12 @@ $(document).ready(function() {
 	});
 
 	$('.info-in-item').hover(function(){
-		$(this).find('.info-in-item-img').hide();
-		$(this).find('.info-in-hover').fadeIn();
+		$(this).find('.info-in-item-img').stop().hide();
+		$(this).find('.info-in-hover').stop().fadeIn();
 	},
 	function(){
-		$(this).find('.info-in-item-img').fadeIn();
-		$(this).find('.info-in-hover').hide();
+		$(this).find('.info-in-item-img').stop().fadeIn();
+		$(this).find('.info-in-hover').stop().hide();
 	});
 
 
@@ -2053,7 +2053,7 @@ var offsetTop = -1;
 var offsetTop_t = -1;
 if ($('.left_column_t').length) { var offsetTopMenu = $('.routes_fixed').offset().top; };
 var offsetTopMenuCal = offsetTopMenu + 120;
-var scrollMenuInfo = 50;
+var scrollMenuInfo = $('.hotel_main_slider_cent').height();
 
 $(window).scroll(function() {
 
@@ -2081,8 +2081,6 @@ $(window).scroll(function() {
 	if ($('.left_column_t').length) {
 		$('.left_column_t').each(function() {
 			if ($(this).is(':visible')) {
-			
-
 				if ($(window).scrollTop() > offsetTop - 40) {
 					var curBottom = $(window).height() - $(this).height();
 					if ($(window).scrollTop() + $(this).height() > $('.footer_main').offset().top - 8) {
@@ -2099,9 +2097,12 @@ $(window).scroll(function() {
 	// Меню инфо
 
 	if ($('.main_page-info:visible').length) {
+		scrollMenuInfo = $('.hotel_main_slider_cent').height();
+		console.log(scrollMenuInfo);
 		if ($(window).scrollTop() > scrollMenuInfo) {
 			$('.main_page-info-open').fadeIn();
 			$('.main_page-info').fadeOut();
+
 		};
 	};
 
