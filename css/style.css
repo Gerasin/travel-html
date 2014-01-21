@@ -1656,7 +1656,7 @@ background: linear-gradient(#FB7F01, #d65002);}
 
           .sn-friend-item.active .ask-btn_close {display: block;}
           .sn-friend-item.active .ask-btn {display: none;}
-      .wrap-sn-friends .sn-friend-cont {display: none;}
+      /*.wrap-sn-friends .sn-friend-cont {display: none;}*/
 
   .pagination {position:relative; padding: 0; background: #2e2e2e; height: 42px;}
     .pagination:before {position: absolute; width: 100%; left: 0; top: 1px; border-top: 1px solid #252525; content: ' '; z-index: 1;}
@@ -1672,11 +1672,20 @@ background: linear-gradient(#FB7F01, #d65002);}
     .pagination .page:hover:before, .pagination .page.active:before {display: none;}
     .pagination .page.page_end {width: 121px;}
     .pagination .page.active {cursor: default; position: relative; z-index: 20;}
+    .pagination .page:hover {position: relative; z-index: 20;}
   .ask-sn-popup .select_button {float: none; width: 100%; margin: 0 !important; height: 40px; background: #008cd4;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0;}
   .ask-sn-popup .select_button:hover {background: #007ab9;}
+
+  .pagination .page_namber {font-size:18px; font-family: Arial; color:#595959; text-decoration:none; text-align:center; display: block; vertical-align: top; float: left; height: 42px; line-height: 42px; width: 36px; padding-right: 1px; position: relative; border-right: 1px solid #252525;}
+    .pagination .page_namber:before {position: absolute; width: 1px; content: ' '; right: 0; top:0; height: 100%; border-right: 1px solid #424242;}
+    .pagination .page_namber:hover, .pagination .page_namber.active {background: #008cd4; border-color: #008cd4; color: #fff;}
+    .pagination .page_namber:hover:before, .pagination .page_namber.active:before {display: none;}
+    .pagination .page_namber.active {cursor: default; position: relative; z-index: 20;}
+    .pagination .page_namber:hover {position: relative; z-index: 20;}
+    .page_namber_box {float: left;}
 
 /* спросить совета через vk*/ 
 .vk-btn {background:url(../img/routes/vk-logo-min.png) 0 0 no-repeat; width:49px; height:49px; float:right; margin:0;} 
@@ -2056,7 +2065,7 @@ background: linear-gradient(#FB7F01, #d65002);}
     .budget_day_header:before {position: absolute; right: 0; top: 0; height: 100%; content: ' '; border-right: 1px solid #4a4a4a;}
   .budget_day_form {margin: 0;position: relative; margin: 0 0 0 496px;}
     .budget_day_textareaa {padding:20px; height: 275px; border-right: 1px solid #cecece;}
-      .budget_day_textareaa textarea {border: 0; background: none; font-size: 14px; font-family: Arial; overflow: auto; resize:none; height: 100%; width: 100%; outline: none;}
+      .budget_day_textareaa textarea {border: 0; background: none; font-size: 14px; font-family: Arial; overflow: auto; resize:none; height: 100%; width: 100%; outline: none; overflow: hidden;}
       .budget_day_table {position: relative; height: 315px;}
       .heder_categori_none {display: none;}
       .budget_day_table-item { border-bottom: 1px solid #cecece; height: 34px;}
@@ -2112,7 +2121,7 @@ background: linear-gradient(#FB7F01, #d65002);}
     .footer_main_menu a.footer_menu_ico_8 {background-position:0 -420px;}
     .footer_main_menu a.footer_menu_ico_8:hover, .footer_main_menu a.footer_menu_ico_8.active {background-position:0 -450px;}
   .footer_soc { padding: 15px 0 0; position: relative; border-top: 1px solid #424242;}
-    .footer_soc_header {float: left; padding: 4px 13px 0 0; color: #fff;}
+    .footer_soc_header {float: left; padding: 7px 13px 0 0; color: #fff;}
     .footer_soc_footer {float: left;padding: 0;width: 214px;position: relative;left: auto;}
       .footer_soc_footer a {float: left;margin: 0 12px 0 0;}
     .footer_soc h4  {font-weight:normal; padding:0 0 31px; font-size:14px; text-align:center; color:#f2f2f4;}

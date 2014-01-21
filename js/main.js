@@ -1,8 +1,7 @@
 var slideTime = 10000, effectTime = 1000, innerDelay = 1000, sliderTimeout;
 $(document).ready(function() {
+	
 
-	// Спросить совета
-	$('.wrap-sn-friends .sn-friend-cont:first').show();
 
 	// Меню информационное на главной
 	$('.main_page-info-open a').click(function(){
@@ -1102,8 +1101,8 @@ $(document).ready(function() {
 		$('.ui-datepicker').addClass('onTop');
 	});
 	// спросить совета переключатель меню
-	$('.ask-socials a').click(function (e) {
-		e.preventDefault();
+	var paginatorNamber;
+	$('.ask-socials a').click(function () {
 		$(this).parent('div').find('a').removeClass('active');
 		$(this).addClass('active');
 		if($(this).hasClass('travelonline')){
@@ -1122,21 +1121,28 @@ $(document).ready(function() {
 			$('.ask-fb-popup').fadeIn();
 			// галерея друзей у которых можно спрашивать совета
 			$('.wrap-sn-friends .sn-friend-item:nth-child(3n+1)').addClass('marked'); 
-			// скролл в галерее друзей у которых можно спрашивать совета
-			if($('.js-sn-friends').length){
-				$('.js-sn-friends').jScrollPane();
-			}
 		}
 		if($(this).hasClass('vk')){  
 			$('.ask-vk-popup').fadeIn();
 			// галерея друзей у которых можно спрашивать совета
 			$('.wrap-sn-friends .sn-friend-item:nth-child(3n+1)').addClass('marked'); 
-			// скролл в галерее друзей у которых можно спрашивать совета
-			if($('.js-sn-friends').length){
-				$('.js-sn-friends').jScrollPane();
-			}
-		}
+		};
+
+		// Пагинация
+		$(".wrap-sn-friends:visible .sn-friend-cont").hide();
+		$(".wrap-sn-friends:visible .sn-friend-cont:first").show();
+		paginatorNamber = $(".wrap-sn-friends:visible .sn-friend-cont").length;
+		console.log(paginatorNamber)
+		$(".ask-sn-popup-in:visible").find('.pagination_all').text(paginatorNamber);
+		$('.page_namber').remove();
+		paginatorTag(paginatorNamber);
+		pagerItemClick(paginatorNamber);
+		$(".page_namber:first").addClass('active');
+		$('.pagination_position').text('1');
+		return false;
 	});
+
+	
 	
 	 // строка поиска - выпадающее меню
  	$('.friend-searchfield').keypress(function(){
@@ -1729,6 +1735,75 @@ $(document).ready(function() {
 	
 
 });
+
+var paginatorTagNamber = 1;
+var paginatorTagVisible = 10;
+var nnnn = 0;
+function paginatorTag(paginatorNamber) {
+	if (paginatorTagNamber <= paginatorNamber) {
+		if ( paginatorTagNamber <= paginatorTagVisible) {
+			$(".ask-sn-popup-in:visible").find('.page_namber_box').append('<a href="#" class="page_namber">' + paginatorTagNamber + '</a>');
+			paginatorTagNamber = ++paginatorTagNamber;
+			paginatorTag(paginatorNamber);
+		} else {
+			$(".ask-sn-popup-in:visible").find('.page_namber_box').append('<a href="#" class="page_namber" style="display: none;">' + paginatorTagNamber + '</a>');
+			paginatorTagNamber = ++paginatorTagNamber;
+			paginatorTag(paginatorNamber);
+		}
+	} else {
+		paginatorTagNamber = 1;
+	};
+};
+
+var pageNamberItem;
+var pageNamberItemAct;
+function pagerItemClick(paginatorNamber) {
+	var i;
+	var iClose;
+	$('.page_namber').click(function(){
+		pageNamberItem = $(this).text() - 1;
+		$('.pagination_position').text(pageNamberItem + 1);
+		$('.wrap-sn-friends:visible .sn-friend-cont').hide();
+		$('.wrap-sn-friends:visible .sn-friend-cont').eq(pageNamberItem).show();
+		$('.page_namber').removeClass('active');
+		$(this).addClass('active');
+
+		$('.ask-sn-popup:visible .page_namber_box .page_namber').hide();
+		var pageNamberItemI = pageNamberItem;
+		if (pageNamberItemI > paginatorNamber - 10) {
+			i = paginatorNamber - 10;
+			iClose = paginatorNamber;
+		} else {
+			i = pageNamberItemI - 5;
+			iClose = pageNamberItemI + 5;
+		}
+		if (pageNamberItemI <= 5) {
+			i = 0;
+			iClose = 9;
+		}
+		for (i; i < iClose; i++) {
+			$('.ask-sn-popup:visible').find('.page_namber_box .page_namber').eq(i).show();
+		};
+		return false;
+	});
+	$('.page_end').click(function(){
+		$(this).parents('.pagination').find('.page_namber').removeClass('active');
+		$(this).parents('.pagination').find('.page_namber').hide();
+		$(this).parents('.pagination').find('.page_namber').eq(paginatorNamber-1).addClass('active');
+		$(this).parents('.ask-sn-popup').find('.sn-friend-cont').hide();
+		$(this).parents('.ask-sn-popup').find('.sn-friend-cont').eq(paginatorNamber-1).show();
+		$(this).parents('.ask-sn-popup').find('.pagination_position').text(paginatorNamber);
+
+		i = paginatorNamber - 10;
+		iClose = paginatorNamber;
+		for (i; i < iClose; i++) {
+			$(this).parents('.ask-sn-popup').find('.page_namber').eq(i).show();
+		};
+		return false;
+	});
+};
+
+		
 
 function Latin(obj) {
    if (/^[a-zA]*?$/.test(obj.value)) 
