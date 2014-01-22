@@ -1127,17 +1127,6 @@ $(document).ready(function() {
 			// галерея друзей у которых можно спрашивать совета
 			$('.wrap-sn-friends .sn-friend-item:nth-child(3n+1)').addClass('marked'); 
 		};
-
-		// Пагинация
-		$(".wrap-sn-friends:visible .sn-friend-cont").hide();
-		$(".wrap-sn-friends:visible .sn-friend-cont:first").show();
-		paginatorNamber = $(".wrap-sn-friends:visible .sn-friend-cont").length;
-		$(".ask-sn-popup-in:visible").find('.pagination_all').text(paginatorNamber);
-		$('.page_namber').remove();
-		paginatorTag(paginatorNamber);
-		pagerItemClick(paginatorNamber);
-		$(".page_namber:first").addClass('active');
-		$('.pagination_position').text('1');
 		return false;
 	});
 
@@ -1720,85 +1709,7 @@ $(document).ready(function() {
 		return false;
 	});
 
-	/*var teamNameHeight;
-	$('.team-item a').hover(function(){
-		teamNameHeight = $(this).find('.team_name').height();
-		$(this).find('.team_name').stop().animate({'height' : 155 + 'px', 'opacity' : 0.59}, 500);
-	},
-	function(){
-		$(this).find('.team_name').stop().animate({'height' : teamNameHeight + 'px', 'opacity' : 0.8}, 500);
-	});*/
-	
-
 });
-
-var paginatorTagNamber = 1;
-var paginatorTagVisible = 10;
-var nnnn = 0;
-function paginatorTag(paginatorNamber) {
-	if (paginatorTagNamber <= paginatorNamber) {
-		if ( paginatorTagNamber <= paginatorTagVisible) {
-			$(".ask-sn-popup-in:visible").find('.page_namber_box').append('<a href="#" class="page_namber">' + paginatorTagNamber + '</a>');
-			paginatorTagNamber = ++paginatorTagNamber;
-			paginatorTag(paginatorNamber);
-		} else {
-			$(".ask-sn-popup-in:visible").find('.page_namber_box').append('<a href="#" class="page_namber" style="display: none;">' + paginatorTagNamber + '</a>');
-			paginatorTagNamber = ++paginatorTagNamber;
-			paginatorTag(paginatorNamber);
-		}
-	} else {
-		paginatorTagNamber = 1;
-	};
-};
-
-var pageNamberItem;
-var pageNamberItemAct;
-function pagerItemClick(paginatorNamber) {
-	var i;
-	var iClose;
-	$('.page_namber').click(function(){
-		pageNamberItem = $(this).text() - 1;
-		$('.pagination_position').text(pageNamberItem + 1);
-		$('.wrap-sn-friends:visible .sn-friend-cont').hide();
-		$('.wrap-sn-friends:visible .sn-friend-cont').eq(pageNamberItem).show();
-		$('.page_namber').removeClass('active');
-		$(this).addClass('active');
-
-		$('.ask-sn-popup:visible .page_namber_box .page_namber').hide();
-		var pageNamberItemI = pageNamberItem;
-		if (pageNamberItemI > paginatorNamber - 10) {
-			i = paginatorNamber - 10;
-			iClose = paginatorNamber;
-		} else {
-			i = pageNamberItemI - 5;
-			iClose = pageNamberItemI + 5;
-		}
-		if (pageNamberItemI <= 5) {
-			i = 0;
-			iClose = 9;
-		}
-		for (i; i < iClose; i++) {
-			$('.ask-sn-popup:visible').find('.page_namber_box .page_namber').eq(i).show();
-		};
-		return false;
-	});
-	$('.page_end').click(function(){
-		$(this).parents('.pagination').find('.page_namber').removeClass('active');
-		$(this).parents('.pagination').find('.page_namber').hide();
-		$(this).parents('.pagination').find('.page_namber').eq(paginatorNamber-1).addClass('active');
-		$(this).parents('.ask-sn-popup').find('.sn-friend-cont').hide();
-		$(this).parents('.ask-sn-popup').find('.sn-friend-cont').eq(paginatorNamber-1).show();
-		$(this).parents('.ask-sn-popup').find('.pagination_position').text(paginatorNamber);
-
-		i = paginatorNamber - 10;
-		iClose = paginatorNamber;
-		for (i; i < iClose; i++) {
-			$(this).parents('.ask-sn-popup').find('.page_namber').eq(i).show();
-		};
-		return false;
-	});
-};
-
 		
 
 function Latin(obj) {

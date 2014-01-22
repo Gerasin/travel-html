@@ -12,6 +12,8 @@ $(document).ready(function() {
             revert: true,      // will cause the event to go back to its
             revertDuration: 0,  //  original position after the drag
         }); 
+
+        //$('.external-event').droppable();
     });
 
     var date = new Date();
@@ -157,7 +159,6 @@ $(document).ready(function() {
              $('.route_day_pointer_r').hide();
         };
         $('.route_day_pointer_l').show();
-        console.log(dateListing);
     });
 
     $('.route_day_pointer_l').click(function(){
@@ -170,7 +171,6 @@ $(document).ready(function() {
              $('.route_day_pointer_l').hide();
         };
         $('.route_day_pointer_r').show();
-        console.log(dateListing);
     });
 
 

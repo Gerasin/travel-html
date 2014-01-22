@@ -1681,8 +1681,11 @@ background: linear-gradient(#FB7F01, #d65002);}
     .pagination .page.active {background: #008cd4; border-color: #008cd4; color: #fff;}
     .pagination .page:hover {background: #008cd4; color: #fff;}
     .pagination .page.active:before {display: none;}
-    .pagination .page.page_end {width: 121px;}
+    .pagination .page.page_end {width: 36px; }
     .pagination .page.active {cursor: default; position: relative; z-index: 20;}
+
+    .page_point {font-size:18px; font-family: Arial; color:#595959; text-decoration:none; text-align:center; display: block; vertical-align: top; float: left; height: 42px; line-height: 42px; width: 36px; padding-right: 1px; position: relative; border-right: 1px solid #252525;}
+    .page_point:before {position: absolute; width: 1px; content: ' '; right: 0; top:0; height: 100%; border-right: 1px solid #424242;}
   .ask-sn-popup .select_button {float: none; width: 100%; margin: 0 !important; height: 40px; background: #008cd4;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
