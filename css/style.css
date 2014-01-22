@@ -1644,12 +1644,22 @@ background: linear-gradient(#FB7F01, #d65002);}
         .sn-friend-item .wrap-txt a {color: #fff; text-decoration: none;}
         .sn-friend-item .wrap-txt a:hover {text-decoration: underline;}
           .sn-friend-item .wrap-txt a.asked {background:#f15a23; border:1px solid #d14c1b}
-          .sn-friend-item .ask-btn {display: block; float: right; width: 84px; height: 85px; position: relative; line-height: 85px; font-size: 12px; text-decoration: none; text-transform: uppercase; color: #fff; text-align: center; background: #008cd4;}
+          .sn-friend-item .ask-btn {display: block; float: right; width: 84px; height: 85px; position: relative; line-height: 85px; font-size: 12px; text-decoration: none; text-transform: uppercase; color: #fff; text-align: center; background: #008cd4;
+            -webkit-transition: height 0.3s ease, background-color 0.5s ease, background-image 0.5s ease;
+            -webkit-transition-delay: 0s, 0s, 0.5s;
+            -moz-transition: height 0.3s ease, background-color 0.5s ease, background-image 0.5s ease 0.5s;
+            -o-transition: height 0.3s ease, background-color 0.5s ease, background-image 0.5s ease 0.5s;
+            transition: height 0.3s ease, background-color 0.5s ease, background-image 0.5s ease 0.5s;}
           .sn-friend-item .ask-btn:before {position: absolute; left: 0; top:0; content: ' '; width: 100%; border-top: 1px solid #3ca9e1;}
           .sn-friend-item .ask-btn:after {position: absolute; left: 0; top:-1px; content: ' '; width: 100%; border-top: 1px solid #0080c3;}
           .sn-friend-item .ask-btn:hover {background: #007ab9; color: #f7f7f7;}
           
-          .sn-friend-item .ask-btn_close {display: none; float: right; width: 84px; height: 85px; position: relative; line-height: 85px; font-size: 12px; text-decoration: none; text-transform: uppercase; color: #fff; text-align: center; background: #f15a23;}
+          .sn-friend-item .ask-btn_close {display: none; float: right; width: 84px; height: 85px; position: relative; line-height: 85px; font-size: 12px; text-decoration: none; text-transform: uppercase; color: #fff; text-align: center; background: #f15a23;
+            -webkit-transition: height 0.3s ease, background-color 0.5s ease, background-image 0.5s ease;
+            -webkit-transition-delay: 0s, 0s, 0.5s;
+            -moz-transition: height 0.3s ease, background-color 0.5s ease, background-image 0.5s ease 0.5s;
+            -o-transition: height 0.3s ease, background-color 0.5s ease, background-image 0.5s ease 0.5s;
+            transition: height 0.3s ease, background-color 0.5s ease, background-image 0.5s ease 0.5s;}
           .sn-friend-item .ask-btn_close:before {position: absolute; left: 0; top:0; content: ' '; width: 100%; border-top: 1px solid #f77445;}
           .sn-friend-item .ask-btn_close:after {position: absolute; left: 0; top:-1px; content: ' '; width: 100%; border-top: 1px solid #a64521;}
           .sn-friend-item .ask-btn_close:hover {background: #d14e1e; color: #f7f7f7;}
@@ -1668,11 +1678,11 @@ background: linear-gradient(#FB7F01, #d65002);}
     .pagination .cur-pos:before {position: absolute; width: 1px; content: ' '; right: 0; top:0; height: 100%; border-right: 1px solid #424242;}
     .pagination .page, .pagination .page a {font-size:18px; font-family: Arial; color:#595959; text-decoration:none; text-align:center; display: block; vertical-align: top; float: left; height: 42px; line-height: 42px; width: 36px; padding-right: 1px; position: relative; border-right: 1px solid #252525;}
     .pagination .page:before {position: absolute; width: 1px; content: ' '; right: 0; top:0; height: 100%; border-right: 1px solid #424242;}
-    .pagination .page:hover, .pagination .page.active {background: #008cd4; border-color: #008cd4; color: #fff;}
-    .pagination .page:hover:before, .pagination .page.active:before {display: none;}
+    .pagination .page.active {background: #008cd4; border-color: #008cd4; color: #fff;}
+    .pagination .page:hover {background: #008cd4; color: #fff;}
+    .pagination .page.active:before {display: none;}
     .pagination .page.page_end {width: 121px;}
     .pagination .page.active {cursor: default; position: relative; z-index: 20;}
-    .pagination .page:hover {position: relative; z-index: 20;}
   .ask-sn-popup .select_button {float: none; width: 100%; margin: 0 !important; height: 40px; background: #008cd4;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
@@ -1681,10 +1691,11 @@ background: linear-gradient(#FB7F01, #d65002);}
 
   .pagination .page_namber {font-size:18px; font-family: Arial; color:#595959; text-decoration:none; text-align:center; display: block; vertical-align: top; float: left; height: 42px; line-height: 42px; width: 36px; padding-right: 1px; position: relative; border-right: 1px solid #252525;}
     .pagination .page_namber:before {position: absolute; width: 1px; content: ' '; right: 0; top:0; height: 100%; border-right: 1px solid #424242;}
-    .pagination .page_namber:hover, .pagination .page_namber.active {background: #008cd4; border-color: #008cd4; color: #fff;}
-    .pagination .page_namber:hover:before, .pagination .page_namber.active:before {display: none;}
+    .pagination .page_namber.active {background: #008cd4; border-color: #008cd4; color: #fff;}
+    .pagination .page_namber:hover {background: #008cd4; color: #fff;}
+    .pagination .page_namber:hover:before {display: none;}
     .pagination .page_namber.active {cursor: default; position: relative; z-index: 20;}
-    .pagination .page_namber:hover {position: relative; z-index: 20;}
+    .pagination .page_namber:hover {position: relative;}
     .page_namber_box {float: left;}
 
 /* спросить совета через vk*/ 

@@ -1132,7 +1132,6 @@ $(document).ready(function() {
 		$(".wrap-sn-friends:visible .sn-friend-cont").hide();
 		$(".wrap-sn-friends:visible .sn-friend-cont:first").show();
 		paginatorNamber = $(".wrap-sn-friends:visible .sn-friend-cont").length;
-		console.log(paginatorNamber)
 		$(".ask-sn-popup-in:visible").find('.pagination_all').text(paginatorNamber);
 		$('.page_namber').remove();
 		paginatorTag(paginatorNamber);
@@ -1272,7 +1271,6 @@ $(document).ready(function() {
 		$(this).parents('.place-item').find('.in-route').show();
 		savePlacesBtn = ++savePlacesBtn;
 		$('.save-places-btn p span').text(savePlacesBtn);
-		console.log(savePlacesBtn);
 		return false;
 		
 	});
@@ -1409,7 +1407,6 @@ $(document).ready(function() {
 		$('.content-booking .booking-body .check').each(function(index){
 			if ($(this).hasClass('checkOn')) {
 				paymentSym = paymentSym + parseInt($(this).prev().find('.booking-price strong').text().replace(' $', ''));
-				console.log(paymentSym);
 			};
 			
 		});
@@ -1557,7 +1554,6 @@ $(document).ready(function() {
 	        $(this).parents('.budget_day_table-categori').find('span').text($(this).text());
 	        Budget = $(this).parents('.budget_day_form').find('.budget_day_table .budget_day_table-item').length;
 	        BudgetAct = $(this).parents('.budget_day_form').find('.budget_day_table .budget_day_table-item').index($(this).parents('.budget_day_table-item')) + 2;
-	        console.log(Budget+ ' - ' +BudgetAct);
 	        $(this).parents('.budget_day_table-list').find('a').removeClass('activeClick');
 	        $(this).addClass('activeClick');
 	        if (Budget == BudgetAct) {
@@ -2173,7 +2169,6 @@ $(window).scroll(function() {
 
 	if ($('.main_page-info:visible').length) {
 		scrollMenuInfo = $('.hotel_main_slider_cent').height();
-		console.log(scrollMenuInfo);
 		if ($(window).scrollTop() > scrollMenuInfo) {
 			$('.main_page-info-open').fadeIn();
 			$('.main_page-info').fadeOut();
