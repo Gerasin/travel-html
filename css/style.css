@@ -2891,3 +2891,7 @@ thead .fc-first {border-top-color: #f7f9fb; border-left-color: #f7f9fb;}
     .language a {text-decoration: none;}
     .language a:hover {text-decoration: underline;}
 
+
+/*--- page_budget ---*/
+.page_budget {padding-top: 41px;}
+

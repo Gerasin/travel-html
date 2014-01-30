@@ -1437,6 +1437,12 @@ $(document).ready(function() {
 
 
 	$('.rout_user_box_text').click(function() {
+		var ClickBoxNamber = $(this).parents('.rout_user_scroll').find('.rout_user_box').length;
+		var boxHeight = $(this).parents('.rout_user_scroll').find('.rout_user_box_cont');
+		if (ClickBoxNamber == 1) {boxHeight.css({'height' : 487 + 'px'});};
+		if (ClickBoxNamber == 2) {boxHeight.css({'height' : 457 + 'px'});};
+		if (ClickBoxNamber == 3) {boxHeight.css({'height' : 427 + 'px'});};
+
 		if ( $(this).hasClass('active') ) {
 			$('.rout_user_box_text').removeClass('active');
 			$('.rout_user_box_cont').hide();
