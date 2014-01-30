@@ -1529,7 +1529,8 @@ $(document).ready(function() {
 
 	$('.hotel_main_button_add').click(function() {
 		$($('.hotel_main_input_add').html()).insertBefore(".hotel_main_input_add");
-
+		// Удаление инпутов даты
+		dateRemove();
 		return false;
 	});
 
@@ -1716,6 +1717,14 @@ $(document).ready(function() {
 	});
 
 });
+
+// Удаление инпутов даты
+function dateRemove() {
+	$('.input_style_box_close').click(function() {
+		$(this).parents('.input_style_cont').remove();
+		return false;
+	});
+};
 		
 
 function Latin(obj) {
