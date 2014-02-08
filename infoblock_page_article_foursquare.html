@@ -1,0 +1,257 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- css -->
+<link rel="stylesheet" type="text/css" href="css/calendar.css" />
+<link rel="stylesheet" type="text/css" href="css/jquery.ui.all.css" /> 
+<link rel="stylesheet" type="text/css" href="css/jquery.ui.theme.css" /> 
+<link rel="stylesheet" type="text/css" href="css/fullcalendar.css" />    
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<title>Маршруты пользователей</title> 
+<script src='https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false'></script>
+</head>
+<body>
+<div class="loader">
+    <div class="loader_bg">
+        <div class="loader_bg_active"></div>
+    </div>
+</div>
+
+<!-- Шапка-->
+<header class="unauthorizate inited" data-module="header">
+
+    <div class="left"></div>
+    <div class="right"></div>
+    <div class="layout">
+        <div class="logoparts">
+            <a class="foot" href="/"></a>
+            <a href="/" class="logo"></a>
+        </div>
+        <nav class="main">
+            <a href="/">БЛОГи</a>
+            <a href="/"> МАРШРУТЫ</a>
+            <a href="/">АВИАБИЛЕТЫ</a>
+            <a href="/">ОТЕЛИ</a>
+            <a href="/">туры</a>
+        </nav>
+        <div class="help">
+            <span>Помощь</span>
+            <div class="open">
+                <div class="triangle"></div>
+                <div class="item top">
+                    В КАКОМ РАЗДЕЛЕ ВАМ НУЖНА ПОМОЩЬ?
+                </div>
+                <a href="" class="item avia">АВИАБИЛЕТЫ</a>
+                <a href="" class="item hotel">ОТЕЛИ</a>
+                <a href="" class="item tour">ТУРЫ</a>
+                <a href="" class="item route">МАРШРУТЫ</a>
+                <a href="" class="item trip">ПУТЕШЕСТВИЯ</a>
+                <div class="item bottom">
+                    тел: +7 926 426 68 55
+                    <div class="mail">
+                        hello@travelonline.ru 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="separate"></div>
+        <a onclick="registrationPopup()" class="signup">Регистрация</a>
+        <div class="separate"></div>
+        <a onclick="enterPopup()" class="signin">Вход</a>
+    </div>
+</header>
+<!-- Главная маршруты пользователей-->  
+
+<!-- Контент -->
+<div class="page_budget">
+    
+    <!-- бюджет -->
+    <div class="content content-booking">
+        <div class="booking-header">
+            <p>Добавленные</p>
+            <p class="date">17 / 06 / 2013, Понедельник </p>
+        </div>	
+        <div class="booking-body">
+            <div class="booking-block booking-flight">
+                <div class="booking-icon flight-icon"></div>
+                <div class="booking-name flight-name">
+                    <p class="flight">MOV<span></span>DPS</p>
+                    <p class="aircompany">El Al Israel Airlines</p> 
+                    <div class="sum-rating">
+                        <div class="val">
+                            <div style="width: 80%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flight-plan">
+                    <span class="plane-to"></span>
+                    <div class="result_plane_info result_plane_info_to">
+                        <p>Туда, 13 февраля, Суббота</p>
+                        <div class="result_plane_info_clock">
+                            <span>мест 1</span>
+                            <h4>22:50 - 11:20 (20 фев)</h4>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="result_plane_city color_red">
+                            <span>12 ч 10 мин</span>
+                            <a href="#" class="color_red">через Лондон</a>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="result_plane_city">
+                            <span>16 ч 30 мин</span>
+                            из Домодедово - в Гатвик
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <span class="plane-back"></span>
+                    <div class="result_plane_info result_plane_info_back"> 
+                        <p>Обратно, 27 февраля, Пятница</p>
+                        <div class="result_plane_info_clock">
+                            <span>мест 1</span>
+                            <h4>12:30 - 9:50 (29 фев)</h4>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="result_plane_city color_red">
+                            <span>12 ч 10 мин</span>
+                            <a href="#" class="color_red">через Лондон</a>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="result_plane_city">
+                            <span>16 ч 30 мин</span>
+                            из Домодедово - в Гатвик
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="booking-price flight-price"> 
+                    <strong>190 $</strong>
+                    <a href="#">обновить</a>
+                </div>
+            </div>
+            <div class="check"><input type="checkbox" id="check-this"></div>
+            <div class="booking-block booking-hotel">
+                <div class="booking-icon hotel-icon">AMS</div>
+                <div class="booking-name hotel-name">
+                    <p class="hotel">Hotel Serena</p> 
+                    <div class="sum-rating">
+                        <div class="val">
+                            <div style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <p class="desc"> Via Principe Amedeo 64, Stazione Termini <a href="#" target="_blank">www.serena.com</a></p>
+                </div>
+                <div class="hotel-plan">
+                    <p>Двухместный номер с 1 кроватью, вид на сад</p>   
+                    <p class="guests"><span>Число гостей:</span> 1</p>
+                    <p class="rooms"><span>Номер:</span> 1</p>
+                </div>
+                <div class="booking-price hotel-price"> 
+                    <strong>1234 $</strong>
+                    <p>3 часа назад</p>
+                    <a href="#">обновить</a>
+                </div>
+            </div>
+            <div class="check"><input type="checkbox" id="check-this"></div>  
+        </div>	
+        <div class="booking-header"> 
+            <p class="date">16 / 06 / 2013, Воскресенье</p>
+        </div>	
+        <div class="booking-body"> 
+            <div class="booking-block booking-hotel">
+                <div class="booking-icon hotel-icon">AMS</div>
+                <div class="booking-name hotel-name">
+                    <p class="hotel">Hotel Serena</p> 
+                    <div class="sum-rating">
+                        <div class="val">
+                            <div style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <p class="desc"> Via Principe Amedeo 64, Stazione Termini <a href="#" target="_blank">www.serena.com</a></p>
+                </div>
+                <div class="hotel-plan">
+                    <p>Двухместный номер с 1 кроватью, вид на сад</p>   
+                    <p class="guests"><span>Число гостей:</span> 1</p>
+                    <p class="rooms"><span>Номер:</span> 1</p>
+                </div>
+                <div class="booking-price hotel-price"> 
+                    <strong>1234 $</strong>
+                    <p>3 часа назад</p>
+                    <a href="#">обновить</a>
+                </div>
+            </div>
+            <div class="check"><input type="checkbox" id="check-this"></div>  
+        </div>	
+        <div class="booking-summary">
+            <a href="#" class="pay-btn">ОПЛАТИТЬ</a>
+            <p>Сумма к оплате <span class="js_payment_sym"><em>0</em> $</span></p>
+        </div>
+    </div> 
+
+</div>
+
+    
+<!-- js -->
+<script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="js/jquery.queryloader2.js" type="text/javascript"></script>
+<!-- <script>
+        $("body").queryLoader2();
+    </script> -->
+<script src="js/jquery.ui.core.js" type="text/javascript"></script>
+<script src="js/jquery.ui.widget.js" type="text/javascript"></script>
+<script src="js/jquery.ui.position.js"></script>
+<script src="js/jquery.ui.menu.js"></script>
+<script src="js/jquery.ui.autocomplete.js"></script>
+<script src="js/jquery.ui.mouse.js" type="text/javascript"></script>
+<script src="js/jquery.ui.slider.js" type="text/javascript"></script> 
+<script src="js/jquery.ui.datepicker.js" type="text/javascript"></script> 
+<script src="js/jquery.ui.datepicker-ru.js" type="text/javascript"></script> 
+<script src="js/jquery.carouFredSel-6.2.1-packed.js" type="text/javascript"></script>
+<script src="js/jquery.selectbox-0.2.min.js" type="text/javascript"></script>
+<script src='js/markerclusterer.js' type="text/javascript"></script>
+<script src='js/jquery.mousewheel.js' type="text/javascript"></script>
+<script src='js/jquery.jscrollpane.js' type="text/javascript"></script>
+<script src='js/jquery-ui.custom.min.js' type="text/javascript"></script>
+<script src='js/fullcalendar.min.js' type="text/javascript"></script>
+<script src="js/main.js" type="text/javascript"></script>
+<script src="js/main-calendar.js" type="text/javascript"></script>
+<script src="js/paginator.js" type="text/javascript"></script>
+
+<script>
+$('.ask-sn-popup').paginator();
+
+	$(function() {
+		var availableTags = [
+			"ActionScript",
+			"AppleScript",
+			"Asp",
+			"BASIC",
+			"C",
+			"Clojure",
+			"COBOL",
+            "COBOLa",
+			"ColdFusion",
+			"Erlang",
+			"Fortran",
+			"Groovy",
+			"Haskell",
+			"Java",
+			"JavaScript",
+			"Lisp",
+			"Perl",
+			"PHP",
+			"Python",
+			"Ruby",
+			"Scala",
+			"Scheme"
+		];
+        $( ".js_toggle" ).autocomplete({
+            source: availableTags
+        });
+		$( ".js_toggle_tab" ).autocomplete({
+			source: availableTags
+		}).autocomplete( "widget" ).addClass( "toggle_searchfield" );
+	});
+	</script>
+</body>
+</html>
