@@ -1,0 +1,25 @@
+/* line 1, ../sass/test.sass */
+body {
+  background-color: #303030;
+}
+
+/* line 4, ../sass/test.sass */
+#chartdiv {
+  width: 900px;
+  height: 200px;
+  margin-top: 100px;
+  background-color: #303030;
+}
+
+/* line 10, ../sass/test.sass */
+.donutsDiv {
+  margin-top: 100px;
+  width: 900px;
+  height: 220px;
+}
+/* line 14, ../sass/test.sass */
+.donutsDiv div {
+  width: 220px;
+  height: 220px;
+  float: left;
+}
