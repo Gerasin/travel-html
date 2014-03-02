@@ -1,25 +1,105 @@
 /* line 1, ../sass/test.sass */
 body {
   background-color: #303030;
+  font-family:arial;
 }
 
 /* line 4, ../sass/test.sass */
-#chartdiv {
+#chartdiv, #chartdiv2, #chartdiv3, #chartdiv4 {
   width: 900px;
-  height: 200px;
-  margin-top: 100px;
-  background-color: #303030;
+  height: 140px;
+  margin-top: 00px;
+  position: absolute;
 }
+
+
+#lineDiv {
+  width : 900px;
+  position: absolute;
+  border-top: 1px solid white;
+  bottom: 22px;
+  opacity : .2;
+}
+
+#chartdiv  { pointer-events:none; left : -10px; }
+#chartdiv2 { pointer-events:none; top : -15px; left: -7px; }
+#chartdiv3 { left : -17px; top : -15px; height:120px; }
+#chartdiv4 { pointer-events:none; top : -15px; height:120px; }
+
 
 /* line 10, ../sass/test.sass */
 .donutsDiv {
-  margin-top: 100px;
-  width: 900px;
+  width: 1100px;
   height: 220px;
+  position:relative;
 }
 /* line 14, ../sass/test.sass */
 .donutsDiv div {
-  width: 220px;
-  height: 220px;
+  width: 250px;
+  height: 250px;
   float: left;
+  
 }
+
+
+.donutsDiv .aline { width:0px; height:200px; border-left:1px solid white; opacity:.2; margin-right:20px; }
+
+.donutsDiv .routeMsg { position:absolute; width:100px; height:20px; color:white; left:77px; top:115px; }
+.donutsDiv .expenceMsg { position:absolute; width:120px; height:20px; color:white; right:190px; top:117px; font-size:14px; }
+
+.donutsDiv .legend { margin-top:30px; width:220px; }
+
+
+.chartPlace {
+  position: relative;
+  width: 900px;
+  height: 100px;
+  margin:50px 30px;
+}
+
+.chartPlace>div { float : left; }
+
+
+
+
+
+.leftNav {
+  height : 50px;
+  width : 100px;
+  position : absolute;
+  bottom : -35px;
+  left : -30px;
+}
+
+.leftNav .leftText { position : absolute;  bottom : 0px; left : 0px; color : #1d91cc; }
+
+.leftNav .leftArrow { 
+  position : absolute;
+  cursor : pointer;
+  width:   8px;
+  height:  15px;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAPCAYAAADZCo4zAAAAaElEQVR42mJkrt7JgAOwAfFqJnySQPyLCZ8kEEcz4ZNENwFDEiTIhE8SpgCnJEzBYigbQxKm4CEQywAxDzb/ghSUAfFeIN4FxELYFDBAFe3DpgjZm1gVoQcUhiJsQY2iCFdkwRUBBBgAY9sgpfSZkQwAAAAASUVORK5CYII=');
+}
+
+
+
+
+.rightNav {
+  height : 50px;
+  width : 100px;
+  position : absolute;
+  bottom : -35px;
+  right : -30px;
+}
+
+.rightNav .rightText { position : absolute;  bottom : 0px; right : 0px; color : #1d91cc; }
+.rightNav .rightArrow { 
+  position : absolute;
+  cursor : pointer;
+  right: 0px;
+  width:   8px;
+  height:  15px;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAPCAYAAADZCo4zAAAAbklEQVR42mJkrt65kYGBIRSIfzFgAUxQidVAzIZLQTQ+RTATcCpigtI4FTEhKcaqiAnNSgxFTFgcDlMEAouxKQABHiCWAeKH2BQIAfEuIN4LxGVMOCT3gSTRHYkhiawAqyRMAU5JmAKckiAAEGAATfEh9I31+PUAAAAASUVORK5CYII=');
+}
+
+  

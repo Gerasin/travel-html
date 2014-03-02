@@ -385,6 +385,7 @@ header nav.main a.active {
 .map  {height:475px; width:100%; margin-top:41px;}
 .map_user {margin: 0; top: 41px;}
 .map_pin {position: absolute; z-index: 40;}
+.map_save  {height:475px; width:100%;}
 
 /*-- формы на карте --*/
 .popup_map_pin {position: absolute; width: 256px;}
@@ -2934,8 +2935,8 @@ body.haspopup {overflow: hidden !important;}
 
   .save_routes-statistics {position: relative; background: #303030;}
     .save_routes-statistics-in {width: 990px; margin: 0 auto; padding: 21px 0 0;}
-      .pointer_stat {background: url(../img/routes/pointer_stat.gif) 0 0 no-repeat; width: 18px; height: 10px; position: absolute; left: 50%; top: 0; margin-left: -9px;}
-      .save_routes-statistics-in h3 {text-align: center; font-weight: normal; font-size: 18px; color: #ffffff; padding: 0 0 20px;}
+      .pointer_stat {background: url(../img/routes/pointer_stat.gif) 0 0 no-repeat; width: 18px; height: 10px; position: absolute; left: 50%; top: 0; margin-left: -34px;}
+      .save_routes-statistics-in h3 {text-align: center; font-weight: normal; font-size: 18px; color: #ffffff; padding: 0 43px 20px 0;}
 
 .pointer_stat_left {position: absolute; margin: 123px 0 0 205px; font-size: 16px; color: #c9c9c9; z-index: 10;}
 .pointer_stat_right {position: absolute; margin: 123px 0 0 735px; font-size: 16px; color: #c9c9c9; z-index: 10;}
@@ -2953,3 +2954,41 @@ body.haspopup {overflow: hidden !important;}
 
 .budget_day_save .budget_day_form {float: right; width: 690px; margin: 0;}
 .budget_day_save .budget_day_note {float: none; margin: 0 690px 0 0; width: auto;}
+
+.routes_date {background: #303030; height: 52px; border-top: 1px solid #292929;}
+  .routes_date_center {width: 1000px; margin: 0 auto;}
+      .routes_date_l {float: left; width: 39px; height: 52px;}
+        .routes_date_l a {background: url(../img/routes/pointer_corusel.png) 0 0 no-repeat; display: block; width: 39px; height: 52px; opacity: 0.8;}
+      .routes_date_r {float: left; width: 39px; height: 52px; border-left: 1px solid #1f1f1f;}
+        .routes_date_r a {background: url(../img/routes/pointer_corusel.png) -39px 0 no-repeat; display: block; width: 39px; height: 52px; opacity: 0.8;}
+        .routes_date_l a:hover, .routes_date_r a:hover {opacity: 1;}
+      .routes_date_corusel {width: 915px; height: 52px; float: left;}
+        .routes_date_corusel li {float: left; width: 149px; text-align: center; height: 30px; list-style: none; position: relative; color: #fff; font-size: 12px; border-left: 1px solid #1f1f1f; padding: 22px 0 0;}
+          .routes_date_corusel li span {position: absolute; top: 2px; left: 4px; color: #037bb9; font-size: 12px;}
+          .routes_date_corusel li a {color: #fff; text-decoration: none;}
+        .routes_date_corusel li.routes_city {border-left: 1px solid #1d91cc;}
+
+    .ico_link_soc {overflow: hidden;}
+      .ico_link_soc_in {float: left;}
+       .ico_link_soc a {display: block; width: 60px; height: 30px; background: url(../img/soc_gif.gif) 0 0 no-repeat; float: left; margin-right: 6px;}
+       .ico_link_soc_in:hover a {opacity: 0.6;}
+       .ico_link_soc a:hover {opacity: 1;}
+       .ico_link_soc a.ico_fb {background-position: 0 0;} 
+       .ico_link_soc a.ico_tv {background-position: -66px 0;} 
+       .ico_link_soc a.ico_vk {background-position: -131px 0;} 
+       .ico_link_soc a.ico_mail {background-position: -196px 0;} 
+
+.search-map {position:absolute; top:14px; right:28px; z-index:80;}
+  .search-map-btn {position:relative; background-color: rgba(0, 0, 0, 0.8); background-image:url(../img/routes/search-icon-white.png); background-position:93% 10px; background-repeat:no-repeat; width:141px; height:20px; display:block; -webkit-border-radius:3px; -moz-border-radius:3px; border-radius:3px; font-size:13px; color:#fff; text-decoration:none; padding:7px 20px 5px 14px; display:none;}
+  .search-map input {position:absolute; top:0; right:0; width:360px; height:32px; margin: 0; font-size:13px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-border-radius:2px; -moz-border-radius:2px; -ms-border-radius:2px; -o-border-radius:2px; border-radius:2px; padding: 6px 25px 5px 10px;  outline: none !important; background:url(../img/routes/search-icon.png) 98% 10px no-repeat #fff !important; -webkit-box-shadow: inset 0px 1px 2px #8b8b8b; -moz-box-shadow: inset 0px 1px 2px #8b8b8b; box-shadow: inset 0px 1px 2px #8b8b8b; background-color: rgba(0, 0, 0, 0.8); color:#545353 !important;} 
+.search-map_bot {position: absolute; top: 47px; right: 28px; z-index: 80;}
+  .search-map_bot .route_day_box_ico img {margin-top: -2px;}
+  .search-map_bot .rout_user_box_text {padding: 12px 0 6px;}
+  .search-map_bot .rout_user_box_text:hover {background: #1d91cc;}
+  .rout_user_box_but3 {background: url(../img/routes/ico_close_basket.png) 0 center no-repeat; float: right; margin: -12px 0 -6px;  width: 36px; height: 41px; position:relative; z-index:15; cursor: pointer; display: none;}
+  .search-map_bot .rout_user_box_text:hover .rout_user_box_but3 {display: block;}
+  .search-map_bot .rout_user_box_text:hover h3, .search-map_bot .rout_user_box_text:hover .rout_user_box_namber {color: #fff;}
+
+
+.statistics_scroll {position: relative;}
+

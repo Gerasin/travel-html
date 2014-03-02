@@ -2,7 +2,6 @@ var slideTime = 10000, effectTime = 1000, innerDelay = 1000, sliderTimeout;
 $(document).ready(function() {
 	
 
-
 	// Меню информационное на главной
 	$('.main_page-info-open a').click(function(){
 		$('.main_page-info-open').fadeOut();
@@ -1719,6 +1718,19 @@ $(document).ready(function() {
 
 
 
+	// save_routes
+	if($('.routes_date_corusel').length){
+		$('.routes_date_corusel').carouFredSel({
+			width: 915,
+			height: 52, 
+			prev: '.routes_date_l a',
+			next: '.routes_date_r a',
+			auto: false 
+		});  
+	} 
+
+
+
 });
 
 // Удаление инпутов даты
@@ -2087,6 +2099,9 @@ $(window).scroll(function() {
 
 		};
 	};
+
+
+	$('.save_routes-statistics').css({ 'top' : -1*$(window).scrollTop() + 'px'});
 
 
 	
