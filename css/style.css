@@ -2906,8 +2906,8 @@ body.haspopup {overflow: hidden !important;}
 
 
 /*---- сохранение маршрута ----*/
-.save_routes {padding: 41px 0 0;}
-  .save_routes-header {background: #494a4a; height: 190px; position: relative;}
+.save_routes {padding: 230px 0 52px; position: relative;}
+  .save_routes-header {background: #494a4a; height: 190px; position: fixed; top: 41px; left: 0; width: 100%; z-index: 100;}
     .save_routes-header-bg-left {position: absolute; width: 50%; left: 0; top: 0; height: 100%; background: #1d91cc;}
     .save_routes-in {width: 990px; margin: 0 auto;}
       .save_routes-info {width: 670px; height: 190px; float: left; background: #1d91cc; position: relative; }
@@ -2915,7 +2915,7 @@ body.haspopup {overflow: hidden !important;}
         .save_routes-date {padding: 3px 0 0 27px; height: 23px; background: url(../img/routes/ico_date.png) 0 0 no-repeat; font-size: 14px; color: #fff; font-family: 'Helvetica Neue', Helvetica, Arial;}
       .save_routes-info-text {height: 153px;}
       .save_routes-info-link {}
-        .save_routes-info-link a {position: relative; display: block; float: left; margin-left: 27px; margin-right: 18px; font-size: 14px; color: #252525; text-decoration: none;}
+        .save_routes-info-link a {position: relative; display: block; float: left; margin-left: 27px; margin-right: 18px; font-size: 14px; color: #005b89; text-decoration: none;}
           .save_routes-info-link a img {position: absolute; left: -27px; top: -1px;}
         .save_routes-info-link a:hover {color: #fff;}
     .save_routes-info-right {float: left; width: 286px; padding: 24px 0 0 25px; font-size: 14px;}
@@ -2955,7 +2955,8 @@ body.haspopup {overflow: hidden !important;}
 .budget_day_save .budget_day_form {float: right; width: 690px; margin: 0;}
 .budget_day_save .budget_day_note {float: none; margin: 0 690px 0 0; width: auto;}
 
-.routes_date {background: #303030; height: 52px; border-top: 1px solid #292929;}
+.routes_date {background: #303030; height: 52px; border-top: 1px solid #292929; position: absolute; left: 0; width: 100%; z-index: 100; margin-top: -52px;}
+.routes_date.active {top: 283px; position: fixed;}  
   .routes_date_center {width: 1000px; margin: 0 auto;}
       .routes_date_l {float: left; width: 39px; height: 52px;}
         .routes_date_l a {background: url(../img/routes/pointer_corusel.png) 0 0 no-repeat; display: block; width: 39px; height: 52px; opacity: 0.8;}

@@ -2101,9 +2101,15 @@ $(window).scroll(function() {
 	};
 
 
-	$('.save_routes-statistics').css({ 'top' : -1*$(window).scrollTop() + 'px'});
+	// $('.save_routes-statistics').css({ 'top' : -1*$(window).scrollTop() + 'px'});
 
+	if ($(window).scrollTop() > 480) {
+		$('.routes_date').addClass('active');
+	} else {
+		$('.routes_date').removeClass('active');
+	};
 
+	//console.log($(window).scrollTop());
 	
 });
 
