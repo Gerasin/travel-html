@@ -162,7 +162,6 @@ function createGraph()
 			}],
 
 			chartScrollbarSettings : { enabled : false }
-			//chartCursor: { cursorAlpha : 0, enabled : false, valueBalloonsEnabled: true,	zoomable: false	}
     };		
 
 
@@ -206,10 +205,6 @@ function createGraph()
 	charts['graph2'].chartCursorSettings.enabled = false;
 	charts['graph3'].chartCursorSettings.enabled = true;
 	charts['graph4'].chartCursorSettings.enabled = false;
-
-
-
-	
 
  }	
 
@@ -298,26 +293,28 @@ function reloadData()
     */ 
 
     		// Updating charts 
+		    charts['graph'].clear();
+		    charts['graph2'].clear();
+		    charts['graph3'].clear();
+		    charts['graph4'].clear();
+		    $("#chartdiv").html('');
+		    $("#chartdiv2").html('');
+		    $("#chartdiv3").html('');
+		    $("#chartdiv4").html('');
+		    initThemes();
+		    createGraph();
+		    
 		    charts['pieLeft'].dataProvider = generatePieData();
 		    charts['pieLeft'].validateData();
 		    
 		    charts['pieRight'].dataProvider = generatePieData();
 		    charts['pieRight'].validateData();
 
-		    charts['chart1'].clear();
-		    charts['chart2'].clear();
-		    charts['chart3'].clear();
-		    charts['chart4'].clear();
-		    createGraph();
-
-
 		    // update month names 
 		    var next = currentMonth+1; if (next>11) { next = 0; }
 		    var prev = currentMonth-1; if (prev<0) { prev = 11; }
 		    $(".leftText").html(months[prev]);
 		    $(".rightText").html(months[next]);
-
-
 
  }
 
@@ -340,11 +337,10 @@ function prevMonth()
 
 function init()
  {
+ 	 initThemes();
 	 createRightDonut(); 
 	 createLeftDonut(); 
 	 createGraph(); 
-	 //createSimpleGraph() 
-	 //reloadData();
 
 	 $('.rightArrow').on('click',nextMonth); 
 	 $('.leftArrow').on('click',prevMonth); 

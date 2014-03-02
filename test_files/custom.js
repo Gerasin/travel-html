@@ -1,3 +1,7 @@
+
+
+function initThemes() {
+
 AmCharts.themes.custom = {
 
 	AmChart: {
@@ -202,3 +206,5 @@ AmCharts.themes.custom = {
 	}
 
 };
+
+}
