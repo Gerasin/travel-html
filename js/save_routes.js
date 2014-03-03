@@ -56,10 +56,12 @@ $(document).ready(function() {
 
 $(window).scroll(function() {
 
-	if ($(window).scrollTop() > 480) {
+	if ($(window).scrollTop() > 675) {
 		$('.routes_date').addClass('active');
 	} else {
 		$('.routes_date').removeClass('active');
 	};
 	
+	console.log($(window).scrollTop());
+
 });
