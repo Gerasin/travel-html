@@ -2058,10 +2058,12 @@ $(window).scroll(function() {
 
 	var leftColTop;
 	var leftColTopScroll;
+	var leftColHeight;
 	if ($('.left_column').length) {
 		$('.left_column').each(function() {
 			if ($(this).is(':visible')) {
-
+				leftColHeight = $(this).height();
+				$(this).parents('.content').css({ 'min-height' : leftColHeight + 'px'});
 				if (offsetLeftCol == -100) {
 					offsetLeftCol = $(this).offset().top;
 				};

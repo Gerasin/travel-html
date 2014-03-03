@@ -45,9 +45,24 @@ $(document).ready(function() {
 
 
 	$('.rout_user_box_but3').click(function(){
-		$(this)
+		$(this).parents('.rout_user_box').remove();
+		return false;
 	});
 
+
+	$('.search-map_bot').height($(window).height() - 130);
+	$('.search-map_bot').jScrollPane({
+ 		autoReinitialise : true,
+		autoReinitialiseDelay : 100
+ 	});
+
+ 	$('.search-map_bot').find('.jspVerticalBar').css({opacity : 0});
+
+	$('.rout_user_box_text').hover(function() {
+		$(this).parents('.search-map_bot').find('.jspVerticalBar').stop().animate({opacity : 1}, 500);
+	}, function() {
+		$(this).parents('.search-map_bot').find('.jspVerticalBar').stop().animate({opacity : 0}, 100);
+	});
 
 
 });
@@ -60,6 +75,12 @@ $(window).scroll(function() {
 		$('.routes_date').addClass('active');
 	} else {
 		$('.routes_date').removeClass('active');
+	};
+
+	if ($(window).scrollTop() > 720) {
+		$('.search-map_bot').addClass('active');
+	} else {
+		$('.search-map_bot').removeClass('active');
 	};
 	
 	console.log($(window).scrollTop());

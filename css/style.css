@@ -2987,7 +2987,8 @@ body.haspopup {overflow: hidden !important;}
 .search-map {position:absolute; top:14px; right:28px; z-index:80;}
   .search-map-btn {position:relative; background-color: rgba(0, 0, 0, 0.8); background-image:url(../img/routes/search-icon-white.png); background-position:93% 10px; background-repeat:no-repeat; width:141px; height:20px; display:block; -webkit-border-radius:3px; -moz-border-radius:3px; border-radius:3px; font-size:13px; color:#fff; text-decoration:none; padding:7px 20px 5px 14px; display:none;}
   .search-map input {position:absolute; top:0; right:0; width:360px; height:32px; margin: 0; font-size:13px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-border-radius:2px; -moz-border-radius:2px; -ms-border-radius:2px; -o-border-radius:2px; border-radius:2px; padding: 6px 25px 5px 10px;  outline: none !important; background:url(../img/routes/search-icon.png) 98% 10px no-repeat #fff !important; -webkit-box-shadow: inset 0px 1px 2px #8b8b8b; -moz-box-shadow: inset 0px 1px 2px #8b8b8b; box-shadow: inset 0px 1px 2px #8b8b8b; background-color: rgba(0, 0, 0, 0.8); color:#545353 !important;} 
-.search-map_bot {position: absolute; top: 47px; right: 28px; z-index: 80;}
+.search-map_bot {position: absolute; top: 47px; right: 28px; z-index: 80; width: 360px;}
+.search-map_bot.active {position: fixed; top: 93px;}
   .search-map_bot .route_day_box_ico img {margin-top: -2px;}
   .search-map_bot .rout_user_box_text {padding: 12px 0 6px;}
   .search-map_bot .rout_user_box_text:hover {background: #1d91cc;}
@@ -2999,7 +3000,7 @@ body.haspopup {overflow: hidden !important;}
     .search-map_bot .r_u_cont_corusel_img li {width: 360px; height: 173px;}
       .search-map_bot .r_u_cont_corusel_img img {width: 360px;}
       .search-map_bot .jspTrack {background: none;}
-      .search-map_bot .jspVerticalBar {z-index: 15;}
+      .search-map_bot .jspVerticalBar {z-index: 50;}
       .search-map_bot .jspDrag {background: #151515;}
       .search-map_bot .r_u_cont_corusel_but a.r_u_cont_corusel_r {right: 0px;}
 
