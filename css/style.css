@@ -2947,13 +2947,17 @@ body.haspopup {overflow: hidden !important;}
 .map_page {position:relative;}
   .map_page .search-menu-map {}
 .budget_day_itogo_bg {background: #2e2e2e; height: 37px; clear: both;} 
-  .budget_day_itogo_bg .budget_day_itogo {float: right; width: 645px;}
+  .budget_day_itogo_bg .budget_day_itogo {float: right; width: 445px;}
 .budget_day_save {background: #fff url(../img/routes/border_big.gif) 0 0 repeat-x;}
   .budget_day_save .budget_day {background: #fff url(../img/routes/border_big.gif) 0 0 repeat-x;}
   .budget_day_save .budget_day_header {height: 52px; line-height: 52px;}
 
-.budget_day_save .budget_day_form {float: right; width: 690px; margin: 0;}
-.budget_day_save .budget_day_note {float: none; margin: 0 690px 0 0; width: auto;}
+.budget_day_save .budget_day_form {float: right; width: 490px; margin: 0;}
+.budget_day_save .budget_day_note {float: none; margin: 0 490px 0 0; width: auto;}
+
+
+.save_route_tab {position: relative; height: 405px; overflow: hidden;}
+  .save_route_tab_item {position: absolute; width: 100%; height: 405px; left: 0%;}
 
 .routes_date {background: #303030; height: 52px; border-top: 1px solid #292929; position: absolute; left: 0; width: 100%; z-index: 100; margin-top: -52px;}
 .routes_date.active {top: 283px; position: fixed;}  
@@ -2964,9 +2968,10 @@ body.haspopup {overflow: hidden !important;}
         .routes_date_r a {background: url(../img/routes/pointer_corusel.png) -39px 0 no-repeat; display: block; width: 39px; height: 52px; opacity: 0.8;}
         .routes_date_l a:hover, .routes_date_r a:hover {opacity: 1;}
       .routes_date_corusel {width: 915px; height: 52px; float: left;}
-        .routes_date_corusel li {float: left; width: 149px; text-align: center; height: 30px; list-style: none; position: relative; color: #fff; font-size: 12px; border-left: 1px solid #1f1f1f; padding: 22px 0 0;}
+        .routes_date_corusel li {float: left; width: 129px; text-align: center; height: 30px; list-style: none; position: relative; color: #fff; font-size: 12px; border-left: 1px solid #1f1f1f; padding: 22px 0 0;}
           .routes_date_corusel li span {position: absolute; top: 2px; left: 4px; color: #037bb9; font-size: 12px;}
           .routes_date_corusel li a {color: #fff; text-decoration: none;}
+          .routes_date_corusel li a.active {color: #037bb9;}
         .routes_date_corusel li.routes_city {border-left: 1px solid #1d91cc;}
 
     .ico_link_soc {overflow: hidden;}
@@ -2989,7 +2994,14 @@ body.haspopup {overflow: hidden !important;}
   .rout_user_box_but3 {background: url(../img/routes/ico_close_basket.png) 0 center no-repeat; float: right; margin: -12px 0 -6px;  width: 36px; height: 41px; position:relative; z-index:15; cursor: pointer; display: none;}
   .search-map_bot .rout_user_box_text:hover .rout_user_box_but3 {display: block;}
   .search-map_bot .rout_user_box_text:hover h3, .search-map_bot .rout_user_box_text:hover .rout_user_box_namber {color: #fff;}
-
+  .search-map_bot .rout_user_box {width: 360px;}
+  .search-map_bot .r_u_cont_corusel_img {width: 360px; height: 173px;}
+    .search-map_bot .r_u_cont_corusel_img li {width: 360px; height: 173px;}
+      .search-map_bot .r_u_cont_corusel_img img {width: 360px;}
+      .search-map_bot .jspTrack {background: none;}
+      .search-map_bot .jspVerticalBar {z-index: 15;}
+      .search-map_bot .jspDrag {background: #151515;}
+      .search-map_bot .r_u_cont_corusel_but a.r_u_cont_corusel_r {right: 0px;}
 
 .statistics_scroll {position: relative;}
 

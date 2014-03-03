@@ -1573,7 +1573,7 @@ $(document).ready(function() {
 	$('.budget_day_table-input input').keyup(function()	{
 		budgetDayInput = 0;
 		budgetDayInputNamber = 0;
-		$(this).parents('.budget_day_table-input').find("input").each(function(){
+		$(this).parents('.budget_day_table').find("input").each(function(){
 			if ( $(this).val() > 0 ) {
 				budgetDayInputNamber = parseInt($(this).val())
 			} else {budgetDayInputNamber = 0;}
@@ -1715,20 +1715,6 @@ $(document).ready(function() {
 		$(this).parents('.pay_form-input').find('.pol_select').hide();
 		return false;
 	});
-
-
-
-	// save_routes
-	if($('.routes_date_corusel').length){
-		$('.routes_date_corusel').carouFredSel({
-			width: 915,
-			height: 52, 
-			prev: '.routes_date_l a',
-			next: '.routes_date_r a',
-			auto: false 
-		});  
-	} 
-
 
 
 });
@@ -2100,16 +2086,6 @@ $(window).scroll(function() {
 		};
 	};
 
-
-	// $('.save_routes-statistics').css({ 'top' : -1*$(window).scrollTop() + 'px'});
-
-	if ($(window).scrollTop() > 480) {
-		$('.routes_date').addClass('active');
-	} else {
-		$('.routes_date').removeClass('active');
-	};
-
-	//console.log($(window).scrollTop());
 	
 });
 
