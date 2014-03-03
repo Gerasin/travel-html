@@ -1568,9 +1568,10 @@ $(document).ready(function() {
     }
 	$('.budget_day_table-list a').click(budgetDayTableClick);
 
+	// code 0303
 	var budgetDayInput = 0;
 	var budgetDayInputNamber = 0;
-	$('.budget_day_table-input input').keyup(function()	{
+	$('.budget_day_table input').keyup(function()	{
 		budgetDayInput = 0;
 		budgetDayInputNamber = 0;
 		$(this).parents('.budget_day_table').find("input").each(function(){
@@ -1715,6 +1716,25 @@ $(document).ready(function() {
 		$(this).parents('.pay_form-input').find('.pol_select').hide();
 		return false;
 	});
+
+
+	// Срываем ячейки фильтра в левой калонке
+  	$('.hotels_on_route .setting_cont').hide();
+  	$('.hotels_on_route .setting_cont').eq(0).show();
+  	$('.hotels_on_route .setting_cont').eq(1).show();
+  	$('.hotels_on_route .setting_cont').eq(2).show();
+  	$('.hotels_on_route .left_column h3').eq(0).addClass('active');
+  	$('.hotels_on_route .left_column h3').eq(1).addClass('active');
+  	$('.hotels_on_route .left_column h3').eq(2).addClass('active');
+  	$('.hotels_on_route .left_column h3').click(function(){
+  		if (!$(this).hasClass('active')) {
+  			$(this).next().slideDown();
+  			$(this).addClass('active');
+  		} else {
+  			$(this).next().slideUp();
+  			$(this).removeClass('active');
+  		}
+  	});
 
 
 });
@@ -2058,20 +2078,20 @@ $(window).scroll(function() {
 
 	var leftColTop;
 	var leftColTopScroll;
-	var leftColHeight;
+	var windowHeight = $(window).height() - 280;
 	if ($('.left_column').length) {
 		$('.left_column').each(function() {
 			if ($(this).is(':visible')) {
-				leftColHeight = $(this).height();
-				$(this).parents('.content').css({ 'min-height' : leftColHeight + 'px'});
-				if (offsetLeftCol == -100) {
-					offsetLeftCol = $(this).offset().top;
-				};
-				leftColTopScroll = $(window).scrollTop() + 41;
-				if (leftColTopScroll > offsetLeftCol) {
-					$(this).css({position: 'fixed', top: 41 + 'px'});
-				} else {
-					$(this).css({position: 'relative', top: 0});
+				if ($('.left_column:visible').height() < windowHeight) {
+					if (offsetLeftCol == -100) {
+						offsetLeftCol = $(this).offset().top;
+					};
+					leftColTopScroll = $(window).scrollTop() + 41;
+					if (leftColTopScroll > offsetLeftCol) {
+						$(this).css({position: 'fixed', top: 41 + 'px'});
+					} else {
+						$(this).css({position: 'relative', top: 0});
+					}
 				}
 			}
 		});

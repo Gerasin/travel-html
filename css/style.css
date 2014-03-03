@@ -512,8 +512,9 @@ header nav.main a.active {
 .content  {width:990px; margin:20px auto 0;}
 
   /*=== Левая колонка ===*/
-  .left_column  {float:left; width:200px; z-index: 20;}
+  .left_column  {float:left; width:200px; z-index: 20; margin-bottom: 20px;}
     .left_column h3 {background:#2c2c2c; padding:13px 10px 14px 20px; border-bottom: 1px solid #262626; font-weight:normal; display:block; color:#fff; font-size: 12px;}
+    .hotels_on_route .left_column h3 {cursor: pointer;}
   .left_column_t  {float:left; width:200px;}
     .left_column_t h3 {background:#2e2e2e; padding:13px 10px 14px 20px; border-bottom: 1px solid #262626; font-weight:normal; display:block; color:#fff; font-size: 12px;}
     .setting_cont {padding:30px 10px 30px;
@@ -2117,7 +2118,7 @@ background: linear-gradient(#FB7F01, #d65002);}
 
 
 /*==== Подвал ====*/
-.footer_main  {background:#151515; width:100%; margin:0 auto; position: relative; z-index: 10;}
+.footer_main  {background:#151515; width:100%; margin:0 auto; position: relative; z-index: 20;}
   .footer_main_menu {text-align:center; padding:12px 0 0; height:23px; border-bottom:1px solid #070707;}
     .footer_main_menu a {position:relative; padding:0 0 0 25px; background:url(../img/footer_main_menu_ico.png) 0 0 no-repeat; font-size:14px; color:#eaeaea; text-decoration:none; margin:0 37px;}
     .footer_main_menu a:hover, .footer_main_menu a.active {color:#0690d7;}
