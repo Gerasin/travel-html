@@ -2,6 +2,13 @@ var slideTime = 10000, effectTime = 1000, innerDelay = 1000, sliderTimeout;
 $(document).ready(function() {
 	
 
+	// tur
+	$('.tur_search_button').click(function(){
+		$('.tur_name_search').animate({'width' : 220 + 'px'}, 500);
+		setTimeout("$('.tur_name_search').addClass('active')", 500);
+		return false;
+	});
+
 	// Меню информационное на главной
 	$('.main_page-info-open a').click(function(){
 		$('.main_page-info-open').fadeOut();
@@ -2040,6 +2047,16 @@ $(document).on('click', 'body', function (e) {
 
 
 $(document).mouseup(function (e){
+	var searchTur = $(".tur_name_search"); 
+  	if (!searchTur.is(e.target) && searchTur.has(e.target).length === 0){
+		if ( $('.tur_search_input').val() == '') {
+			if ($('.tur_name_search').hasClass('active')) {
+				$('.tur_name_search').animate({width: '57'}, 500);
+				$('.tur_name_search').removeClass('active'); 
+			}
+		};
+	};
+
   	var container = $(".searchfield"); 
   	if (!container.is(e.target) && container.has(e.target).length === 0){
 		if ( $('.searchfield').val() == '') {

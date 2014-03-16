@@ -598,7 +598,7 @@ header nav.main a.active {
   .rating_info_popup  {display:none; position: absolute; top: 5px; left: 159px; background:url(../images/rating_popup_bg.png) 0 0 no-repeat; width:403px; height:186px; padding:11px 24px 0 28px; z-index:4;}
   .rating_info_popup.item-third {background:url(../images/rating_popup_bg_third.png) 0 0 no-repeat; left: -150px; }
   .rating_info_popup .rating_info_list {padding-top: 7px;}
-    .rating_info_main {background:url(../images/rating_info_main.png) 0 27px no-repeat; width:230px; font-size:80px; color:#1082c2; text-shadow:-1px -1px 1px #14425e; font-weight:bold; padding:0 0 5px 80px;}
+    .rating_info_main {background:url(../images/rating_info_main.png) 0 27px no-repeat; width:230px; margin-top: 17px; font-size:80px; color:#1082c2; text-shadow:-1px -1px 1px #14425e; font-weight:bold; padding:0 0 5px 80px;}
       .rating_info_main span  {color:#c4c4c4; font-size:12px;}
     .rating_info_recommendation {font-size:30px; color:#ed5200; font-weight:bold;}
       .rating_info_recommendation span  {font-size:14px; font-weight:normal;}
@@ -2118,6 +2118,23 @@ background: linear-gradient(#FB7F01, #d65002);}
 
 
 /*==== Подвал ====*/
+.footer_main_center {width: 1000px; margin: 0 auto; padding-bottom: 8px;}
+.footer_menu_border {border-bottom: 1px solid #333232; margin-bottom: 44px;}
+.footer_menu_link {font-family: 'helveticaneuecyrlight', "Helvetica Neue", Helvetica, sans-serif; height: 28px; padding: 12px 0 0; margin: 0 auto; width: 1000px; }
+  .footer_menu_link li {list-style: none; float: left; padding: 0 85px;}
+    .footer_menu_link li.first {padding-left: 0;}
+    .footer_menu_link li.last {padding-right: 0;}
+    .footer_menu_link li a {text-decoration: none; color: #fff; font-size: 14px; color: #fff;}
+    .footer_menu_link a:hover, .footer_menu li.active a {color: #43adec;}
+.footer_message {text-align: center; padding-bottom: 30px;}
+.soc_ico_link {float: right;}
+  .soc_ico_link li {list-style: none; float: left; margin-left: 13px;}
+.footer_menu_info {float: left; padding-top: 5px;}
+  .footer_menu_info li {list-style: none; float: left; padding-right: 40px; font-size: 14px;}
+    .footer_menu_info a {color: #fff; text-decoration: none;}
+    .footer_menu_info a:hover, .footer_menu_info li.active a {color: #43adec;}
+    .ico_logo_footer {margin-top: -3px; margin-right: -20px;}
+  
 .footer_main  {background:#151515; width:100%; margin:0 auto; position: relative; z-index: 20;}
   .footer_main_menu {text-align:center; padding:12px 0 0; height:23px; border-bottom:1px solid #070707;}
     .footer_main_menu a {position:relative; padding:0 0 0 25px; background:url(../img/footer_main_menu_ico.png) 0 0 no-repeat; font-size:14px; color:#eaeaea; text-decoration:none; margin:0 37px;}
@@ -3006,4 +3023,33 @@ body.haspopup {overflow: hidden !important;}
       .search-map_bot .r_u_cont_corusel_but a.r_u_cont_corusel_r {right: 0px;}
 
 .statistics_scroll {position: relative;}
+
+.tur_name_padding {height: 539px; clear: both;}
+.tur_name {position: relative; height: 73px; background: rgba(0, 0, 0, 0.5); clear: both; z-index: 98;}
+  .tur_name_center {width: 1000px; margin: 0 auto; color: #fff; font-family: 'Helvetica Neue', Helvetica, Arial; position:relative;}
+    .tur_name_country {text-align: center; font-size: 12px; padding: 12px 0 6px;}
+    .tur_name_city {text-align: center; font-size: 27px;}
+    .tur_name_search {float: left; margin: 17px 0 0 0; border: 1px solid #646262; position: absolute; left: 0;}
+      .tur_search_button {display: block; float: right;}
+        .tur_search_button img {float: left;}
+      .tur_search_input {float: left; width: 150px; margin:11px 0 0 10px; display: none; border: 0; background: none; font: 14px 'Arial'}
+    .tur_name_search.active {background: #fff;}
+      .tur_name_search.active .tur_search_input {display: block;}
+  
+.content_tabs_bg_withe {background: #fff; position: relative; z-index: 90; padding-top: 20px;}
+  .content_tabs_bg_withe .route-content {margin-top: 0;}
+  .tur_slider_cont {width: 1000px; position: relative; z-index: 10; margin: 0 auto; color: #fff; font-family: 'Helvetica Neue', Helvetica, Arial; text-align: center; padding: 100px 0 0;}
+    .tur_slider_city {padding-bottom: 21px; font-size: 18px;}
+      .tur_slider_city span {padding: 0 75px;}
+      .tur_slider_city img {position: relative; top: -5px;}
+    .tur_slider_name {font-size: 50px; padding-bottom: 25px;}
+    .tur_slider_date {font-size: 22px; padding-bottom: 35px;}
+    .tur_slider_price {font-size: 22px; padding-bottom: 23px;}
+    .tur_slider_detals {display: block; border: 1px solid #fff; width: 186px; margin: 0 auto; color: #fff; text-decoration: none; padding: 10px 0 11px; font-size: 18px;}
+.tur_item {padding: 10px 6px 0;}
+  .tur_item_logo {height: 53px;}
+  .tur_item_date {border-bottom: 1px solid #d7d7d7; font-size: 14px; color: #008cd4; padding-bottom: 3px; margin-bottom: 4px;}
+  .tur_item_price {height: 28px; font-family: Arial;}
+    .tur_item_price_haeder {float: left; color: #1d98d8; font-size: 12px; padding-top: 9px;}
+    .tur_item_price_namber {float: right; color: #f15a22; font-size: 22px; font-weight: bold;}
 
