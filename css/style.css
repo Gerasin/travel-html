@@ -2120,8 +2120,8 @@ background: linear-gradient(#FB7F01, #d65002);}
 /*==== Подвал ====*/
 .footer_main_center {width: 1000px; margin: 0 auto; padding-bottom: 8px;}
 .footer_menu_border {border-bottom: 1px solid #333232; margin-bottom: 44px;}
-.footer_menu_link {font-family: 'helveticaneuecyrlight', "Helvetica Neue", Helvetica, sans-serif; height: 28px; padding: 12px 0 0; margin: 0 auto; width: 1000px; }
-  .footer_menu_link li {list-style: none; float: left; padding: 0 85px;}
+.footer_menu_link {font-family: Helvetica, 'helveticaneuecyrlight', "Helvetica Neue", sans-serif; font-weight: 100; height: 28px; padding: 12px 0 0; margin: 0 auto; width: 1000px; }
+  .footer_menu_link li {list-style: none; float: left; padding: 0 81px;}
     .footer_menu_link li.first {padding-left: 0;}
     .footer_menu_link li.last {padding-right: 0;}
     .footer_menu_link li a {text-decoration: none; color: #fff; font-size: 14px; color: #fff;}
@@ -2135,7 +2135,7 @@ background: linear-gradient(#FB7F01, #d65002);}
     .footer_menu_info a:hover, .footer_menu_info li.active a {color: #43adec;}
     .ico_logo_footer {margin-top: -3px; margin-right: -20px;}
   
-.footer_main  {background:#151515; width:100%; margin:0 auto; position: relative; z-index: 20;}
+.footer_main  {background:#151515; width:100%; margin:0 auto; position: relative; z-index: 20; letter-spacing: 0.04em;}
   .footer_main_menu {text-align:center; padding:12px 0 0; height:23px; border-bottom:1px solid #070707;}
     .footer_main_menu a {position:relative; padding:0 0 0 25px; background:url(../img/footer_main_menu_ico.png) 0 0 no-repeat; font-size:14px; color:#eaeaea; text-decoration:none; margin:0 37px;}
     .footer_main_menu a:hover, .footer_main_menu a.active {color:#0690d7;}
@@ -3026,7 +3026,7 @@ body.haspopup {overflow: hidden !important;}
 
 .tur_name_padding {height: 539px; clear: both;}
 .tur_name {position: relative; height: 73px; background: rgba(0, 0, 0, 0.5); clear: both; z-index: 98;}
-  .tur_name_center {width: 1000px; margin: 0 auto; color: #fff; font-family: 'Helvetica Neue', Helvetica, Arial; position:relative;}
+  .tur_name_center {width: 990px; margin: 0 auto; color: #fff; font-family: 'Helvetica Neue', Helvetica, Arial; position:relative;}
     .tur_name_country {text-align: center; font-size: 12px; padding: 12px 0 6px;}
     .tur_name_city {text-align: center; font-size: 27px;}
     .tur_name_search {float: left; margin: 17px 0 0 0; border: 1px solid #646262; position: absolute; left: 0;}
@@ -3046,6 +3046,7 @@ body.haspopup {overflow: hidden !important;}
     .tur_slider_date {font-size: 22px; padding-bottom: 35px;}
     .tur_slider_price {font-size: 22px; padding-bottom: 23px;}
     .tur_slider_detals {display: block; border: 1px solid #fff; width: 186px; margin: 0 auto; color: #fff; text-decoration: none; padding: 10px 0 11px; font-size: 18px;}
+    a.tur_slider_detals:hover {border: 1px solid #008cd4; color: #008cd4;}
 .tur_item {padding: 10px 6px 0;}
   .tur_item_logo {height: 53px;}
   .tur_item_date {border-bottom: 1px solid #d7d7d7; font-size: 14px; color: #008cd4; padding-bottom: 3px; margin-bottom: 4px;}
