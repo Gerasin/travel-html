@@ -3047,10 +3047,158 @@ body.haspopup {overflow: hidden !important;}
     .tur_slider_price {font-size: 22px; padding-bottom: 23px;}
     .tur_slider_detals {display: block; border: 1px solid #fff; width: 186px; margin: 0 auto; color: #fff; text-decoration: none; padding: 10px 0 11px; font-size: 18px;}
     a.tur_slider_detals:hover {border: 1px solid #008cd4; color: #008cd4;}
-.tur_item {padding: 10px 6px 0;}
+.tur_item {padding: 10px 6px 0; position: relative; z-index: 30; background: #f7f9fb;}
   .tur_item_logo {height: 53px;}
   .tur_item_date {border-bottom: 1px solid #d7d7d7; font-size: 14px; color: #008cd4; padding-bottom: 3px; margin-bottom: 4px;}
   .tur_item_price {height: 28px; font-family: Arial;}
     .tur_item_price_haeder {float: left; color: #1d98d8; font-size: 12px; padding-top: 9px;}
     .tur_item_price_namber {float: right; color: #f15a22; font-size: 22px; font-weight: bold;}
+.routes_main_img_bg {position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 5; background: rgba(0, 0, 0, 0.2);}
+
+.fixed-content-absolute {position: fixed; left: 0; top: 0; width: 100%;}
+
+
+.tur_detal_map {position: relative; height: 73px; background: rgba(0, 0, 0, 0.5); clear: both; z-index: 98;}
+  .tur_detal_map_center {width: 990px; margin: 0 auto; color: #fff; font-size: 14px; font-family: 'Helvetica Neue', Helvetica, Arial; position:relative; text-align: center;}
+    .tur_detal_map_ico {padding: 10px 0 5px;}
+    .tur_detal_map_center a {text-decoration: none; color: #fff;}
+.tur_detal {background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, Arial; position: relative; z-index: 50;}
+.tur_detal_center {max-width: 1400px; margin: 0 auto;}
+  .tur_detal_right {float: right; width: 268px;}
+    .tur_detal_price_header {text-align: center; border-bottom: 1px solid #d0d0d0; padding: 18px 0 12px; font-size: 20px; color: #3c3c3c; margin-bottom: 27px;}
+  
+    .tur_detal_price {padding: 0 15px; border-bottom: 1px solid #d0d0d0; padding-bottom: 10px; margin-bottom: 9px;}
+      .tur_detal_price_l {float: left; width: 145px; font-size: 16px; color: #000;}
+      .tur_detal_price_r {float: right; text-align: right; font-size: 16px; color: #1d91cb;}
+    .tur_detal_price_bottom {border: 0; margin-bottom: 30px;}
+  .tur_detal_button {padding: 0 15px 25px;}
+    .tur_detal_button a {display: block; font-size: 18px; color: #fff; text-decoration: none; background: #1b8fcb; text-align: center; padding: 10px 0 11px;}
+  .user_gid_name_header {padding-bottom: 12px; border-bottom: 1px solid #d0d0d0; margin-bottom: 20px; font-size: 20px; color: #3c3c3c; letter-spacing: 0.05em; padding: 0 17px 10px;}
+    .user_gid_name_header span {display: block; padding: 0 10px; text-align: center;}
+    .user_gid_name_header.ico_active span {background: url(../images/tur/ico_active.jpg) 100% 8px no-repeat;}
+    .user_gid_name_img {width: 100px; height: 100px; margin: 0 auto; overflow: hidden; margin-bottom: 12px;}
+    .user_gid_name {color: #1b8fcb; font-size: 16px; text-align: center; padding-bottom: 6px;}
+    .user_gid_name_inf {color: #333; font-size: 12px; text-align: center; padding-bottom: 20px; letter-spacing: 0.05em;}
+    .user_gid_name_inf.active {color: #41962f;}
+    .user_gid_form {padding: 0 17px;}
+      .user_gid_form_inp {padding: 12px 10px; margin-bottom: 7px; border: 1px solid #dedede; background: #fff;}
+        .user_gid_form_inp input {font-size: 12px; color: #bfbfbf; padding: 0; margin: 0; width: 215px; border: 0; background: none;}
+    .user_gid_cont {border: 1px solid #dedede; padding: 10px 0 0;}
+      .user_gid_chat {max-height: 230px; overflow: auto;}
+        .user_gid_chat_user {overflow: hidden; padding: 4px; background: #fff;}
+          .user_gid_chat_ava {float: left; width: 32px; min-height: 32px; border: 1px solid #dbdbdb; overflow: hidden;
+            -webkit-border-radius: 1px;
+            -moz-border-radius: 1px;
+            border-radius: 1px;}
+            .user_gid_chat_ava img {max-width: 32px; max-height: 32px;}
+          .user_gid_chat_text {margin: 0 0 0 16px; background: #fff; margin-top: 3px; max-width: 145px; float: left; padding: 6px 12px 7px 11px; position: relative; font-size: 12px; color: #464646; margin-bottom: 18px;
+            -moz-border-radius: 4px;
+            -webkit-border-radius: 4px;
+            border-radius: 4px;
+            background-color: #d77b37;
+            -moz-box-shadow: 0 1px 2px rgba(0,0,0,.4);
+            -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.4);
+            box-shadow: 0 1px 2px rgba(0,0,0,.4);
+            background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEzOSAzMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PGxpbmVhckdyYWRpZW50IGlkPSJoYXQwIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjUwJSIgeTE9IjEwMCUiIHgyPSI1MCUiIHkyPSItMS40MjEwODU0NzE1MjAyZS0xNCUiPgo8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjZjVmNWY1IiBzdG9wLW9wYWNpdHk9IjEiLz4KPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZmJmYmZiIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgPC9saW5lYXJHcmFkaWVudD4KCjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMzkiIGhlaWdodD0iMzEiIGZpbGw9InVybCgjaGF0MCkiIC8+Cjwvc3ZnPg==);
+            background-image: -moz-linear-gradient(bottom, #f5f5f5 0%, #fbfbfb 100%);
+            background-image: -o-linear-gradient(bottom, #f5f5f5 0%, #fbfbfb 100%);
+            background-image: -webkit-linear-gradient(bottom, #f5f5f5 0%, #fbfbfb 100%);
+            background-image: linear-gradient(bottom, #f5f5f5 0%, #fbfbfb 100%);}
+            .user_gid_chat_text:after {position: absolute; left: -7px; top: 7px; content: ' '; font-size: 0;
+              border-top: 7px solid transparent;
+              border-right: 8px solid #fff;
+              border-bottom: 7px solid transparent;}
+             .user_gid_chat_text:before {position: absolute; left: -8px; top: 7px; content: ' '; font-size: 0;
+              border-top: 7px solid transparent;
+              border-right: 8px solid #d5d5d5;
+              border-bottom: 7px solid transparent;}
+            .user_gid_chat_admin {max-width: 173px; font-size: 12px; color: #1b8fcb; float: right; padding: 6px 11px 7px 10px; position: relative; margin: 0 17px 12px 0;
+              -moz-border-radius: 4px;
+              -webkit-border-radius: 4px;
+              border-radius: 4px;
+              background-color: #d77b37;
+              -moz-box-shadow: 0 1px 2px rgba(0,0,0,.4);
+              -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.4);
+              box-shadow: 0 1px 2px rgba(0,0,0,.4);
+              background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDIwNiA1MCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PGxpbmVhckdyYWRpZW50IGlkPSJoYXQwIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjUwJSIgeTE9IjEwMCUiIHgyPSI1MCUiIHkyPSItMS40MjEwODU0NzE1MjAyZS0xNCUiPgo8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjZTVlZGZkIiBzdG9wLW9wYWNpdHk9IjEiLz4KPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZjVmOWZkIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgPC9saW5lYXJHcmFkaWVudD4KCjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIyMDYiIGhlaWdodD0iNTAiIGZpbGw9InVybCgjaGF0MCkiIC8+Cjwvc3ZnPg==);
+              background-image: -moz-linear-gradient(bottom, #e5edfd 0%, #f5f9fd 100%);
+              background-image: -o-linear-gradient(bottom, #e5edfd 0%, #f5f9fd 100%);
+              background-image: -webkit-linear-gradient(bottom, #e5edfd 0%, #f5f9fd 100%);
+              background-image: linear-gradient(bottom, #e5edfd 0%, #f5f9fd 100%);
+              }
+                .user_gid_chat_admin:after {position: absolute; right: -7px; top: 9px; content: ' '; font-size: 0;
+                  border-top: 8px solid transparent;
+                  border-left: 9px solid #eef4fe;
+                  border-bottom: 8px solid transparent;
+                  }
+                .user_gid_chat_admin:before {position: absolute; right: -8px; top: 9px; content: ' '; font-size: 0;
+                  border-top: 8px solid transparent;
+                  border-left: 9px solid #d5d5d5;
+                  border-bottom: 8px solid transparent;}
+            .user_gid_message_inp {border-left: 1px solid #e2e2e2; border-right: 1px solid #e2e2e2; padding: 11px 10px 25px 13px; background: #fff;}
+              .user_gid_message_inp textarea {border: 0; padding: 0; margin: 0; width: 207px; height: 50px; font-size: 12px; resize: none; background: none;}
+            .user_gid_message_button a {display: block; background: #1b8fcb; text-decoration: none; color: #fff; text-align: center; font-size: 16px; padding: 13px 0 14px;}
+
+
+
+
+    .tur_detal_left {overflow: hidden; margin: 0 268px 0 0; letter-spacing: 0.05em;}
+      .tur_detal_left h1 {font-weight: normal; padding-bottom: 32px; font-size: 20px; text-align: center;}
+      .tur_detal_left p {display: block; padding: 10px 30px 20px 55px; font-size: 14px; line-height: 24px;}
+      .tur_detal_left p span {display: inline; color: #1b8fcb; font-weight: normal;}
+      .img_tur {max-width: 100%; margin: 10px 0;}
+    .tur_detal_link {font-size: 12px; text-align: center; padding-bottom: 11px; margin-bottom: 20px;}
+      .tur_detal_link a {text-decoration: none; color: #1b8fcb;}
+      .tur_detal_link a:hover {text-decoration: underline;}
+    .tur_detal_open {background: #1b8fcb; position: relative; padding: 18px 0 35px; margin-bottom: 25px;}
+      .tur_detal_open:before {position: absolute; top: 0; left: 50%; margin-left: -11px; content: ' ';
+        border-left: 11px solid transparent;
+        border-right: 11px solid transparent;
+        border-top: 11px solid #fff;}
+      .tur_detal_open_center {width: 600px; margin: 0 auto; color: #fff;}
+        .tur_detal_open_header {font-size: 20px; text-align: center; padding-bottom: 30px;}
+          .tur_detal_open_header span {padding: 0 10px;}
+          .tur_detal_open_header img {position: relative; top: -6px;}
+      .tur_detal_open_price {overflow: hidden; border-bottom: 1px solid #ffffff; padding: 0 10px 7px; margin-bottom: 18px; font-size: 22px;}
+        .tur_detal_open_price_l {float: left; width: 40%;}
+        .tur_detal_open_price_r {float: right; width: 40%; text-align: right;}
+      .tur_detal_open_button {padding: 34px 12px 38px; overflow: hidden;}
+        .tur_detal_open_button a {display: block; float: right; font-size: 20px; color: #fff; text-decoration: none;}
+      .tur_detal_left h2 {color: #1b8fcb; font-size: 20px; font-weight: normal; padding: 10px 0 10px 55px;}
+      .tur_list {padding: 10px 30px 10px 30px;}
+        .tur_list li {list-style: none; padding: 0 0 0 25px; line-height: 30px; font-size: 14px; background: url(../images/tur/marker.png) 0 9px no-repeat;}
+        .tur_list_no li {background: url(../images/tur/marker_no.png) 0 9px no-repeat;}
+      .tur_corusel {position: relative;}
+        .tur_corusel_img {position: relative;}
+          .tur_corusel_img img {max-width: 100%;}
+        .tur_corusel_img_bg {position: absolute; z-index: 10; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.7)}
+        .tur_corusel_cont {position: absolute; z-index: 15; width: 680px; color: #fff; top: 24px; left: 50%; margin-left: -340px; text-align: center;}
+          .tur_corusel_header {padding: 23px 0 0;}
+            .tur_corusel_header span {padding: 0 10px; font-size: 20px; color: #fff;}
+            .tur_corusel_header img {position: relative; top: -5px;}
+          .tur_corusel_item {height: 260px; width: 680px; margin: 0 auto;}
+            .tur_corusel_item li {float: left; list-style: none; width: 680px; height: 125px; padding-top: 125px; font-size: 14px;}
+            .tur_corusel_item_img {padding-bottom: 10px;}
+            .tur_corusel_item_name {color: #1b8fcb; font-size: 14px; line-height: 19px;}
+            .tur_corusel_item_text {position: absolute; bottom: 145px; font-size: 14px; line-height: 19px;}
+  .reservation_form {background: #1b8fcb; padding: 25px 0 20px;}
+    .reservation_form {font-size: 20px; text-align: center; color: #fff; padding-bottom: 25px;}
+      .reservation_form img {position: relative; top: -9px;}
+    .reservation_form_cent {width: 325px; margin: 0 auto;}
+      .reservation_form_cent h3 {font-size: 16px; line-height: 24px; font-weight: normal; padding: 0 0 35px 27px; display: block;}
+      .reservation_form_inp {border: 1px solid #fcfefe; padding: 10px 10px 8px 12px; margin-bottom: 23px; text-align: left;}
+        .reservation_form_inp input {font-size: 14px; color: #fff; border: 0; padding: 0; margin: 0; background: none; width: 300px;}
+        .reservation_form_inp ::-webkit-input-placeholder { color: #fff;}
+        .reservation_form_inp  :-moz-placeholder { color: #fff;}
+      .reservation_form_textarea {border: 1px solid #fcfefe; padding: 10px 10px 8px 12px; margin-bottom: 23px; text-align: left;}
+        .reservation_form_textarea textarea {font-size: 14px; color: #fff; border: 0; padding: 0; margin: 0; background: none; width: 300px; height: 177px; overflow: hidden;}
+        .reservation_form_textarea ::-webkit-input-placeholder { color: #fff;}
+        .reservation_form_textarea  :-moz-placeholder { color: #fff;}
+
+      .reservation_form_people {overflow: hidden;}
+        .reservation_form_people span {display: block; float: left;  padding: 14px 10px 15px 12px; font-size: 16px; color: #fff;}
+        .reservation_form_people .reservation_form_inp {width: 20px; float: right;}
+          .reservation_form_people .reservation_form_inp input {width: 20px; text-align: center;}
+      .reservation_form_butto {border: 1px solid #fcfefe; display: block; text-align: center; padding: 17px 0 18px; text-decoration: none; color: #fff; font-size: 16px;}
+
 
