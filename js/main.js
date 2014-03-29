@@ -9,6 +9,44 @@ $(document).ready(function() {
 		return false;
 	});
 
+	$('.tur_detal_map a').click(function(){
+		if ($('.tur_detal_map_bg').hasClass('active')) {
+			$('.fixed-content').show();
+			$('.tur_map').hide();
+			$(this).parents('.tur_detal_map_bg').removeClass('active');
+		} else {
+			$('.fixed-content').hide();
+			$('.tur_map').show();
+			$(this).parents('.tur_detal_map_bg').addClass('active');
+			mapTur();
+		}
+		return false;
+	});
+
+	if($('.tur_corusel_item').length){
+		$('.tur_corusel_item').carouFredSel({
+			auto: false,
+			pagination: ".tur_corusel-pager",
+			mousewheel: true,
+			swipe: {
+				onMouse: true,
+				onTouch: true
+			}
+		})
+	};
+
+	$('.date_carusel a').click(function(){
+		$('.date_carusel li').removeClass('active');
+		$(this).parents('li').addClass('active');
+		return false;
+	});
+
+	/*$('.email-bind').bind("change keyup input click", function() {
+	    if (this.value.match(/[^0-9-A-Za-z]+$/g)) {
+	        this.value = this.value.replace(/[^0-9-A-Za-z]/g, '');
+	    }
+	});*/
+
 	// Меню информационное на главной
 	$('.main_page-info-open a').click(function(){
 		$('.main_page-info-open').fadeOut();
@@ -2091,7 +2129,17 @@ var offsetTopMenuCal = offsetTopMenu + 120;
 var scrollMenuInfo = $('.hotel_main_slider_cent').height();
 var offsetLeftCol = -100;
 
+var tur_chat = $('.tur_chat').offset().top;
 $(window).scroll(function() {
+
+	// tur
+
+	var windowScroll = $(window).scrollTop();
+	if (windowScroll > tur_chat) {
+		$('.tur_chat').addClass('active')
+	} else {
+		$('.tur_chat').removeClass('active')
+	};
 
 	var leftColTop;
 	var leftColTopScroll;
@@ -2187,4 +2235,47 @@ function sizeUserMap() {
 		$('.map_user').height($(window).height() - 153 + 'px');
 	};
 };
+
+
+
+
+// Карта для тура
+function mapTur() { 
+	if ($('#tur_map').length) { 
+		var latlng = new google.maps.LatLng(45.436767,12.330093); 
+		var mapOptions = {
+			zoom: 15,  
+			center: latlng,
+			mapTypeId: google.maps.MapTypeId.ROADMAP, 
+			panControl:false,
+			streetViewControl:false,
+			mapTypeControl:false, 
+			scaleControl: false,
+			scrollwheel: false 
+		}; 
+		var map = new google.maps.Map(document.getElementById('tur_map'), mapOptions); 
+		var image = new google.maps.MarkerImage('/bundles/routes/img/popup/pin.png', 
+			new google.maps.Size(63, 56), 
+			new google.maps.Point(0,0), 
+			new google.maps.Point(18, 42)
+		); 
+		var marker1 = new google.maps.Marker({
+			position: new google.maps.LatLng(45.436767,12.330093),
+			map: map,
+			icon: image  
+		});  
+		google.maps.event.addDomListener(map, 'tilesloaded', function(){ 
+			mapTurZoomInitSmall();
+		});  
+	};
+};
+
+function mapTurZoomInitSmall() { 
+	if($('#tur_map').find('.customContSmall').length==0){ 
+		$('#tur_map').find('.gmnoprint').last().parent().wrap('<div class="customCont customContSmall" />'); 
+		$('#tur_map').find('.customCont').children().find('.gmnoprint:last-child').addClass('customZoom customZoomSmall');
+		$('#tur_map').find('.customZoom').find('div:nth-child(2)').addClass('zoomIn');  
+		$('#tur_map').find('.customZoom').find('div:last-child').addClass('zoomOut');
+	}  
+} 
  

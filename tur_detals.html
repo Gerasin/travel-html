@@ -134,13 +134,24 @@
         </div>
     </div>
 </div>
-<div class="tur_name_padding"></div>
-<div class="tur_detal_map">
-    <div class="tur_detal_map_center">
-        <div class="tur_detal_map_ico"><a href=""><img src="images/tur/ico_map.png" alt="" /></a></div>
-        <a href="">посмотреть карту маршрута</a>
-    </div>
+<div id="tur_map" class="tur_map">
+    
 </div>
+<div class="tur_name_padding"></div>
+<div class="tur_detal_map_bg">
+    <div class="tur_detal_map">
+        <div class="tur_detal_map_center">
+            <div class="tur_detal_map_ico"><a href=""><img src="images/tur/ico_map.png" alt="" /></a></div>
+            <a href="">посмотреть карту маршрута</a>
+        </div>
+        <div class="tur_detal_img_center">
+            <div class="tur_detal_map_ico"><a href=""><img src="images/tur/ico_map.png" alt="" /></a></div>
+            <a href="">посмотреть маршрут</a>
+        </div>
+    </div>
+    <img src="images/tur/map_bg.jpg" alt="" class="map_bg" />
+</div>
+
 <div class="tur_detal">
     <div class="tur_detal_center">
         <div class="tur_detal_right">
@@ -171,32 +182,34 @@
                <div class="clear"></div>
            </div>
            <div class="tur_detal_button"><a href="">Бронировать</a></div>
-           <div class="user_gid_name_header ico_active"><span>Ваш гид</span></div>
-           <div class="user_gid_name_img"><img src="images/tur/img.jpg" alt="" /></div>
-           <div class="user_gid_name">Денис Майоров</div>
-           <div class="user_gid_name_inf active">online now</div>
-           <div class="user_gid_form">
-               <div class="user_gid_form_inp"><input type="text" placeholder="Ваше имя" /></div>
-               <div class="user_gid_form_inp"><input type="text" placeholder="Email" /></div>
-               <div class="user_gid_cont">
-                   <div class="user_gid_chat">
-                       <div class="user_gid_chat_user">
-                           <div class="user_gid_chat_ava"><img src="images/tur/ava2.gif" alt="" /></div>
-                           <div class="user_gid_chat_text">
-                               Здравствуйте !
+           <div class="tur_chat">
+               <div class="user_gid_name_header ico_active"><span>Ваш гид</span></div>
+               <div class="user_gid_name_img"><img src="images/tur/img.jpg" alt="" /></div>
+               <div class="user_gid_name">Денис Майоров</div>
+               <div class="user_gid_name_inf active">online now</div>
+               <div class="user_gid_form">
+                   <div class="user_gid_form_inp"><input type="text" placeholder="Ваше имя" /></div>
+                   <div class="user_gid_form_inp"><input type="text" placeholder="Email"  /></div>
+                   <div class="user_gid_cont">
+                       <div class="user_gid_chat">
+                           <div class="user_gid_chat_user">
+                               <div class="user_gid_chat_ava"><img src="images/tur/ava2.gif" alt="" /></div>
+                               <div class="user_gid_chat_text">
+                                   Здравствуйте !
+                               </div>
+                               <div class="clear"></div>
+                               <div class="user_gid_chat_admin">
+                                   Добрый день , как дела с погодой обычно на майские праздники 
+                               </div>
+                               <div class="clear"></div>
                            </div>
-                           <div class="clear"></div>
-                           <div class="user_gid_chat_admin">
-                               Добрый день , как дела с погодой обычно на майские праздники 
-                           </div>
-                           <div class="clear"></div>
                        </div>
                    </div>
+                   <div class="user_gid_message_inp">
+                       <textarea name="" id="" cols="30" rows="10" placeholder="Ваш вопрос"></textarea>
+                   </div>
+                   <div class="user_gid_message_button"><a href="">Отправить</a></div>
                </div>
-               <div class="user_gid_message_inp">
-                   <textarea name="" id="" cols="30" rows="10" placeholder="Ваш вопрос"></textarea>
-               </div>
-               <div class="user_gid_message_button"><a href="">Отправить</a></div>
            </div>
         </div>
 
@@ -286,7 +299,18 @@
                             <div class="tur_corusel_item_img"><img src="images/tur/ava.gif" alt="" /></div>
                             <div class="tur_corusel_item_name">Валентина Харичева</div>
                         </li>
+                        <li>
+                            <div class="tur_corusel_item_text">Путешествие очень понравилась, невозможно выделить что-то, понравилось все, несмотря на то, что путешествие длилиась две недели, но благодаря замечательному гиду Денису удалось многое посмотреть и познакомиться с красивой историей страны.</div>
+                            <div class="tur_corusel_item_img"><img src="images/tur/ava.gif" alt="" /></div>
+                            <div class="tur_corusel_item_name">Валентина Харичева</div>
+                        </li>
+                        <li>
+                            <div class="tur_corusel_item_text">Путешествие очень понравилась, невозможно выделить что-то, понравилось все, несмотря на то, что путешествие длилиась две недели, но благодаря замечательному гиду Денису удалось многое посмотреть и познакомиться с красивой историей страны.</div>
+                            <div class="tur_corusel_item_img"><img src="images/tur/ava.gif" alt="" /></div>
+                            <div class="tur_corusel_item_name">Валентина Харичева</div>
+                        </li>
                     </ul>
+                    <div class="tur_corusel-pager"></div>
                 </div>
             </div>
             <div class="reservation_form">
@@ -297,7 +321,7 @@
                     <h3>Наши менеджеры с радостью <br />
                     ответят на все ваши вопросы</h3>
                     <div class="reservation_form_inp"><input type="text" placeholder="Ваше имя" /></div>
-                    <div class="reservation_form_inp"><input type="text" placeholder="Email" /></div>
+                    <div class="reservation_form_inp"><input type="text" placeholder="Email" class="email-bind" /></div>
                     <div class="reservation_form_inp"><input type="text" placeholder="Телефон" /></div>
                     <div class="reservation_form_people">
                         <span>Количество человек</span>
@@ -10625,6 +10649,7 @@
 <script src='js/jquery.jscrollpane.js' type="text/javascript"></script>
 <script src='js/jquery-ui.custom.min.js' type="text/javascript"></script>
 <script src='js/fullcalendar.min.js' type="text/javascript"></script>
+<script src='js/jquery.maskedinput.min.js' type="text/javascript"></script>
 <script src="js/main.js" type="text/javascript"></script>
 <script src="js/main-calendar.js" type="text/javascript"></script>
 <script src="js/paginator.js" type="text/javascript"></script>

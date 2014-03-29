@@ -35,6 +35,7 @@ a:hover        {text-decoration:none;}
 
 .clear  {clear:both;}
 
+input {font-family: Helvetica;}
     
 header {
   position: fixed;
@@ -2641,8 +2642,17 @@ thead .fc-first {border-top-color: #f7f9fb; border-left-color: #f7f9fb;}
           .input_style_date p {font-size:16px;margin:0;line-height:11px;}
         .slider_search_button {width: 292px; padding: 0 0 22px;}
           .slider_search_button a {display: block; background: #303030; text-align: center; height: 39px; line-height: 39px; text-decoration: none; color: #008cd4;}
-        .slider_search_button_next {}
-          .slider_search_button_next a{}
+  
+        .main_cont_form_5 {width: 612px;}
+          .main_cont_form_5 h3 {font-size: 40px; padding-bottom: 15px;}
+          .main_cont_form_5 .slider_search_input {width: 562px;}
+          .main_cont_form_5 .input_style_box {margin-bottom: 14px;}
+          .date_carusel {margin-bottom: 49px; background: rgba(0, 0, 0, 0.5); overflow: hidden;}
+            .date_carusel li {float: left; border-right: 1px solid #919191; width: 50px; height: 40px; text-align: center; list-style: none;}
+              .date_carusel li.last {border: 0;}
+              .date_carusel li a {display: block; padding: 6px 0 0; width: 50px; height: 34px; color: #fff; font-size: 12px; text-decoration: none;}
+              .date_carusel li.active a {background: #008cd4; cursor: default;}
+
     .input_style_box_padding {float: left; width: 129px; height: 20px;}
     .hotel_main_slider_inp_box {display: none;}
     .hotel_main_tab {float: left; margin: 0 14px 0 -4px;
@@ -3035,7 +3045,7 @@ body.haspopup {overflow: hidden !important;}
       .tur_search_input {float: left; width: 150px; margin:11px 0 0 10px; display: none; border: 0; background: none; font: 14px 'Arial'}
     .tur_name_search.active {background: #fff;}
       .tur_name_search.active .tur_search_input {display: block;}
-  
+body .tur_map {height: 613px; display: none; position: fixed !important; top: 0; left: 0; width: 100%;}
 .content_tabs_bg_withe {background: #fff; position: relative; z-index: 90; padding-top: 20px;}
   .content_tabs_bg_withe .route-content {margin-top: 0;}
   .tur_slider_cont {width: 1000px; position: relative; z-index: 10; margin: 0 auto; color: #fff; font-family: 'Helvetica Neue', Helvetica, Arial; text-align: center; padding: 100px 0 0;}
@@ -3058,12 +3068,20 @@ body.haspopup {overflow: hidden !important;}
 .fixed-content-absolute {position: fixed; left: 0; top: 0; width: 100%;}
 
 
-.tur_detal_map {position: relative; height: 73px; background: rgba(0, 0, 0, 0.5); clear: both; z-index: 98;}
+.tur_detal_map_bg {position: relative; height: 73px; clear: both; z-index: 98; overflow: hidden;}
+.map_bg {width:100%; position: absolute; top: 0; left: 0; z-index: 1;}
+.tur_detal_map {position: relative; height: 73px; background: rgba(0, 0, 0, 0.5); z-index: 5;}
   .tur_detal_map_center {width: 990px; margin: 0 auto; color: #fff; font-size: 14px; font-family: 'Helvetica Neue', Helvetica, Arial; position:relative; text-align: center;}
     .tur_detal_map_ico {padding: 10px 0 5px;}
     .tur_detal_map_center a {text-decoration: none; color: #fff;}
-.tur_detal {background: #f8f8f8; font-family: 'Helvetica Neue', Helvetica, Arial; position: relative; z-index: 50;}
-.tur_detal_center {max-width: 1400px; margin: 0 auto;}
+  .tur_detal_img_center {display: none; width: 990px; margin: 0 auto; color: #fff; font-size: 14px; font-family: 'Helvetica Neue', Helvetica, Arial; position:relative; text-align: center;}
+    .tur_detal_img_center a {text-decoration: none; color: #fff;}
+.tur_detal_map_bg.active .tur_detal_img_center {display: block;}
+.tur_detal_map_bg.active .tur_detal_map_center {display: none;}
+.tur_detal_map_bg.active .map_bg {display: none;}
+
+.tur_detal {background: #fff url(../images/tur/body_bg.gif) center 0 repeat-y; font-family: Helvetica, Arial; position: relative; z-index: 20;}
+.tur_detal_center {width: 1000px; margin: 0 auto;}
   .tur_detal_right {float: right; width: 268px;}
     .tur_detal_price_header {text-align: center; border-bottom: 1px solid #d0d0d0; padding: 18px 0 12px; font-size: 20px; color: #3c3c3c; margin-bottom: 27px;}
   
@@ -3083,7 +3101,7 @@ body.haspopup {overflow: hidden !important;}
     .user_gid_form {padding: 0 17px;}
       .user_gid_form_inp {padding: 12px 10px; margin-bottom: 7px; border: 1px solid #dedede; background: #fff;}
         .user_gid_form_inp input {font-size: 12px; color: #bfbfbf; padding: 0; margin: 0; width: 215px; border: 0; background: none;}
-    .user_gid_cont {border: 1px solid #dedede; padding: 10px 0 0;}
+    .user_gid_cont {border: 1px solid #dedede; padding: 10px 0 0; background: #fff;}
       .user_gid_chat {max-height: 230px; overflow: auto;}
         .user_gid_chat_user {overflow: hidden; padding: 4px; background: #fff;}
           .user_gid_chat_ava {float: left; width: 32px; min-height: 32px; border: 1px solid #dbdbdb; overflow: hidden;
@@ -3138,13 +3156,14 @@ body.haspopup {overflow: hidden !important;}
             .user_gid_message_inp {border-left: 1px solid #e2e2e2; border-right: 1px solid #e2e2e2; padding: 11px 10px 25px 13px; background: #fff;}
               .user_gid_message_inp textarea {border: 0; padding: 0; margin: 0; width: 207px; height: 50px; font-size: 12px; resize: none; background: none;}
             .user_gid_message_button a {display: block; background: #1b8fcb; text-decoration: none; color: #fff; text-align: center; font-size: 16px; padding: 13px 0 14px;}
+      .tur_chat {}
+      .tur_chat.active {position: fixed; top: 0; z-index: 0;}
 
 
 
-
-    .tur_detal_left {overflow: hidden; margin: 0 268px 0 0; letter-spacing: 0.05em;}
-      .tur_detal_left h1 {font-weight: normal; padding-bottom: 32px; font-size: 20px; text-align: center;}
-      .tur_detal_left p {display: block; padding: 10px 30px 20px 55px; font-size: 14px; line-height: 24px;}
+    .tur_detal_left {overflow: hidden; margin: 0 268px 0 0; padding-top: 20px; letter-spacing: 0.05em;}
+      .tur_detal_left h1 {font-weight: normal; padding-bottom: 22px; font-size: 20px; text-align: center;}
+      .tur_detal_left p {display: block; padding: 10px 30px 20px 55px; font-size: 14px; line-height: 24px; font-family: 'Georgia'; letter-spacing: 0.08em;}
       .tur_detal_left p span {display: inline; color: #1b8fcb; font-weight: normal;}
       .img_tur {max-width: 100%; margin: 10px 0;}
     .tur_detal_link {font-size: 12px; text-align: center; padding-bottom: 11px; margin-bottom: 20px;}
@@ -3163,10 +3182,10 @@ body.haspopup {overflow: hidden !important;}
         .tur_detal_open_price_l {float: left; width: 40%;}
         .tur_detal_open_price_r {float: right; width: 40%; text-align: right;}
       .tur_detal_open_button {padding: 34px 12px 38px; overflow: hidden;}
-        .tur_detal_open_button a {display: block; float: right; font-size: 20px; color: #fff; text-decoration: none;}
+        .tur_detal_open_button a {display: block; float: right; font-size: 20px; color: #fff; text-decoration: none; padding: 17px 40px; border: 1px solid #fff;}
       .tur_detal_left h2 {color: #1b8fcb; font-size: 20px; font-weight: normal; padding: 10px 0 10px 55px;}
       .tur_list {padding: 10px 30px 10px 30px;}
-        .tur_list li {list-style: none; padding: 0 0 0 25px; line-height: 30px; font-size: 14px; background: url(../images/tur/marker.png) 0 9px no-repeat;}
+        .tur_list li {list-style: none; padding: 0 0 0 25px; line-height: 30px; font-size: 14px; background: url(../images/tur/marker.png) 0 9px no-repeat; font-family: 'Georgia'; letter-spacing: 0.08em;}
         .tur_list_no li {background: url(../images/tur/marker_no.png) 0 9px no-repeat;}
       .tur_corusel {position: relative;}
         .tur_corusel_img {position: relative;}
@@ -3176,11 +3195,14 @@ body.haspopup {overflow: hidden !important;}
           .tur_corusel_header {padding: 23px 0 0;}
             .tur_corusel_header span {padding: 0 10px; font-size: 20px; color: #fff;}
             .tur_corusel_header img {position: relative; top: -5px;}
-          .tur_corusel_item {height: 260px; width: 680px; margin: 0 auto;}
-            .tur_corusel_item li {float: left; list-style: none; width: 680px; height: 125px; padding-top: 125px; font-size: 14px;}
+          .tur_corusel_item {width: 680px; margin: 0 auto;}
+            .tur_corusel_item li {float: left; list-style: none; width: 680px; text-align: center; padding-top: 15px; font-size: 14px; position: relative;}
             .tur_corusel_item_img {padding-bottom: 10px;}
             .tur_corusel_item_name {color: #1b8fcb; font-size: 14px; line-height: 19px;}
-            .tur_corusel_item_text {position: absolute; bottom: 145px; font-size: 14px; line-height: 19px;}
+            .tur_corusel_item_text {font-size: 14px; line-height: 19px; padding-bottom: 30px;}
+        .tur_corusel-pager {padding-top: 30px;}
+          .tur_corusel-pager a {text-decoration: none; font-size: 0; display: inline-block; margin:0 4px; width: 8px; height: 7px; background: url(../images/tur/tur_corusel-pager.png) 100% 0 no-repeat;}
+          .tur_corusel-pager a.selected {background-position: 0 0;}
   .reservation_form {background: #1b8fcb; padding: 25px 0 20px;}
     .reservation_form {font-size: 20px; text-align: center; color: #fff; padding-bottom: 25px;}
       .reservation_form img {position: relative; top: -9px;}
@@ -3191,7 +3213,7 @@ body.haspopup {overflow: hidden !important;}
         .reservation_form_inp ::-webkit-input-placeholder { color: #fff;}
         .reservation_form_inp  :-moz-placeholder { color: #fff;}
       .reservation_form_textarea {border: 1px solid #fcfefe; padding: 10px 10px 8px 12px; margin-bottom: 23px; text-align: left;}
-        .reservation_form_textarea textarea {font-size: 14px; color: #fff; border: 0; padding: 0; margin: 0; background: none; width: 300px; height: 177px; overflow: hidden;}
+        .reservation_form_textarea textarea {font-size: 14px; color: #fff; border: 0; padding: 0; margin: 0; background: none; width: 300px; height: 177px; overflow: hidden; resize: none;}
         .reservation_form_textarea ::-webkit-input-placeholder { color: #fff;}
         .reservation_form_textarea  :-moz-placeholder { color: #fff;}
 
