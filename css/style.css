@@ -1011,7 +1011,7 @@ width:460px; color:#5a5a5a;}
 /*==== Главная картинка отеля ====*/  
 .main-content {}
 .main-content > div{position:relative; z-index:2;}
-.fixed-content {position:absolute; height:498px; z-index:1; margin-top:41px;}
+.fixed-content {position:absolute; height:586px; z-index:1; margin-top:41px;}
 .fixed-content .hotel_main_slider_cent {}
 .fixed-content .hotel_main_cont_up {position:absolute;  }
 .relative-content {top:571px; position:relative; z-index:20; background:#fff;}
@@ -3034,7 +3034,7 @@ body.haspopup {overflow: hidden !important;}
 
 .statistics_scroll {position: relative;}
 
-.tur_name_padding {height: 539px; clear: both; }
+.tur_name_padding {height: 626px; clear: both; }
 .tur_name {position: relative; height: 73px; background: rgba(0, 0, 0, 0.5); clear: both; z-index: 98;}
   .tur_name_center {width: 990px; margin: 0 auto; color: #fff; font-family: 'Helvetica Neue', Helvetica, Arial; position:relative;}
     .tur_name_country {text-align: center; font-size: 12px; padding: 12px 0 6px;}
@@ -3045,7 +3045,7 @@ body.haspopup {overflow: hidden !important;}
       .tur_search_input {float: left; width: 150px; margin:11px 0 0 10px; display: none; border: 0; background: none; font: 14px 'Arial'}
     .tur_name_search.active {background: #fff;}
       .tur_name_search.active .tur_search_input {display: block;}
-.tur_map-box {height: 498px;}
+.tur_map-box {height: 585px;}
 body .tur_map {height: 613px; height: 30px; display: block; position: absolute !important; bottom: 0; left: 0; width: 100%; z-index: 10;}
 .content_tabs_bg_withe {background: #fff; position: relative; z-index: 90; padding-top: 20px;}
   .content_tabs_bg_withe .route-content {margin-top: 0;}
@@ -3069,7 +3069,7 @@ body .tur_map {height: 613px; height: 30px; display: block; position: absolute !
 .fixed-content-absolute {position: fixed; left: 0; top: 0; width: 100%;}
 
 
-.tur_detal_map_bg {position:absolute; height: 30px; left: 0; bottom: 0; width: 100%; clear: both; z-index: 98; overflow: hidden; background: rgba(0, 0, 0, 0.5);}
+.tur_detal_map_bg {position:absolute; height: 30px; left: 0; bottom: 0; width: 100%; clear: both; z-index: 98; overflow: hidden; background: rgba(0, 0, 0, 0.5); border-top: 1px solid #333;}
 .map_bg {width:100%; position: absolute; top: 0; left: 0; z-index: 1;}
 .tur_detal_map {position: relative; height: 73px; background: rgba(0, 0, 0, 0.5); z-index: 5;}
   .tur_detal_map_center {width: 990px; margin: 0 auto; color: #fff; font-size: 14px; font-family: 'Helvetica Neue', Helvetica, Arial; position:relative; text-align: center;}
@@ -3083,7 +3083,7 @@ body .tur_map {height: 613px; height: 30px; display: block; position: absolute !
 
 .tur_detal {background: #f2f2f3 url(../images/tur/body_bg.gif) center 0 repeat-y; letter-spacing: 0.2em; font-family: Helvetica, 'Helvetica Neue', Arial; position: relative; z-index: 20; font-weight: lighter;}
 .tur_detal_center {width: 1000px; margin: 0 auto;}
-  .tur_detal_right {float: right; width: 268px;}
+  .tur_detal_right {float: right; width: 268px; margin-top: 52px;}
     .tur_detal_price_header {text-align: center; border-bottom: 1px solid #d0d0d0; padding: 18px 0 12px; font-size: 20px; color: #3c3c3c; margin-bottom: 27px;}
   
     .tur_detal_price {padding: 0 15px; border-bottom: 1px solid #d0d0d0; padding-bottom: 10px; margin-bottom: 9px;}
@@ -3093,7 +3093,7 @@ body .tur_map {height: 613px; height: 30px; display: block; position: absolute !
     .tur_detal_price_bottom {border: 0; margin-bottom: 30px;}
   .tur_detal_button {padding: 0 15px 25px;}
     .tur_detal_button a {display: block; font-size: 18px; color: #fff; text-decoration: none; background: #1b8fcb; text-align: center; padding: 10px 0 11px;}
-  .user_gid_name_header {padding-bottom: 12px; border-bottom: 1px solid #d0d0d0; margin-bottom: 20px; font-size: 20px; color: #3c3c3c; letter-spacing: 0.05em; padding: 0 17px 10px;}
+  .user_gid_name_header {padding-bottom: 12px; border-bottom: 1px solid #d0d0d0; margin-bottom: 20px; font-size: 20px; color: #3c3c3c; letter-spacing: 0.05em; padding: 30px 17px 14px;}
     .user_gid_name_header span {display: block; padding: 0 10px; text-align: center;}
     .user_gid_name_header.ico_active span {background: url(../images/tur/ico_active.jpg) 100% 8px no-repeat;}
     .user_gid_name_img {width: 100px; height: 100px; margin: 0 auto; overflow: hidden; margin-bottom: 12px;}
@@ -3172,8 +3172,9 @@ body .tur_map {height: 613px; height: 30px; display: block; position: absolute !
         .tur_carusel_img-box:hover .tur_carusel_img-button  {opacity: 0.8;}
 
 
-    .tur_detal_left {overflow: hidden; margin: 0 268px 0 0; padding-top: 90px; letter-spacing: 0.05em; color: #414141;}
+    .tur_detal_left {overflow: hidden; margin: 0 268px 0 0; padding-top: 70px; letter-spacing: 0.05em; color: #414141;}
       .tur_detal_left h1 {font-weight: normal; padding-bottom: 22px; font-size: 20px; text-align: center;}
+        .tur_detal_left h1 img {position: relative; top: -6px; margin: 0 8px;}
       .tur_detal_left p {display: block; padding: 10px 20px 20px 30px; font-size: 14px; line-height: 24px; font-family: 'Georgia'; letter-spacing: 0.08em;}
       .tur_detal_left p span {display: inline; color: #1b8fcb; font-weight: normal;}
       .img_tur {max-width: 100%; margin: 10px 0;}
