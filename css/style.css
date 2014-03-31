@@ -3034,7 +3034,7 @@ body.haspopup {overflow: hidden !important;}
 
 .statistics_scroll {position: relative;}
 
-.tur_name_padding {height: 539px; clear: both;}
+.tur_name_padding {height: 539px; clear: both; }
 .tur_name {position: relative; height: 73px; background: rgba(0, 0, 0, 0.5); clear: both; z-index: 98;}
   .tur_name_center {width: 990px; margin: 0 auto; color: #fff; font-family: 'Helvetica Neue', Helvetica, Arial; position:relative;}
     .tur_name_country {text-align: center; font-size: 12px; padding: 12px 0 6px;}
@@ -3045,7 +3045,7 @@ body.haspopup {overflow: hidden !important;}
       .tur_search_input {float: left; width: 150px; margin:11px 0 0 10px; display: none; border: 0; background: none; font: 14px 'Arial'}
     .tur_name_search.active {background: #fff;}
       .tur_name_search.active .tur_search_input {display: block;}
-body .tur_map {height: 613px; display: none; position: fixed !important; top: 0; left: 0; width: 100%;}
+body .tur_map {height: 613px; display: none; position: fixed !important; top: 41px; left: 0; width: 100%;}
 .content_tabs_bg_withe {background: #fff; position: relative; z-index: 90; padding-top: 20px;}
   .content_tabs_bg_withe .route-content {margin-top: 0;}
   .tur_slider_cont {width: 1000px; position: relative; z-index: 10; margin: 0 auto; color: #fff; font-family: 'Helvetica Neue', Helvetica, Arial; text-align: center; padding: 100px 0 0;}
@@ -3080,7 +3080,7 @@ body .tur_map {height: 613px; display: none; position: fixed !important; top: 0;
 .tur_detal_map_bg.active .tur_detal_map_center {display: none;}
 .tur_detal_map_bg.active .map_bg {display: none;}
 
-.tur_detal {background: #fff url(../images/tur/body_bg.gif) center 0 repeat-y; font-family: Helvetica, Arial; position: relative; z-index: 20;}
+.tur_detal {background: #f2f2f3 url(../images/tur/body_bg.gif) center 0 repeat-y; font-family: 'Helvetica Neue', Helvetica, Arial; position: relative; z-index: 20; font-weight: lighter;}
 .tur_detal_center {width: 1000px; margin: 0 auto;}
   .tur_detal_right {float: right; width: 268px;}
     .tur_detal_price_header {text-align: center; border-bottom: 1px solid #d0d0d0; padding: 18px 0 12px; font-size: 20px; color: #3c3c3c; margin-bottom: 27px;}
@@ -3088,6 +3088,7 @@ body .tur_map {height: 613px; display: none; position: fixed !important; top: 0;
     .tur_detal_price {padding: 0 15px; border-bottom: 1px solid #d0d0d0; padding-bottom: 10px; margin-bottom: 9px;}
       .tur_detal_price_l {float: left; width: 145px; font-size: 16px; color: #000;}
       .tur_detal_price_r {float: right; text-align: right; font-size: 16px; color: #1d91cb;}
+        .tur_detal_price_r a {text-decoration: none; color: #1d91cb;}
     .tur_detal_price_bottom {border: 0; margin-bottom: 30px;}
   .tur_detal_button {padding: 0 15px 25px;}
     .tur_detal_button a {display: block; font-size: 18px; color: #fff; text-decoration: none; background: #1b8fcb; text-align: center; padding: 10px 0 11px;}
@@ -3153,8 +3154,8 @@ body .tur_map {height: 613px; display: none; position: fixed !important; top: 0;
                   border-top: 8px solid transparent;
                   border-left: 9px solid #d5d5d5;
                   border-bottom: 8px solid transparent;}
-            .user_gid_message_inp {border-left: 1px solid #e2e2e2; border-right: 1px solid #e2e2e2; padding: 11px 10px 25px 13px; background: #fff;}
-              .user_gid_message_inp textarea {border: 0; padding: 0; margin: 0; width: 207px; height: 50px; font-size: 12px; resize: none; background: none;}
+            .user_gid_message_inp {border-left: 1px solid #e2e2e2; border-right: 1px solid #e2e2e2; padding: 11px 10px 11px 13px; background: #fff;}
+              .user_gid_message_inp textarea {border: 0; padding: 0; margin: 0; font-family: 'Helvetica Neue', Helvetica, Arial; width: 207px; height: 31px; font-size: 12px; resize: none; background: none;}
             .user_gid_message_button a {display: block; background: #1b8fcb; text-decoration: none; color: #fff; text-align: center; font-size: 16px; padding: 13px 0 14px;}
       .tur_chat {}
       .tur_chat.active {position: fixed; top: 0; z-index: 0;}
@@ -3163,12 +3164,16 @@ body .tur_map {height: 613px; display: none; position: fixed !important; top: 0;
 
     .tur_detal_left {overflow: hidden; margin: 0 268px 0 0; padding-top: 20px; letter-spacing: 0.05em;}
       .tur_detal_left h1 {font-weight: normal; padding-bottom: 22px; font-size: 20px; text-align: center;}
-      .tur_detal_left p {display: block; padding: 10px 30px 20px 55px; font-size: 14px; line-height: 24px; font-family: 'Georgia'; letter-spacing: 0.08em;}
+      .tur_detal_left p {display: block; padding: 10px 20px 20px 30px; font-size: 14px; line-height: 24px; font-family: 'Georgia'; letter-spacing: 0.08em;}
       .tur_detal_left p span {display: inline; color: #1b8fcb; font-weight: normal;}
       .img_tur {max-width: 100%; margin: 10px 0;}
-    .tur_detal_link {font-size: 12px; text-align: center; padding-bottom: 11px; margin-bottom: 20px;}
+    .tur_detal_link {font-size: 12px; text-align: center; padding-bottom: 11px;}
       .tur_detal_link a {text-decoration: none; color: #1b8fcb;}
       .tur_detal_link a:hover {text-decoration: underline;}
+      .tur_detal_link .read_more_close-link {display: none;}
+      .tur_detal_link.active .read_more_close-link {display: inline;}
+      .tur_detal_link.active .read_more-link {display: none;}
+      .read_more-box {display: none;}
     .tur_detal_open {background: #1b8fcb; position: relative; padding: 18px 0 35px; margin-bottom: 25px;}
       .tur_detal_open:before {position: absolute; top: 0; left: 50%; margin-left: -11px; content: ' ';
         border-left: 11px solid transparent;
@@ -3188,8 +3193,8 @@ body .tur_map {height: 613px; display: none; position: fixed !important; top: 0;
         .tur_list li {list-style: none; padding: 0 0 0 25px; line-height: 30px; font-size: 14px; background: url(../images/tur/marker.png) 0 9px no-repeat; font-family: 'Georgia'; letter-spacing: 0.08em;}
         .tur_list_no li {background: url(../images/tur/marker_no.png) 0 9px no-repeat;}
       .tur_corusel {position: relative;}
-        .tur_corusel_img {position: relative;}
-          .tur_corusel_img img {max-width: 100%;}
+        .tur_corusel_img {position: relative; overflow: hidden;}
+          .tur_corusel_img img {max-width: 100%; float: left;}
         .tur_corusel_img_bg {position: absolute; z-index: 10; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.7)}
         .tur_corusel_cont {position: absolute; z-index: 15; width: 680px; color: #fff; top: 24px; left: 50%; margin-left: -340px; text-align: center;}
           .tur_corusel_header {padding: 23px 0 0;}
@@ -3203,6 +3208,13 @@ body .tur_map {height: 613px; display: none; position: fixed !important; top: 0;
         .tur_corusel-pager {padding-top: 30px;}
           .tur_corusel-pager a {text-decoration: none; font-size: 0; display: inline-block; margin:0 4px; width: 8px; height: 7px; background: url(../images/tur/tur_corusel-pager.png) 100% 0 no-repeat;}
           .tur_corusel-pager a.selected {background-position: 0 0;}
+        .ur_corusel-button {position: relative; z-index: 50;}
+          .ur_corusel-button a {position: absolute; top: 123px; display: block; width: 19px; height: 32px; background: url(../img/pointer.png) 0 0 no-repeat;}
+          .ur_corusel-button a.tur_corusel-prev {background-position: 0 0; left: 30px;}
+          .ur_corusel-button a.tur_corusel-prev:hover {background-position: 0 -32px;}
+          .ur_corusel-button a.tur_corusel-next {background-position: -19px 0; right: 30px;}
+          .ur_corusel-button a.tur_corusel-next:hover {background-position: -19px -32px;}
+
   .reservation_form {background: #1b8fcb; padding: 25px 0 20px;}
     .reservation_form {font-size: 20px; text-align: center; color: #fff; padding-bottom: 25px;}
       .reservation_form img {position: relative; top: -9px;}
@@ -3222,5 +3234,13 @@ body .tur_map {height: 613px; display: none; position: fixed !important; top: 0;
         .reservation_form_people .reservation_form_inp {width: 20px; float: right;}
           .reservation_form_people .reservation_form_inp input {width: 20px; text-align: center;}
       .reservation_form_butto {border: 1px solid #fcfefe; display: block; text-align: center; padding: 17px 0 18px; text-decoration: none; color: #fff; font-size: 16px;}
+      .similar_offers-header {background: #d6d6d8; text-align: center; color: #292929; font-size: 20px; padding: 27px 0 28px; background: #d6d6d8;}
+        .similar_offers .top_destinations li {width: 366px; height: 365px;}
+          .similar_offers .destinations_max {width: 366px; height: 365px;}
+            .similar_offers .destinations_min img {width: 366px;}
+            .similar_offers .top_destinations li p {padding: 0;}
+            .similar_offers .top_destinations li p.username {font-size: 11px !important; font-family: 'Helvetica Neue', Helvetica, Arial !important;}
+            .similar_offers .top_destinations li p.routename {font-size: 16px !important; width: 227px !important; font-family: 'Helvetica Neue', Helvetica, Arial !important;}
+            .similar_offers  .destinations_min .route_user_comment .wrap-usertext {width: 227px;}
 
 

@@ -3,6 +3,13 @@ $(document).ready(function() {
 	
 
 	// tur
+	$('a[href^="#"]').click(function(){
+        var target = $(this).attr('href');
+        $('html, body').animate({scrollTop: $(target).offset().top - 41}, 1000);
+        return false; 
+   	}); 
+
+
 	$('.tur_search_button').click(function(){
 		$('.tur_name_search').animate({'width' : 220 + 'px'}, 500);
 		setTimeout("$('.tur_name_search').addClass('active')", 500);
@@ -27,13 +34,26 @@ $(document).ready(function() {
 		$('.tur_corusel_item').carouFredSel({
 			auto: false,
 			pagination: ".tur_corusel-pager",
-			mousewheel: true,
+			prev: '.tur_corusel-prev',
+			next: '.tur_corusel-next', 
+			mousewheel: false,
 			swipe: {
 				onMouse: true,
 				onTouch: true
 			}
 		})
 	};
+
+	$('.read_more-link').click(function(){
+		$(this).parent().addClass('active');
+		$('.read_more-box').slideDown();
+		return false;
+	});
+	$('.read_more_close-link').click(function(){
+		$(this).parent().removeClass('active');
+		$('.read_more-box').slideUp();
+		return false;
+	});
 
 	$('.date_carusel a').click(function(){
 		$('.date_carusel li').removeClass('active');
@@ -2254,7 +2274,7 @@ function mapTur() {
 			scrollwheel: false 
 		}; 
 		var map = new google.maps.Map(document.getElementById('tur_map'), mapOptions); 
-		var image = new google.maps.MarkerImage('/bundles/routes/img/popup/pin.png', 
+		var image = new google.maps.MarkerImage('img/popup/pin.png', 
 			new google.maps.Size(63, 56), 
 			new google.maps.Point(0,0), 
 			new google.maps.Point(18, 42)
@@ -2263,19 +2283,8 @@ function mapTur() {
 			position: new google.maps.LatLng(45.436767,12.330093),
 			map: map,
 			icon: image  
-		});  
-		google.maps.event.addDomListener(map, 'tilesloaded', function(){ 
-			mapTurZoomInitSmall();
-		});  
+		});   
 	};
 };
 
-function mapTurZoomInitSmall() { 
-	if($('#tur_map').find('.customContSmall').length==0){ 
-		$('#tur_map').find('.gmnoprint').last().parent().wrap('<div class="customCont customContSmall" />'); 
-		$('#tur_map').find('.customCont').children().find('.gmnoprint:last-child').addClass('customZoom customZoomSmall');
-		$('#tur_map').find('.customZoom').find('div:nth-child(2)').addClass('zoomIn');  
-		$('#tur_map').find('.customZoom').find('div:last-child').addClass('zoomOut');
-	}  
-} 
  
