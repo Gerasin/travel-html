@@ -2163,7 +2163,7 @@ var offsetTopMenuCal = offsetTopMenu + 120;
 var scrollMenuInfo = $('.hotel_main_slider_cent').height();
 var offsetLeftCol = -100;
 
-var tur_chat = $('.tur_chat').offset().top;
+var tur_chat = $('.tur_chat').offset().top + 30;
 $(window).scroll(function() {
 
 	// tur

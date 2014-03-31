@@ -3158,10 +3158,10 @@ body .tur_map {height: 613px; height: 30px; display: block; position: absolute !
                   border-left: 9px solid #d5d5d5;
                   border-bottom: 8px solid transparent;}
             .user_gid_message_inp {border-left: 1px solid #e2e2e2; border-right: 1px solid #e2e2e2; padding: 11px 10px 11px 13px; background: #fff;}
-              .user_gid_message_inp textarea {border: 0; padding: 0; margin: 0; font-family: Helvetica, 'Helvetica Neue', Arial; width: 207px; height: 31px; font-size: 12px; resize: none; background: none;}
+              .user_gid_message_inp textarea {border: 0; padding: 0; margin: 0; font-family: Helvetica, 'Helvetica Neue', Arial; width: 207px; height: 91px; font-size: 12px; resize: none; background: none;}
             .user_gid_message_button a {display: block; background: #1b8fcb; text-decoration: none; color: #fff; text-align: center; font-size: 16px; padding: 13px 0 14px;}
       .tur_chat {width: 268px;}
-      .tur_chat.active {position: fixed; top: 0; z-index: 0;}
+      .tur_chat.active {position: fixed; top: 30px; z-index: 0;}
       .tur_carusel_img {position: relative; overflow: hidden; width: 732px; z-index: 1;}
         .tur_carusel_img li {float: left; width: 732px;}
           .tur_carusel_img li img {width: 100%;}
@@ -3244,7 +3244,7 @@ body .tur_map {height: 613px; height: 30px; display: block; position: absolute !
         .reservation_form_people .reservation_form_inp {width: 20px; float: right;}
           .reservation_form_people .reservation_form_inp input {width: 20px; text-align: center;}
       .reservation_form_butto {border: 1px solid #fcfefe; display: block; letter-spacing: 0.2em; text-align: center; padding: 17px 0 18px; text-decoration: none; color: #fff; font-size: 16px;}
-      .similar_offers {padding-bottom: 28px;}
+      .similar_offers {padding-bottom: 28px; background: #d6d6d8;}
         .similar_offers .top_destinations {overflow: hidden;}
       .similar_offers-header {background: #d6d6d8; text-align: center; color: #292929; font-size: 20px; padding: 27px 0 28px; background: #d6d6d8;}
         .similar_offers .top_destinations li {width: 366px; height: 365px;}
