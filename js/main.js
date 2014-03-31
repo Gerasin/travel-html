@@ -20,11 +20,13 @@ $(document).ready(function() {
 
 	$('.expand span').click(function(){
 		if ($('.expand').hasClass('active')) {
-			$('.tur_map').animate({'height' : 70 + 'px'});
+			$('.tur_map').animate({'height' : 30 + 'px'});
 			$(this).parent().removeClass('active');
+			$('.tur_detal_map_bg').show();
 		} else {
 			$('.tur_map').animate({'height' : 498 + 'px'});
 			$(this).parent().addClass('active');
+			$('.tur_detal_map_bg').hide();
 		}
 		return false;
 	});
