@@ -16,16 +16,15 @@ $(document).ready(function() {
 		return false;
 	});
 
-	$('.tur_detal_map a').click(function(){
-		if ($('.tur_detal_map_bg').hasClass('active')) {
-			$('.fixed-content').show();
-			$('.tur_map').hide();
-			$(this).parents('.tur_detal_map_bg').removeClass('active');
+	mapTur();
+
+	$('.expand span').click(function(){
+		if ($('.expand').hasClass('active')) {
+			$('.tur_map').animate({'height' : 70 + 'px'});
+			$(this).parent().removeClass('active');
 		} else {
-			$('.fixed-content').hide();
-			$('.tur_map').show();
-			$(this).parents('.tur_detal_map_bg').addClass('active');
-			mapTur();
+			$('.tur_map').animate({'height' : 498 + 'px'});
+			$(this).parent().addClass('active');
 		}
 		return false;
 	});
@@ -36,6 +35,19 @@ $(document).ready(function() {
 			pagination: ".tur_corusel-pager",
 			prev: '.tur_corusel-prev',
 			next: '.tur_corusel-next', 
+			mousewheel: false,
+			swipe: {
+				onMouse: true,
+				onTouch: true
+			}
+		})
+	};
+
+	if($('.tur_carusel_img').length){
+		$('.tur_carusel_img').carouFredSel({
+			auto: false,
+			prev: '.tur_carusel_img-prev',
+			next: '.tur_carusel_img-next', 
 			mousewheel: false,
 			swipe: {
 				onMouse: true,

@@ -1011,12 +1011,12 @@ width:460px; color:#5a5a5a;}
 /*==== Главная картинка отеля ====*/  
 .main-content {}
 .main-content > div{position:relative; z-index:2;}
-.fixed-content {position:absolute; height:531px;z-index:1; margin-top:41px;}
+.fixed-content {position:absolute; height:498px; z-index:1; margin-top:41px;}
 .fixed-content .hotel_main_slider_cent {}
 .fixed-content .hotel_main_cont_up {position:absolute;  }
 .relative-content {top:571px; position:relative; z-index:20; background:#fff;}
 
-.hotel_main_slider_cent {width:100%; margin:0 auto; overflow:hidden; position:relative;}
+.hotel_main_slider_cent {width:100%; margin:0 auto; overflow:hidden; position:relative; z-index: 1;}
 .hotel_main_slider  {overflow:hidden; height:571px; position:relative; z-index:1;}  
 .hotel_main {height:571px; min-width:976px; width:100%; position:absolute; left:-30px; top:0; z-index: 2;}
   .hotel_main_img {position:absolute; min-height:100%; min-width: 100%; left:0; top:0; z-index:1;}
@@ -3045,7 +3045,8 @@ body.haspopup {overflow: hidden !important;}
       .tur_search_input {float: left; width: 150px; margin:11px 0 0 10px; display: none; border: 0; background: none; font: 14px 'Arial'}
     .tur_name_search.active {background: #fff;}
       .tur_name_search.active .tur_search_input {display: block;}
-body .tur_map {height: 613px; display: none; position: fixed !important; top: 41px; left: 0; width: 100%;}
+.tur_map-box {height: 498px;}
+body .tur_map {height: 613px; height: 70px; display: block; position: absolute !important; bottom: 0; left: 0; width: 100%; z-index: 10;}
 .content_tabs_bg_withe {background: #fff; position: relative; z-index: 90; padding-top: 20px;}
   .content_tabs_bg_withe .route-content {margin-top: 0;}
   .tur_slider_cont {width: 1000px; position: relative; z-index: 10; margin: 0 auto; color: #fff; font-family: 'Helvetica Neue', Helvetica, Arial; text-align: center; padding: 100px 0 0;}
@@ -3068,7 +3069,7 @@ body .tur_map {height: 613px; display: none; position: fixed !important; top: 41
 .fixed-content-absolute {position: fixed; left: 0; top: 0; width: 100%;}
 
 
-.tur_detal_map_bg {position: relative; height: 73px; clear: both; z-index: 98; overflow: hidden;}
+.tur_detal_map_bg {position:absolute; height: 70px; left: 0; bottom: 0; width: 100%; clear: both; z-index: 98; overflow: hidden; background: rgba(0, 0, 0, 0.5);}
 .map_bg {width:100%; position: absolute; top: 0; left: 0; z-index: 1;}
 .tur_detal_map {position: relative; height: 73px; background: rgba(0, 0, 0, 0.5); z-index: 5;}
   .tur_detal_map_center {width: 990px; margin: 0 auto; color: #fff; font-size: 14px; font-family: 'Helvetica Neue', Helvetica, Arial; position:relative; text-align: center;}
@@ -3102,6 +3103,7 @@ body .tur_map {height: 613px; display: none; position: fixed !important; top: 41
     .user_gid_form {padding: 0 17px;}
       .user_gid_form_inp {padding: 12px 10px; margin-bottom: 7px; border: 1px solid #dedede; background: #fff;}
         .user_gid_form_inp input {font-size: 12px; color: #bfbfbf; padding: 0; margin: 0; width: 215px; border: 0; background: none;}
+        .user_gid_form .soc_ico_link {padding: 40px 14px 0 0;}
     .user_gid_cont {border: 1px solid #dedede; padding: 10px 0 0; background: #fff;}
       .user_gid_chat {max-height: 230px; overflow: auto;}
         .user_gid_chat_user {overflow: hidden; padding: 4px; background: #fff;}
@@ -3157,12 +3159,19 @@ body .tur_map {height: 613px; display: none; position: fixed !important; top: 41
             .user_gid_message_inp {border-left: 1px solid #e2e2e2; border-right: 1px solid #e2e2e2; padding: 11px 10px 11px 13px; background: #fff;}
               .user_gid_message_inp textarea {border: 0; padding: 0; margin: 0; font-family: 'Helvetica Neue', Helvetica, Arial; width: 207px; height: 31px; font-size: 12px; resize: none; background: none;}
             .user_gid_message_button a {display: block; background: #1b8fcb; text-decoration: none; color: #fff; text-align: center; font-size: 16px; padding: 13px 0 14px;}
-      .tur_chat {}
+      .tur_chat {width: 268px;}
       .tur_chat.active {position: fixed; top: 0; z-index: 0;}
+      .tur_carusel_img {position: relative; overflow: hidden; width: 732px; z-index: 1;}
+        .tur_carusel_img li {float: left; width: 732px;}
+          .tur_carusel_img li img {width: 100%;}
+      .tur_carusel_img-button {position: relative; z-index: 10; opacity: 0;}
+        .tur_carusel_img-button a {position: absolute; top: 174px; display: block; width: 34px; height: 56px; background: url(../images/tur/r_u_cont_corusel_but.png) 0 0 no-repeat;}
+          .tur_carusel_img-button a.tur_carusel_img-prev {background-position: 0 0; left: 30px;}
+          .tur_carusel_img-button a.tur_carusel_img-next {background-position: -34px 0; right: 30px;}
+        .tur_carusel_img-box:hover .tur_carusel_img-button  {opacity: 0.8;}
 
 
-
-    .tur_detal_left {overflow: hidden; margin: 0 268px 0 0; padding-top: 20px; letter-spacing: 0.05em;}
+    .tur_detal_left {overflow: hidden; margin: 0 268px 0 0; padding-top: 90px; letter-spacing: 0.05em;}
       .tur_detal_left h1 {font-weight: normal; padding-bottom: 22px; font-size: 20px; text-align: center;}
       .tur_detal_left p {display: block; padding: 10px 20px 20px 30px; font-size: 14px; line-height: 24px; font-family: 'Georgia'; letter-spacing: 0.08em;}
       .tur_detal_left p span {display: inline; color: #1b8fcb; font-weight: normal;}
@@ -3174,7 +3183,7 @@ body .tur_map {height: 613px; display: none; position: fixed !important; top: 41
       .tur_detal_link.active .read_more_close-link {display: inline;}
       .tur_detal_link.active .read_more-link {display: none;}
       .read_more-box {display: none;}
-    .tur_detal_open {background: #1b8fcb; position: relative; padding: 18px 0 35px; margin-bottom: 25px;}
+    .tur_detal_open {background: #1b8fcb; position: relative; padding: 18px 0 14px; margin-bottom: 25px;}
       .tur_detal_open:before {position: absolute; top: 0; left: 50%; margin-left: -11px; content: ' ';
         border-left: 11px solid transparent;
         border-right: 11px solid transparent;
@@ -3209,11 +3218,9 @@ body .tur_map {height: 613px; display: none; position: fixed !important; top: 41
           .tur_corusel-pager a {text-decoration: none; font-size: 0; display: inline-block; margin:0 4px; width: 8px; height: 7px; background: url(../images/tur/tur_corusel-pager.png) 100% 0 no-repeat;}
           .tur_corusel-pager a.selected {background-position: 0 0;}
         .ur_corusel-button {position: relative; z-index: 50;}
-          .ur_corusel-button a {position: absolute; top: 123px; display: block; width: 19px; height: 32px; background: url(../img/pointer.png) 0 0 no-repeat;}
+          .ur_corusel-button a {position: absolute; top: 123px; display: block; width: 34px; height: 56px; background: url(../images/tur/r_u_cont_corusel_but.png) 0 0 no-repeat;}
           .ur_corusel-button a.tur_corusel-prev {background-position: 0 0; left: 30px;}
-          .ur_corusel-button a.tur_corusel-prev:hover {background-position: 0 -32px;}
-          .ur_corusel-button a.tur_corusel-next {background-position: -19px 0; right: 30px;}
-          .ur_corusel-button a.tur_corusel-next:hover {background-position: -19px -32px;}
+          .ur_corusel-button a.tur_corusel-next {background-position: -34px 0; right: 30px;}
 
   .reservation_form {background: #1b8fcb; padding: 25px 0 20px;}
     .reservation_form {font-size: 20px; text-align: center; color: #fff; padding-bottom: 25px;}
@@ -3234,6 +3241,8 @@ body .tur_map {height: 613px; display: none; position: fixed !important; top: 41
         .reservation_form_people .reservation_form_inp {width: 20px; float: right;}
           .reservation_form_people .reservation_form_inp input {width: 20px; text-align: center;}
       .reservation_form_butto {border: 1px solid #fcfefe; display: block; text-align: center; padding: 17px 0 18px; text-decoration: none; color: #fff; font-size: 16px;}
+      .similar_offers {padding-bottom: 28px;}
+        .similar_offers .top_destinations {overflow: hidden;}
       .similar_offers-header {background: #d6d6d8; text-align: center; color: #292929; font-size: 20px; padding: 27px 0 28px; background: #d6d6d8;}
         .similar_offers .top_destinations li {width: 366px; height: 365px;}
           .similar_offers .destinations_max {width: 366px; height: 365px;}
@@ -3242,5 +3251,10 @@ body .tur_map {height: 613px; display: none; position: fixed !important; top: 41
             .similar_offers .top_destinations li p.username {font-size: 11px !important; font-family: 'Helvetica Neue', Helvetica, Arial !important;}
             .similar_offers .top_destinations li p.routename {font-size: 16px !important; width: 227px !important; font-family: 'Helvetica Neue', Helvetica, Arial !important;}
             .similar_offers  .destinations_min .route_user_comment .wrap-usertext {width: 227px;}
+.expand {position: absolute; width: 176px; height: 33px; background: center no-repeat; background-image: url('../images/tur/bg-showmap.png'); line-height: 33px; text-align: center; left: 50%; margin-left: -88px; font-size: 12px;color: white; cursor: pointer; z-index: 50;}
+.expand .hide {display: none;}
+.expand.active .hide {display: inline;}
+.expand.active .show {display: none;}
+
 
 
