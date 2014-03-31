@@ -3104,7 +3104,7 @@ body .tur_map {height: 613px; height: 30px; display: block; position: absolute !
       .user_gid_form_inp {padding: 12px 10px; margin-bottom: 7px; border: 1px solid #dedede; background: #fff;}
         .user_gid_form_inp input {font-size: 12px; color: #000; padding: 0; margin: 0; width: 215px; border: 0; background: none;}
 
-        .user_gid_form .soc_ico_link {padding: 40px 14px 0 0;}
+        .user_gid_form .soc_ico_link {padding: 10px 14px 0 0;}
     .user_gid_cont {border: 1px solid #dedede; padding: 10px 0 0; background: #fff;}
       .user_gid_chat {max-height: 230px; overflow: auto;}
         .user_gid_chat_user {overflow: hidden; padding: 4px; background: #fff; letter-spacing: 0.01em;}
