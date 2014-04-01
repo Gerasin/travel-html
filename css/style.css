@@ -3173,6 +3173,7 @@ body .tur_map {height: 613px; height: 30px; display: block; position: absolute !
 
 
     .tur_detal_left {overflow: hidden; margin: 0 268px 0 0; padding-top: 70px; letter-spacing: 0.05em; color: #414141;}
+      .tur_detal_left img {max-width: 100%;}
       .tur_detal_left h1 {font-weight: normal; padding-bottom: 22px; font-size: 20px; text-align: center;}
         .tur_detal_left h1 img {position: relative; top: -6px; margin: 0 8px;}
       .tur_detal_left p {display: block; padding: 10px 20px 20px 30px; font-size: 14px; line-height: 24px; font-family: 'Georgia'; letter-spacing: 0.08em;}
