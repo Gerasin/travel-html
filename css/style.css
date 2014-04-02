@@ -539,7 +539,8 @@ header nav.main a.active {
   
     .range-radio, .range-check  {font:12px/14px Arial; color:#fff; font-weight:bold; padding: 13px 9px 6px;}  
     .r-type, .ch-type {height:22px;}  
-      .r-type label, .ch-type label {margin-left:9px;}
+      .r-type label, .ch-type label {margin-left: 24px;  display: block;}
+        .r-type label span, .ch-type label span {display: block; float: right; }
       .r-type .radio, .ch-type .check {float:left; background:url(../img/radio_check.png) 0 0 no-repeat; width:15px;height:15px; display:inline-block; cursor:pointer; }
         .r-type .radio input, .ch-type .check input { display: none; }
       .r-type .radioOn {background-position:0 -15px;} 
@@ -1148,7 +1149,7 @@ width:460px; color:#5a5a5a;}
 /*==== Главная маршруты ====*/  
 .routes_main  {height:571px; float:left; width:1000px; margin:0;}  
   .routes_main_cont {width:976px; margin:0 auto; padding:183px 0 0;}
-  .routes_main_img  {position:absolute; left:0; top:0; min-width:100%; min-height:100%; z-index:3;}
+  .routes_main_img  {position:absolute; left:0; top:0; width:100%; height:100%; z-index:3;}
   .routes_main_cont_up  {position:absolute; left:50%; margin-left:-476px; z-index:30;}
     .routes_main_cont_up .routes_main_comment {height:auto; width:auto;}
     .routes_main_comment  {height:201px; text-shadow:0 -1px 1px #000;}
@@ -1460,6 +1461,8 @@ html body .ui-autocomplete  {z-index:110 !important; background:url(../img/bg_op
   
 .route-content {width:990px; margin:20px auto 0;} 
 .route-content .setting_cont { padding: 21px 10px 24px;}
+.route-content .setting_cont.setting_cont-day {text-align: center;}
+  .route-content .setting_cont.setting_cont-day .ui-widget-content {margin-top: 30px; height: 23px;}
   .switcher-content {position:relative; height:14px; }
     .switcher-content .switcher-btn {display: block; background:url(../img/routes/switcher.png) 0 -14px no-repeat; width: 49px;  height:14px; cursor:pointer; margin: 3px auto 0;}
     .switcher-content .switcher-btn.clicked {background-position: 0 0;}
@@ -3035,7 +3038,7 @@ body.haspopup {overflow: hidden !important;}
 .statistics_scroll {position: relative;}
 
 .tur_name_padding {height: 626px; clear: both; }
-.tur_name {position: relative; height: 73px; background: rgba(0, 0, 0, 0.5); clear: both; z-index: 98;}
+.tur_name {position: relative; height: 73px; background: rgba(0, 0, 0, 0.5); clear: both; z-index: 98; margin-top: -88px;}
   .tur_name_center {width: 990px; margin: 0 auto; color: #fff; font-family: 'Helvetica Neue', Helvetica, Arial; position:relative;}
     .tur_name_country {text-align: center; font-size: 12px; padding: 12px 0 6px;}
     .tur_name_city {text-align: center; font-size: 27px;}
@@ -3049,7 +3052,8 @@ body.haspopup {overflow: hidden !important;}
 body .tur_map {height: 613px; height: 30px; display: block; position: absolute !important; bottom: 0; left: 0; width: 100%; z-index: 10;}
 .content_tabs_bg_withe {background: #fff; position: relative; z-index: 90; padding-top: 20px;}
   .content_tabs_bg_withe .route-content {margin-top: 0;}
-  .tur_slider_cont {width: 1000px; position: relative; z-index: 10; margin: 0 auto; color: #fff; font-family: 'Helvetica Neue', Helvetica, Arial; text-align: center; padding: 100px 0 0;}
+  .tur_slider_cont_box {position: absolute; left: 0; top: 0; width: 100%; bottom: 0;}
+  .tur_slider_cont {width: 1000px; position: relative; z-index: 50; margin: 0 auto; color: #fff; font-family: 'Helvetica Neue', Helvetica, Arial; text-align: center; padding: 100px 0 0;}
     .tur_slider_city {padding-bottom: 21px; font-size: 18px;}
       .tur_slider_city span {padding: 0 75px;}
       .tur_slider_city img {position: relative; top: -5px;}
@@ -3064,7 +3068,7 @@ body .tur_map {height: 613px; height: 30px; display: block; position: absolute !
   .tur_item_price {height: 28px; font-family: Arial;}
     .tur_item_price_haeder {float: left; color: #1d98d8; font-size: 12px; padding-top: 9px;}
     .tur_item_price_namber {float: right; color: #f15a22; font-size: 22px; font-weight: bold;}
-.routes_main_img_bg {position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 5; background: rgba(0, 0, 0, 0.2);}
+.routes_main_img_bg {position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 50; background: rgba(0, 0, 0, 0.2);}
 
 .fixed-content-absolute {position: fixed; left: 0; top: 0; width: 100%;}
 

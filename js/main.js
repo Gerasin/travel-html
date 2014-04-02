@@ -2250,7 +2250,11 @@ $(window).resize(function() {
 	if($('.hidden-block').length){ 
 		var hideWidth = ($('.routes-range').width() - $('.routes-range-cont').width())/2;
 		$('.hidden-block').css('width',hideWidth+70).show(); 
-	}
+	};
+
+	$('.hotel_main_slider').css({ width : $('html, body').width() });
+	$('.hotel_main_slider .hotel_main').css({ width : $('html, body').width() });
+	$('.hotel_main_slider_height').css({ height : $(window).height() });
 });
 
 function resizePopUpRoutes() {

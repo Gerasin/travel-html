@@ -150,22 +150,82 @@
     <!-- маршруты -->
     <div class="content route-content">
         <!-- левая колонка -->
-        <div class="left_column_t">
+        <div class="left_column">
+            <h3>ЦЕНА</h3>
+            <div class="setting_cont">
+                <div id="slider-range-price"></div>
+                <div class="slider-price_namber_l">от <span id="slider-price_namber_l"></span></div>
+                <div class="slider-price_namber_r">до <span id="slider-price_namber_r"></span></div>
+                <input name="" type="hidden" value="" class="price_namber_l_inp" />
+                <input name="" type="hidden" value="" class="price_namber_r_inp" />
+                <div class="clear"></div>
+            </div>
             <h3>КОЛИЧЕСТВО ДНЕЙ</h3>
-            <div class="setting_cont"> 
+            <div class="setting_cont setting_cont-day"> 
                 <input type="text" id="range-route-duration-min" class="style_input range-route-duration-input"/>
                 <span class="dash">&#8211;</span>
                 <input type="text" id="range-route-duration-max" class="style_input range-route-duration-input"/>
+                <div class="clear"></div>
                 <div id="range-route-duration" class="range-route-duration"></div>
                 <span class="rrd-const rrd-const-min">0</span>
                 <span class="rrd-const rrd-const-max">20+</span>
                 <div class="clear"></div>  
-            </div>  
-            <div class="social">
-                <a href="#" class="fb"></a>
-                <a href="#" class="vk"></a>
-                <a href="#" class="gplus"></a>
-                <a href="#" class="lj"></a>
+            </div>
+            <h3>КАТЕГОРИЯ</h3>
+            <div class="setting_cont range-check">
+                <div id="range-service" class="range-service"> 
+                    <div class="ch-type">
+                        <div class="check checkOn"><input type="checkbox" /></div>
+                        <label><span>3</span>Треккинг</label> 
+                    </div>   
+                    <div class="ch-type">
+                        <div class="check"><input type="checkbox" /></div>
+                        <label><span>3</span>Горные лыжи</label> 
+                    </div>   
+                </div>
+                <div class="clear"></div>
+            </div>
+            <h3>СПОСОБ ПЕРЕДВИЖЕНИЯ</h3>
+            <div class="setting_cont range-check">
+                <div id="range-service" class="range-service"> 
+                    <div class="ch-type">
+                        <div class="check checkOn"><input type="checkbox" /></div>
+                        <label><span>3</span>Машина</label> 
+                    </div>   
+                    <div class="ch-type">
+                        <div class="check"><input type="checkbox" /></div>
+                        <label><span>3</span>Мотоцикл</label> 
+                    </div> 
+                    <div class="ch-type">
+                        <div class="check checkOn"><input type="checkbox" /></div>
+                        <label><span>3</span>Автобус</label> 
+                    </div>   
+                    <div class="ch-type">
+                        <div class="check"><input type="checkbox" /></div>
+                        <label><span>3</span>Пешком</label> 
+                    </div>  
+                    <div class="ch-type">
+                        <div class="check checkOn"><input type="checkbox" /></div>
+                        <label><span>3</span>Велосипед</label> 
+                    </div>   
+                    <div class="ch-type">
+                        <div class="check"><input type="checkbox" /></div>
+                        <label><span>3</span>На корабле</label> 
+                    </div> 
+                    <div class="ch-type">
+                        <div class="check checkOn"><input type="checkbox" /></div>
+                        <label><span>3</span>На лодке</label> 
+                    </div>   
+                    <div class="ch-type">
+                        <div class="check"><input type="checkbox" /></div>
+                        <label><span>3</span>Воздушный шар</label> 
+                    </div>  
+                    <div class="ch-type">
+                        <div class="check checkOn"><input type="checkbox" /></div>
+                        <label><span>3</span>Другое</label> 
+                    </div>
+                </div>
+                <div class="clear"></div>
             </div>
         </div>
         <!-- правая колонка -->
