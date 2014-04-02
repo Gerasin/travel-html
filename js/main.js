@@ -1,4 +1,9 @@
 var slideTime = 10000, effectTime = 1000, innerDelay = 1000, sliderTimeout;
+
+$('#hotel_main_slider').ready(function() {
+	$('#hotel_main_slider').css({'opacity' : 1});
+});
+
 $(document).ready(function() {
 	
 
@@ -8,6 +13,13 @@ $(document).ready(function() {
         $('html, body').animate({scrollTop: $(target).offset().top - 41}, 1000);
         return false; 
    	}); 
+
+   	$(".js_message").click(function(){ 
+		loadPopup('.popupMessage_send');
+		return false; 
+	});
+
+
 
 
 	$('.tur_search_button').click(function(){
@@ -118,9 +130,8 @@ $(document).ready(function() {
 	});
 	
 	//вспомогательное для попапа
-	$(".popup .close").click(function(e){
-		e.preventDefault();
-		disablePopup();
+	$(".popup .close").click(function(){
+		disablePopup();	
 	});
 	
 	$(".popup_bg").click(function(){
@@ -2253,7 +2264,7 @@ $(window).resize(function() {
 	};
 
 	$('.hotel_main_slider').css({ width : $('html, body').width() });
-	$('.hotel_main_slider .hotel_main').css({ width : $('html, body').width() });
+	$('.hotel_main_slider .hotel_main').css({ width : $('html, body').width() + 30 +'px' });
 	$('.hotel_main_slider_height').css({ height : $(window).height() });
 });
 
