@@ -7,6 +7,21 @@ $('#hotel_main_slider').ready(function() {
 $(document).ready(function() {
 	
 
+	if($('.destinations-corusel-img').length){
+		$('.destinations-corusel-img').carouFredSel({
+			auto: false,
+			prev: '.destinations-prev',
+			next: '.destinations-next',
+			pagination: ".destinations-pager",
+			mousewheel: false,
+			swipe: {
+				onMouse: true,
+				onTouch: true
+			}
+		})
+	};
+
+
 	// tur
 	$('a[href^="#"]').click(function(){
         var target = $(this).attr('href');
