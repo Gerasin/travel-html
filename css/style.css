@@ -3327,7 +3327,7 @@ body .tur_map {height: 613px; height: 30px; display: block; position: absolute !
         .destinations-corusel:hover .destinations-button  {opacity: 0.8;}
 
   .destinations-columns {margin: 0 -30px 0 -10px; letter-spacing: 0.1em; padding-bottom: 142px; padding-left: 13px;}
-    .destinations-column {padding: 0 15px; width: 310px; float: left;}
+    .destinations-column {padding: 0 15px; width: 310px; float: left; color: #3a3c3d;}
       .destinations-column h4 {font-size: 18px; font-weight: bold; padding-bottom: 20px;}
       .destinations-column p {line-height: 20px; font-size: 14px;}
     .destinations-column.last {padding-right: 0;}
