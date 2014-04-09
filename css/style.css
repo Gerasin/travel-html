@@ -2647,11 +2647,14 @@ thead .fc-first {border-top-color: #f7f9fb; border-left-color: #f7f9fb;}
         .main_cont_form_3 p.slider_searc_p {font-size: 20px;padding-bottom: 38px;}
       .input_style_box {float:left; margin-right: 17px; position: relative; margin-bottom: 24px;}
       .input_style_box.last {margin-right: 0;}
-        .slider_search_input {float: left; background: #f8f8f8; padding: 10px 37px 11px 13px; width:241px; font-size: 18px; font-weight: 100; font-family: "Helvetica Neue", Helvetica, sans-serif; border:0;
+        .slider_search_input {float: left; background: #f8f8f8; padding: 10px 37px 11px 13px; width:241px; font-size: 18px; font-weight: 100; font-family: Helvetica, sans-serif; border:0; color: #3b444f;
           -webkit-border-radius: 3px;
           -moz-border-radius: 3px;
           border-radius: 3px;
           margin: 0;}
+          ::-webkit-input-placeholder {color: #999;}
+          :-moz-placeholder {color: #999;}
+
         .slider_search_input2 {width: 385px;}
         .slider_search_input3 {width: 550px;}
         .input_calendar_ico {position: absolute; margin: 9px 9px 0 0; background: url(../img/routes/input_calendar_ico.png) 0 0 no-repeat; width: 23px; height: 24px; right: 0;}
@@ -3289,20 +3292,20 @@ body .tur_map {height: 613px; height: 30px; display: block; position: absolute !
 
 .page_main-bg {position: relative; z-index: 20; background: #f2f2f3;}
 .page_main-center {width: 1000px; margin: 0 auto; padding: 38px 0 0;}
-  .page_main-center h3 {text-align: center; color: #1b8bc5; padding-bottom: 38px; font-size: 18px; font-weight: normal;}
+  .page_main-center h3 {text-align: center; color: #1b8bc5; padding-bottom: 38px; font-size: 18px; font-weight: 100; letter-spacing: 0.1em;}
   .destinations-items{overflow: hidden; margin-bottom: 45px; letter-spacing: 0.1em;}
     .destinations-item-1 {float: left; width: 500px; height: 500px; overflow: hidden; position: relative;}
     .destinations-item-2 {float: left; width: 250px; height: 250px; overflow: hidden; position: relative;}
-    .destinations-item-bg {position: absolute; left: 0; top: 0; right: 0; bottom: 0; background: #000; opacity: 0.5; z-index: 1;}
+    .destinations-item-bg {position: absolute; left: 0; top: 0; right: 0; bottom: 0; background: #000; opacity: 0.45; z-index: 1;}
     .destinations-item-1:hover .destinations-item-bg, .destinations-item-2:hover .destinations-item-bg {display: none;}
     .destinations-item-name {position: absolute; bottom: 8px; left: 18px; right: 18px; color: #fff; z-index: 10;}
 .destinations-corusel {position: relative; padding: 0 0 38px; margin-bottom: 100px; position: relative; letter-spacing: 0.1em;}
   .destinations-corusel-img {position: relative; width: 1000px; height: 513px;}
     .destinations-corusel-img li {list-style: none; float: left; width: 1000px; height: 513px; position: relative;}
       .destinations-corusel-img li img {position: relative; z-index: 1;}
-      .destinations-corusel-cont {position: absolute; top: 0; left: 0; width: 430px; padding: 45px 30px 0 40px; height: 468px; z-index: 10; color: #fff; background: rgba(0, 0, 0, 0.35);}
+      .destinations-corusel-cont {position: absolute; top: 0; left: 0; width: 430px; padding: 45px 30px 0 40px; height: 468px; font-weight: 100; z-index: 10; color: #fff; background: rgba(0, 0, 0, 0.35);}
         .destinations-sity {padding: 0 0 17px; font-size: 18px;}
-        .destinations-tur {padding: 0 0 12px; font-size: 40px;}
+        .destinations-tur {padding: 0 0 12px; font-size: 40px; font-family: Helvetica, 'Helvetica Neue', Arial; font-weight: 100;}
         .destinations-date {padding: 0; font-size: 20px;}
         .destinations-comment {position: relative; height: 134px; width: 395px; margin-bottom: 30px;}
           .destinations-comment-in {position: absolute; left: 0; bottom: 0; width: 395px; font-size: 14px; line-height: 20px;}
@@ -3318,17 +3321,17 @@ body .tur_map {height: 613px; height: 30px; display: block; position: absolute !
         .destinations-detals a {display: block; border: 1px solid #f1f1f2; text-decoration: none; padding: 18px 48px 20px; font-size: 16px; color: #ffffff;}
         .destinations-detals a:hover {border: 1px solid #008cd4; color: #008cd4;}
       .destinations-pager {text-align: center; position: absolute; left: 0; bottom: 0; width: 1000px;}
-        .destinations-pager a {font-size: 0; display: inline-block; width: 6px; height: 6px; background: url(../images/tur/pager.png) 100% 0 no-repeat; margin: 0 5px;}
-        .destinations-pager a.selected {background-position: 0 0;}
+        .destinations-pager a {font-size: 0; display: inline-block; width: 6px; height: 6px; background: url(../images/tur/pager.png) 0 0 no-repeat; margin: 0 5px;}
+        .destinations-pager a.selected {background-position: 100% 0;}
       .destinations-button {position: relative; opacity: 0; z-index: 50}
       .destinations-button a {position: absolute; top: -270px; display: block; width: 34px; height: 56px; background: url(../images/tur/r_u_cont_corusel_but.png) 0 0 no-repeat;}
           .destinations-button a.destinations-prev {background-position: 0 0; left: 30px;}
           .destinations-button a.destinations-next {background-position: -34px 0; right: 30px;}
         .destinations-corusel:hover .destinations-button  {opacity: 0.8;}
 
-  .destinations-columns {margin: 0 -30px 0 -10px; letter-spacing: 0.1em; padding-bottom: 142px; padding-left: 13px;}
-    .destinations-column {padding: 0 15px; width: 310px; float: left; color: #3a3c3d;}
+  .destinations-columns {margin: 0 -19px 0 2px; width: 1020px; letter-spacing: 0.1em; padding-bottom: 142px;}
+    .destinations-column {padding: 0 15px; width: 315px; float: left; color: #3a3c3d;}
       .destinations-column h4 {font-size: 18px; font-weight: bold; padding-bottom: 20px;}
-      .destinations-column p {line-height: 20px; font-size: 14px;}
+      .destinations-column p {line-height: 20px; font-size: 15px; font-weight: 100;}
     .destinations-column.last {padding-right: 0;}
 

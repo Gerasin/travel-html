@@ -9,11 +9,15 @@ $(document).ready(function() {
 
 	if($('.destinations-corusel-img').length){
 		$('.destinations-corusel-img').carouFredSel({
-			auto: false,
+			auto: true,
 			prev: '.destinations-prev',
 			next: '.destinations-next',
 			pagination: ".destinations-pager",
-			mousewheel: false,
+			scroll : {
+				fx : "fade",
+				duration: 500
+			},
+			mousewheel: true,
 			swipe: {
 				onMouse: true,
 				onTouch: true
