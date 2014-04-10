@@ -2638,7 +2638,7 @@ thead .fc-first {border-top-color: #f7f9fb; border-left-color: #f7f9fb;}
     -moz-border-radius: 3px;
     border-radius: 3px;
     opacity: 1 !important;}
-      .hotel_main_slider_search h3 {color: #fff; padding: 0 0 25px; font-size: 27px; font-weight: normal; font-weight: 100; font-family: 'helveticaneuecyrlight', "Helvetica Neue", Helvetica, sans-serif;}
+      .hotel_main_slider_search h3 {color: #fff; padding: 0 0 25px; font-size: 27px; margin-right: -10px; font-weight: normal; font-weight: 100; font-family: "Helvetica Neue", Helvetica, sans-serif;}
       .hotel_main_slider_search p.slider_searc_p {color: #fff; padding: 0 0 22px; font-size: 15px; line-height: 20px;}
           .hotel_main_slider_search p.slider_searc_p span {color: #f15a22;}
         .main_cont_form_1 h3 {font-size: 40px;padding-bottom: 18px;}
@@ -2658,7 +2658,7 @@ thead .fc-first {border-top-color: #f7f9fb; border-left-color: #f7f9fb;}
         .slider_search_input2 {width: 385px;}
         .slider_search_input3 {width: 550px;}
         .input_calendar_ico {position: absolute; margin: 9px 9px 0 0; background: url(../img/routes/input_calendar_ico.png) 0 0 no-repeat; width: 23px; height: 24px; right: 0;}
-        .input_style_date {position:absolute; background: #008cd4 ; width: 39px; height: 32px; padding: 7px 0 0; right: 0; text-align: center; color: #fff; font-size: 12px;
+        .input_style_date {position:absolute; background: #008cd4 ; width: 39px; height: 34px; padding: 9px 0 0; right: 0; text-align: center; color: #fff; font-size: 12px;
           -moz-border-radius-topright: 2px;
           -webkit-border-top-right-radius: 2px;
           border-top-right-radius: 2px;
@@ -3305,6 +3305,7 @@ body .tur_map {height: 613px; height: 30px; display: block; position: absolute !
       .destinations-corusel-img li img {position: relative; z-index: 1;}
       .destinations-corusel-cont {position: absolute; top: 0; left: 0; width: 430px; padding: 45px 30px 0 40px; height: 468px; font-weight: 100; z-index: 10; color: #fff; background: rgba(0, 0, 0, 0.35);}
         .destinations-sity {padding: 0 0 17px; font-size: 18px;}
+          .destinations-sity span {color: #217aa8; padding-left: 8px;}
         .destinations-tur {padding: 0 0 12px; font-size: 40px; font-family: Helvetica, 'Helvetica Neue', Arial; font-weight: 100;}
         .destinations-date {padding: 0; font-size: 20px;}
         .destinations-comment {position: relative; height: 134px; width: 395px; margin-bottom: 30px;}
