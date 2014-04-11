@@ -1160,7 +1160,7 @@ width:460px; color:#5a5a5a;}
 /*==== Главная маршруты ====*/  
 .routes_main  {height:571px; float:left; width:1000px; margin:0;}  
   .routes_main_cont {width:976px; margin:0 auto; padding:183px 0 0;}
-  .routes_main_img  {position:absolute; left:0; top:0; width:100%; height:100%; z-index:3;}
+  .routes_main_img  {position:absolute; left:0; top:0; width:100%; z-index:3;}
   .routes_main_cont_up  {position:absolute; left:50%; margin-left:-476px; z-index:30;}
     .routes_main_cont_up .routes_main_comment {height:auto; width:auto;}
     .routes_main_comment  {height:201px; text-shadow:0 -1px 1px #000;}
@@ -2633,12 +2633,13 @@ thead .fc-first {border-top-color: #f7f9fb; border-left-color: #f7f9fb;}
       .footer_menu ul {width: 100%; padding: 0 0 11px; text-align: center;}
         .footer_menu li {padding: 0 37px; list-style: none; display: inline-block; zoom:1; *display: inline; font-size: 12px;}
           .footer_menu li a {color: #eaeaea; text-decoration: none;}
-  .hotel_main_slider_search {position: absolute; top: 20%; right: 10%; background: url(../img/hotel/hotel_slider_bg2.png) 0 0 repeat; padding:43px 27px 20px; width: 600px; z-index: 20; font-family: 'helveticaneuecyrlight', "Helvetica Neue", Helvetica, sans-serif;
+  .hotel_main_slider_search {position: absolute; top: 20%; right: 10%; background: url(../img/hotel/hotel_slider_bg2.png) 0 0 repeat; padding:43px 27px 20px; width: 600px; z-index: 20; font-family: Helvetica, "Helvetica Neue", sans-serif;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
     opacity: 1 !important;}
-      .hotel_main_slider_search h3 {color: #fff; padding: 0 0 25px; font-size: 27px; margin-right: -10px; font-weight: normal; font-weight: 100; font-family: "Helvetica Neue", Helvetica, sans-serif;}
+    .routes_search-box {right: auto; left: 10%;}
+      .hotel_main_slider_search h3 {color: #fff; padding: 0 0 25px; font-size: 27px; margin-right: -10px; font-weight: normal; font-weight: 100; font-family:  Helvetica, "Helvetica Neue", sans-serif;}
       .hotel_main_slider_search p.slider_searc_p {color: #fff; padding: 0 0 22px; font-size: 15px; line-height: 20px;}
           .hotel_main_slider_search p.slider_searc_p span {color: #f15a22;}
         .main_cont_form_1 h3 {font-size: 40px;padding-bottom: 18px;}

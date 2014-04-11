@@ -15,9 +15,10 @@ $(document).ready(function() {
 			pagination: ".destinations-pager",
 			scroll : {
 				fx : "fade",
-				duration: 500
+				duration: 500,
+				timeoutDuration: 6000
 			},
-			mousewheel: true,
+			mousewheel: false,
 			swipe: {
 				onMouse: true,
 				onTouch: true
@@ -1845,6 +1846,8 @@ $(document).ready(function() {
   		}
   	});
 
+  	sliderHeight();
+
 
 });
 
@@ -2285,6 +2288,8 @@ $(window).resize(function() {
 	$('.hotel_main_slider').css({ width : $('html, body').width() });
 	$('.hotel_main_slider .hotel_main').css({ width : $('html, body').width() + 30 +'px' });
 	$('.hotel_main_slider_height').css({ height : $(window).height() });
+
+	sliderHeight();
 });
 
 function resizePopUpRoutes() {
@@ -2333,6 +2338,21 @@ function mapTur() {
 			icon: image  
 		});   
 	};
+};
+
+var sliderHeight, sliderHeightLength;
+function sliderHeight() {
+	sliderHeightLength = $('.routes_main_img').length;
+	sliderHeight = 10000;
+	var i = 0;
+	for (i; i < sliderHeightLength; i++) {
+		if (sliderHeight > $('.hotel_main_slider').find('.routes_main_img').eq(i).height()) {
+			sliderHeight = $('.hotel_main_slider').find('.routes_main_img').eq(i).height();
+			console.log(sliderHeight);
+		}
+	};
+	$('.sliderHeight, .hotel_main, .tur_name_padding').height(sliderHeight + 'px');
+	console.log(sliderHeight);
 };
 
  
