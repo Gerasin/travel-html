@@ -26,7 +26,7 @@ background: transparent;
 
 html           {height:100%;}
 
-body           {font-family: 'Helvetica Neue', Helvetica, Arial;
+body           {font-family: Helvetica, 'Helvetica Neue', Arial; font-weight: 100;
               font-size:14px; color:#858585; position:relative; margin:0 auto; min-height:100%; height:auto !important; height:100%;
               z-index:0; width:100%; min-width:1000px; max-width:2280px; background:#f2f2f4;}
 

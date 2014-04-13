@@ -16,7 +16,7 @@ $(document).ready(function() {
 			scroll : {
 				fx : "fade",
 				duration: 500,
-				timeoutDuration: 6000
+				timeoutDuration: 10000
 			},
 			mousewheel: false,
 			swipe: {
