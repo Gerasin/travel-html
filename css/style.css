@@ -946,7 +946,7 @@ width:460px; color:#5a5a5a;}
     .close:hover { opacity:0.7; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)"; filter: alpha(opacity=70);}
     
  #hotel_main_slider {opacity: 0;}  
-   .hotel_main_message {position: absolute; right: 100px; bottom: 64px; width: 455px; z-index: 60;}
+   .hotel_main_message {position: absolute; right: 40px; bottom: 64px; width: 455px; z-index: 60;}
     .hotel_main_message-ava {float: right; width: 70px;}
       .hotel_main_message-ava img {border: 1px solid #e3e3e3; float: right;
         -webkit-border-radius: 1px;
@@ -3076,10 +3076,10 @@ body.haspopup {overflow: hidden !important;}
 body .tur_map {height: 613px; height: 30px; display: block; position: absolute !important; bottom: 0; left: 0; width: 100%; z-index: 10;}
 .content_tabs_bg_withe {background: #fff; position: relative; z-index: 90; padding-top: 20px;}
   .content_tabs_bg_withe .route-content {margin-top: 0;}
-  .tur_slider_cont_box {position: absolute; left: 50%; margin-left: -410px; top: 140px; z-index: 52; width: 820px;}
+  .tur_slider_cont_box {position: absolute; left: 50%; margin-left: -500px; top: 140px; z-index: 52; width: 1000px;}
       .tur_slider_cont_box h2 {font-size: 26px; padding-bottom: 23px; font-weight: 100; color: #fff;}
       .input_style_main {width: 320px; }
-  .tur_slider_cont {width: 1000px; position: relative; z-index: 50; margin: 0 auto; color: #fff; font-family: 'Helvetica Neue', Helvetica, Arial; text-align: center; padding: 100px 0 0;}
+  .tur_slider_cont {width: 1000px; position: relative; z-index: 50; margin: 0 auto; color: #fff; font-family: 'Helvetica Neue', Helvetica, Arial; text-align: center; padding: 0;}
     .tur_slider_city {padding-bottom: 21px; font-size: 18px;}
       .tur_slider_city span {padding: 0 75px;}
       .tur_slider_city img {position: relative; top: -5px;}

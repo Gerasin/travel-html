@@ -1847,9 +1847,34 @@ $(document).ready(function() {
   	});
 
   	sliderHeight();
-
-
 });
+
+
+$(window).resize(function() {
+	resizePopUpRoutes();
+	sizeUserMap();
+	if($('.hidden-block').length){ 
+		var hideWidth = ($('.routes-range').width() - $('.routes-range-cont').width())/2;
+		$('.hidden-block').css('width',hideWidth+70).show(); 
+	};
+
+	$('.hotel_main_slider').css({ width : $(window).width() });
+	$('.hotel_main').css({ width : $(window).width() + 30 +'px' });
+	sliderHeight();
+	
+});
+
+function sliderHeight() {
+	var sliderHeightLength = $('.routes_main_img').length;
+	var sliderHeight = 10000;
+	var i = 0;
+	for (i; i < sliderHeightLength; i++) {
+		if (sliderHeight > $('.hotel_main_slider').find('.routes_main_img').eq(i).height()) {
+			sliderHeight = $('.hotel_main_slider').find('.routes_main_img').eq(i).height();
+		}
+	};
+	$('.sliderHeight, .hotel_main, .tur_name_padding').height(sliderHeight + 'px');
+};
 
 // Удаление инпутов даты
 function dateRemove() {
@@ -2277,20 +2302,7 @@ function slideTo(i, noDelay) {
 	sliderTimeout = setTimeout(runSlider, slideTime);
 }
 
-$(window).resize(function() {
-	resizePopUpRoutes();
-	sizeUserMap();
-	if($('.hidden-block').length){ 
-		var hideWidth = ($('.routes-range').width() - $('.routes-range-cont').width())/2;
-		$('.hidden-block').css('width',hideWidth+70).show(); 
-	};
 
-	$('.hotel_main_slider').css({ width : $('html, body').width() });
-	$('.hotel_main_slider .hotel_main').css({ width : $('html, body').width() + 30 +'px' });
-	$('.hotel_main_slider_height').css({ height : $(window).height() });
-
-	sliderHeight();
-});
 
 function resizePopUpRoutes() {
 	// Маршруты регулируем видимость попапа
@@ -2340,19 +2352,5 @@ function mapTur() {
 	};
 };
 
-var sliderHeight, sliderHeightLength;
-function sliderHeight() {
-	sliderHeightLength = $('.routes_main_img').length;
-	sliderHeight = 10000;
-	var i = 0;
-	for (i; i < sliderHeightLength; i++) {
-		if (sliderHeight > $('.hotel_main_slider').find('.routes_main_img').eq(i).height()) {
-			sliderHeight = $('.hotel_main_slider').find('.routes_main_img').eq(i).height();
-			console.log(sliderHeight);
-		}
-	};
-	$('.sliderHeight, .hotel_main, .tur_name_padding').height(sliderHeight + 'px');
-	console.log(sliderHeight);
-};
 
  
