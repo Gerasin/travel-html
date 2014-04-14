@@ -56,7 +56,7 @@ $(document).ready(function() {
 			$(this).parent().removeClass('active');
 			$('.tur_detal_map_bg').show();
 		} else {
-			$('.tur_map').animate({'height' : 585 + 'px'});
+			$('.tur_map').animate({'height' : 100 + '%'});
 			$(this).parent().addClass('active');
 			$('.tur_detal_map_bg').hide();
 		}

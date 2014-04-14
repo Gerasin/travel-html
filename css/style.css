@@ -1023,7 +1023,7 @@ width:460px; color:#5a5a5a;}
 /*==== Главная картинка отеля ====*/  
 .main-content {}
 .main-content > div{position:relative; z-index:2;}
-.fixed-content {position:absolute; height:586px; z-index:1; margin-top:41px;}
+.fixed-content {position:absolute; z-index:1; margin-top:41px;}
 .fixed-content .hotel_main_slider_cent {}
 .fixed-content .hotel_main_cont_up {position:absolute;  }
 .relative-content {top:571px; position:relative; z-index:20; background:#fff;}
@@ -3072,7 +3072,7 @@ body.haspopup {overflow: hidden !important;}
       .tur_search_input {float: left; width: 150px; margin:11px 0 0 10px; display: none; border: 0; background: none; font: 14px 'Arial'}
     .tur_name_search.active {background: #fff;}
       .tur_name_search.active .tur_search_input {display: block;}
-.tur_map-box {height: 585px;}
+.tur_map-box {height: 785px;}
 body .tur_map {height: 613px; height: 30px; display: block; position: absolute !important; bottom: 0; left: 0; width: 100%; z-index: 10;}
 .content_tabs_bg_withe {background: #fff; position: relative; z-index: 90; padding-top: 20px;}
   .content_tabs_bg_withe .route-content {margin-top: 0;}
